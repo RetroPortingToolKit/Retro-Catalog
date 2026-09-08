@@ -1,0 +1,233 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/final-fantasy-ix-recomp",
+      "ref": "ddb6444b23ba7bd796850e837f0e4efc6a6ab145"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Final Fantasy IX.",
+  "homepage": "https://github.com/Alexbeav/final-fantasy-ix-recomp",
+  "id": "final-fantasy-ix-psx",
+  "install_dir_name": "final-fantasy-ix-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Final_Fantasy_IX_Recompiled",
+    "macos": "Final_Fantasy_IX_Recompiled",
+    "windows": "Final_Fantasy_IX_Recompiled.exe"
+  },
+  "name": "Final Fantasy IX",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/final-fantasy-ix-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "7a46108f",
+      "575e60d5",
+      "a1d53b67",
+      "a4c892a4"
+    ],
+    "disc_serials": [
+      "SLUS-01251",
+      "SLUS-01295",
+      "SLUS-01296",
+      "SLUS-01297"
+    ],
+    "discs": [
+      {
+        "bin_name": "Final Fantasy IX (USA, Canada) (Disc 1) (Rev 1).bin",
+        "crc32": [
+          "7a46108f"
+        ],
+        "cue_name": "Final Fantasy IX (USA, Canada) (Disc 1) (Rev 1).cue",
+        "index": 1,
+        "md5": [
+          "aabe193e058f166d1a88d99219792598"
+        ],
+        "serial": "SLUS-01251",
+        "sha1": [
+          "8b8feaf91f63ae615d763803b094833dc20ca63c"
+        ],
+        "sha256": [
+          "d5d14f338179bd9dd15ec9e0997462c28643ef84268f3db86c1b3742dbabc6bc"
+        ],
+        "sizes": [
+          740715360
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy IX (USA, Canada) (Disc 2) (Rev 1).bin",
+        "crc32": [
+          "575e60d5"
+        ],
+        "cue_name": "Final Fantasy IX (USA, Canada) (Disc 2) (Rev 1).cue",
+        "index": 2,
+        "md5": [
+          "a18dfcec1e01c4616cdf1bedd0e2b89a"
+        ],
+        "serial": "SLUS-01295",
+        "sha1": [
+          "232c9b94f232006798f466c126a121d256e4122b"
+        ],
+        "sha256": [
+          "df44eb1e9f9e129055ce772329f630da0aab132158f15ee96de30ebe478bdb2e"
+        ],
+        "sizes": [
+          689004288
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy IX (USA, Canada) (Disc 3) (Rev 1).bin",
+        "crc32": [
+          "a1d53b67"
+        ],
+        "cue_name": "Final Fantasy IX (USA, Canada) (Disc 3) (Rev 1).cue",
+        "index": 3,
+        "md5": [
+          "5aa1d8663d6b9b50b3ce6112b3cccf23"
+        ],
+        "serial": "SLUS-01296",
+        "sha1": [
+          "f7177bd1194ff1a642494cf867819d2d3b897c99"
+        ],
+        "sha256": [
+          "090af32b038bd20afe037f68e913276b0d43eb652b3be8902ef4c1ef52b4685c"
+        ],
+        "sizes": [
+          729755040
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy IX (USA, Canada) (Disc 4) (Rev 1).bin",
+        "crc32": [
+          "a4c892a4"
+        ],
+        "cue_name": "Final Fantasy IX (USA, Canada) (Disc 4) (Rev 1).cue",
+        "index": 4,
+        "md5": [
+          "5796b286ddd0335db2d9631701153a42"
+        ],
+        "serial": "SLUS-01297",
+        "sha1": [
+          "ce78c21e3793e04e594429133b05ddf24ed3fc6b"
+        ],
+        "sha256": [
+          "052c3885310820c342d3dd18f10a0a4647365273852ff498568cd0ef0b5ddd59"
+        ],
+        "sizes": [
+          688413936
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "Final Fantasy IX (USA, Canada) (Disc 1) (Rev 1).cue",
+      "Final Fantasy IX (USA, Canada) (Disc 1) (Rev 1).bin",
+      "Final Fantasy IX (USA, Canada) (Disc 2) (Rev 1).cue",
+      "Final Fantasy IX (USA, Canada) (Disc 2) (Rev 1).bin",
+      "Final Fantasy IX (USA, Canada) (Disc 3) (Rev 1).cue",
+      "Final Fantasy IX (USA, Canada) (Disc 3) (Rev 1).bin",
+      "Final Fantasy IX (USA, Canada) (Disc 4) (Rev 1).cue",
+      "Final Fantasy IX (USA, Canada) (Disc 4) (Rev 1).bin"
+    ],
+    "md5": [
+      "aabe193e058f166d1a88d99219792598",
+      "a18dfcec1e01c4616cdf1bedd0e2b89a",
+      "5aa1d8663d6b9b50b3ce6112b3cccf23",
+      "5796b286ddd0335db2d9631701153a42"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "8b8feaf91f63ae615d763803b094833dc20ca63c",
+      "232c9b94f232006798f466c126a121d256e4122b",
+      "f7177bd1194ff1a642494cf867819d2d3b897c99",
+      "ce78c21e3793e04e594429133b05ddf24ed3fc6b"
+    ],
+    "sha256": [
+      "d5d14f338179bd9dd15ec9e0997462c28643ef84268f3db86c1b3742dbabc6bc",
+      "df44eb1e9f9e129055ce772329f630da0aab132158f15ee96de30ebe478bdb2e",
+      "090af32b038bd20afe037f68e913276b0d43eb652b3be8902ef4c1ef52b4685c",
+      "052c3885310820c342d3dd18f10a0a4647365273852ff498568cd0ef0b5ddd59"
+    ],
+    "sizes": [
+      740715360,
+      689004288,
+      729755040,
+      688413936
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

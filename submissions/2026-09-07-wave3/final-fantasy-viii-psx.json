@@ -1,0 +1,233 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/final-fantasy-viii-recomp",
+      "ref": "22aca481ef3e22586ecf04732cf1f8baef4db842"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Final Fantasy VIII.",
+  "homepage": "https://github.com/Alexbeav/final-fantasy-viii-recomp",
+  "id": "final-fantasy-viii-psx",
+  "install_dir_name": "final-fantasy-viii-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Final_Fantasy_VIII_Recompiled",
+    "macos": "Final_Fantasy_VIII_Recompiled",
+    "windows": "Final_Fantasy_VIII_Recompiled.exe"
+  },
+  "name": "Final Fantasy VIII",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/final-fantasy-viii-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "2691d2de",
+      "e3eb68df",
+      "d38ee91e",
+      "6cfb6adf"
+    ],
+    "disc_serials": [
+      "SLUS-00892",
+      "SLUS-00908",
+      "SLUS-00909",
+      "SLUS-00910"
+    ],
+    "discs": [
+      {
+        "bin_name": "Final Fantasy VIII (USA) (Disc 1).bin",
+        "crc32": [
+          "2691d2de"
+        ],
+        "cue_name": "Final Fantasy VIII (USA) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "50d5b62e81b5369f18c8a145af716af9"
+        ],
+        "serial": "SLUS-00892",
+        "sha1": [
+          "5028a4f815a50d6ffe16f9c3e44ec6235a81f3f5"
+        ],
+        "sha256": [
+          "458e63272b480385a98dfd9c1c26cc6581d7841ac612a5ec3a600d5d7c40da26"
+        ],
+        "sizes": [
+          732271680
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy VIII (USA) (Disc 2).bin",
+        "crc32": [
+          "e3eb68df"
+        ],
+        "cue_name": "Final Fantasy VIII (USA) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "2ae4e2022d376a0775e66369de96dc59"
+        ],
+        "serial": "SLUS-00908",
+        "sha1": [
+          "2af26ce916c1b5bbb74fbacb0a8ca1a5171dc510"
+        ],
+        "sha256": [
+          "396f721a2ad90954ef0c9a9a8d80ac72a39e93b2af665c94b28af57f9f8d1337"
+        ],
+        "sizes": [
+          692932128
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy VIII (USA) (Disc 3).bin",
+        "crc32": [
+          "d38ee91e"
+        ],
+        "cue_name": "Final Fantasy VIII (USA) (Disc 3).cue",
+        "index": 3,
+        "md5": [
+          "58461d8ea573b990c7bbcc32d0feb8a8"
+        ],
+        "serial": "SLUS-00909",
+        "sha1": [
+          "9417003499803d9a9c3d26783570a967b0e4fba2"
+        ],
+        "sha256": [
+          "da44e68d80a797a27b814629be86162d7375ba1c525d5d8c125740a301b92890"
+        ],
+        "sizes": [
+          721356048
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Final Fantasy VIII (USA) (Disc 4).bin",
+        "crc32": [
+          "6cfb6adf"
+        ],
+        "cue_name": "Final Fantasy VIII (USA) (Disc 4).cue",
+        "index": 4,
+        "md5": [
+          "5a83d022aa592d4e91c02943467d1fd6"
+        ],
+        "serial": "SLUS-00910",
+        "sha1": [
+          "68a3e8e96eb63018f728014a8044959bcb1b2272"
+        ],
+        "sha256": [
+          "141038cd43f795755ab390af72821b153412c4f8d7a72e92942400046f083eaa"
+        ],
+        "sizes": [
+          694475040
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "Final Fantasy VIII (USA) (Disc 1).cue",
+      "Final Fantasy VIII (USA) (Disc 1).bin",
+      "Final Fantasy VIII (USA) (Disc 2).cue",
+      "Final Fantasy VIII (USA) (Disc 2).bin",
+      "Final Fantasy VIII (USA) (Disc 3).cue",
+      "Final Fantasy VIII (USA) (Disc 3).bin",
+      "Final Fantasy VIII (USA) (Disc 4).cue",
+      "Final Fantasy VIII (USA) (Disc 4).bin"
+    ],
+    "md5": [
+      "50d5b62e81b5369f18c8a145af716af9",
+      "2ae4e2022d376a0775e66369de96dc59",
+      "58461d8ea573b990c7bbcc32d0feb8a8",
+      "5a83d022aa592d4e91c02943467d1fd6"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "5028a4f815a50d6ffe16f9c3e44ec6235a81f3f5",
+      "2af26ce916c1b5bbb74fbacb0a8ca1a5171dc510",
+      "9417003499803d9a9c3d26783570a967b0e4fba2",
+      "68a3e8e96eb63018f728014a8044959bcb1b2272"
+    ],
+    "sha256": [
+      "458e63272b480385a98dfd9c1c26cc6581d7841ac612a5ec3a600d5d7c40da26",
+      "396f721a2ad90954ef0c9a9a8d80ac72a39e93b2af665c94b28af57f9f8d1337",
+      "da44e68d80a797a27b814629be86162d7375ba1c525d5d8c125740a301b92890",
+      "141038cd43f795755ab390af72821b153412c4f8d7a72e92942400046f083eaa"
+    ],
+    "sizes": [
+      732271680,
+      692932128,
+      721356048,
+      694475040
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

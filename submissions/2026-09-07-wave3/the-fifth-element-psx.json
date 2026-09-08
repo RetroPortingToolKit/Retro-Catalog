@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/the-fifth-element-recomp",
+      "ref": "5fa4de22e2a51d42f992f9602948d1bead88d509"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for The Fifth Element.",
+  "homepage": "https://github.com/Alexbeav/the-fifth-element-recomp",
+  "id": "the-fifth-element-psx",
+  "install_dir_name": "the-fifth-element-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "The_Fifth_Element_Recompiled",
+    "macos": "The_Fifth_Element_Recompiled",
+    "windows": "The_Fifth_Element_Recompiled.exe"
+  },
+  "name": "The Fifth Element",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/the-fifth-element-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "f0313791"
+    ],
+    "disc_serials": [
+      "SCES-01285"
+    ],
+    "filenames": [
+      "Fifth Element, The (Europe) (En,Fr,De,Es,It).cue",
+      "Fifth Element, The (Europe) (En,Fr,De,Es,It) (Track 01).bin"
+    ],
+    "md5": [
+      "573d0c845cf12e9c2024746b70c12597"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "71d5d3ceecfe33d45f7ef789ff7bcd4df81044fc"
+    ],
+    "sha256": [
+      "a39c0f24f1abea86a2e62eb0dbab2e84b0415fd2a1dd335622fb2b2e619b2d93"
+    ],
+    "sizes": [
+      354378192
+    ],
+    "track_counts": [
+      10
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/martian-gothic-recomp",
+      "ref": "afb28083afc990117ca42bb62008c6f379dd8bea"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Martian Gothic.",
+  "homepage": "https://github.com/Alexbeav/martian-gothic-recomp",
+  "id": "martian-gothic-psx",
+  "install_dir_name": "martian-gothic-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Martian_Gothic_Recompiled",
+    "macos": "Martian_Gothic_Recompiled",
+    "windows": "Martian_Gothic_Recompiled.exe"
+  },
+  "name": "Martian Gothic",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/martian-gothic-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "5ba9ffcc"
+    ],
+    "disc_serials": [
+      "SLES-01350"
+    ],
+    "filenames": [
+      "Martian Gothic - Unification (Europe) (En,Fr,Es,It).cue",
+      "Martian Gothic - Unification (Europe) (En,Fr,Es,It).bin"
+    ],
+    "md5": [
+      "8d7ed70b84d1a39952d913caa3412a5f"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "7ac0f3769ec927e7d69b3d22e9c6b79e6804629e"
+    ],
+    "sha256": [
+      "b7bf8067fb67e371c89d09f46a87fdd80ff7e3e4d5438bea64a9b335fa118ec6"
+    ],
+    "sizes": [
+      660582720
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

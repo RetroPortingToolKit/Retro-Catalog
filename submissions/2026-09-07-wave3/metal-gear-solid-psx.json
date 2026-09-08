@@ -1,0 +1,169 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/metal-gear-solid-recomp",
+      "ref": "ea9b7bc87de1354d032fe3ffd321ed17a0fa4307"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Metal Gear Solid.",
+  "homepage": "https://github.com/Alexbeav/metal-gear-solid-recomp",
+  "id": "metal-gear-solid-psx",
+  "install_dir_name": "metal-gear-solid-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Metal_Gear_Solid_Recompiled",
+    "macos": "Metal_Gear_Solid_Recompiled",
+    "windows": "Metal_Gear_Solid_Recompiled.exe"
+  },
+  "name": "Metal Gear Solid",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/metal-gear-solid-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "dc3b2b4c",
+      "43e3b465"
+    ],
+    "disc_serials": [
+      "SLES-01370",
+      "SLES-11370"
+    ],
+    "discs": [
+      {
+        "bin_name": "Metal Gear Solid (Europe) (Disc 1).bin",
+        "crc32": [
+          "dc3b2b4c"
+        ],
+        "cue_name": "Metal Gear Solid (Europe) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "14f4ee17e61da6fed24569e409d1e6b7"
+        ],
+        "serial": "SLES-01370",
+        "sha1": [
+          "d498a96150050e45681423d394de5ad36ba42497"
+        ],
+        "sha256": [
+          "de6a10d6860e5513aad1f223cecd4ba1120cea7e8a7b41eefcd236af3e49197e"
+        ],
+        "sizes": [
+          690577776
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Metal Gear Solid (Europe) (Disc 2).bin",
+        "crc32": [
+          "43e3b465"
+        ],
+        "cue_name": "Metal Gear Solid (Europe) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "68695af6a80a5f6549fde7280bbe9e32"
+        ],
+        "serial": "SLES-11370",
+        "sha1": [
+          "ed25f748e4419bf2c68a496185537b966a942e1d"
+        ],
+        "sha256": [
+          "e3dcf869b2ea13d3108eb5d66f6834f543a9b58cf7a6a25ec6d4a2f1de15a3e0"
+        ],
+        "sizes": [
+          718324320
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "Metal Gear Solid (Europe) (Disc 1).cue",
+      "Metal Gear Solid (Europe) (Disc 1).bin",
+      "Metal Gear Solid (Europe) (Disc 2).cue",
+      "Metal Gear Solid (Europe) (Disc 2).bin"
+    ],
+    "md5": [
+      "14f4ee17e61da6fed24569e409d1e6b7",
+      "68695af6a80a5f6549fde7280bbe9e32"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "d498a96150050e45681423d394de5ad36ba42497",
+      "ed25f748e4419bf2c68a496185537b966a942e1d"
+    ],
+    "sha256": [
+      "de6a10d6860e5513aad1f223cecd4ba1120cea7e8a7b41eefcd236af3e49197e",
+      "e3dcf869b2ea13d3108eb5d66f6834f543a9b58cf7a6a25ec6d4a2f1de15a3e0"
+    ],
+    "sizes": [
+      690577776,
+      718324320
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

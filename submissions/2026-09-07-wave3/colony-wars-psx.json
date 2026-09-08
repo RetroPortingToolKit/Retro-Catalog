@@ -1,0 +1,169 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/colony-wars-recomp",
+      "ref": "2310ab183ba2d4f798e8b040d799437b7aba3e02"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Colony Wars.",
+  "homepage": "https://github.com/Alexbeav/colony-wars-recomp",
+  "id": "colony-wars-psx",
+  "install_dir_name": "colony-wars-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Colony_Wars_Recompiled",
+    "macos": "Colony_Wars_Recompiled",
+    "windows": "Colony_Wars_Recompiled.exe"
+  },
+  "name": "Colony Wars",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/colony-wars-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "01ca7e95",
+      "54adbe0a"
+    ],
+    "disc_serials": [
+      "SLUS-00543",
+      "SLUS-00554"
+    ],
+    "discs": [
+      {
+        "bin_name": "Colony Wars (USA) (Disc 1) (Track 1).bin",
+        "crc32": [
+          "01ca7e95"
+        ],
+        "cue_name": "Colony Wars (USA) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "3d2bf0efa439a02fe95520ebb0ec26ea"
+        ],
+        "serial": "SLUS-00543",
+        "sha1": [
+          "5ad8f6a62f9772b0725477e365489f8efabc1371"
+        ],
+        "sha256": [
+          "7a0e30a38b01a6eb4ad42f357b7f8d7981d251033be38d941a39c2c13ffaf624"
+        ],
+        "sizes": [
+          525650832
+        ],
+        "track_counts": [
+          2
+        ]
+      },
+      {
+        "bin_name": "Colony Wars (USA) (Disc 2) (Track 1).bin",
+        "crc32": [
+          "54adbe0a"
+        ],
+        "cue_name": "Colony Wars (USA) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "924e924f15d94f609e10d34c36064ee9"
+        ],
+        "serial": "SLUS-00554",
+        "sha1": [
+          "723491c2876588172e020f9b66c978f0d757ed57"
+        ],
+        "sha256": [
+          "07a82fd36d4ebca103db7994cd5e7c74b201480a48acf50b8e809b7d21d68426"
+        ],
+        "sizes": [
+          642091296
+        ],
+        "track_counts": [
+          2
+        ]
+      }
+    ],
+    "filenames": [
+      "Colony Wars (USA) (Disc 1).cue",
+      "Colony Wars (USA) (Disc 1) (Track 1).bin",
+      "Colony Wars (USA) (Disc 2).cue",
+      "Colony Wars (USA) (Disc 2) (Track 1).bin"
+    ],
+    "md5": [
+      "3d2bf0efa439a02fe95520ebb0ec26ea",
+      "924e924f15d94f609e10d34c36064ee9"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "5ad8f6a62f9772b0725477e365489f8efabc1371",
+      "723491c2876588172e020f9b66c978f0d757ed57"
+    ],
+    "sha256": [
+      "7a0e30a38b01a6eb4ad42f357b7f8d7981d251033be38d941a39c2c13ffaf624",
+      "07a82fd36d4ebca103db7994cd5e7c74b201480a48acf50b8e809b7d21d68426"
+    ],
+    "sizes": [
+      525650832,
+      642091296
+    ],
+    "track_counts": [
+      2
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

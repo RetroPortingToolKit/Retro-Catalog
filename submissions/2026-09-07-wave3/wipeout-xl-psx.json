@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/wipeout-xl-recomp",
+      "ref": "cd3b9e04b6e6698542e532bc70f1e469d3bc08cd"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Wipeout XL.",
+  "homepage": "https://github.com/Alexbeav/wipeout-xl-recomp",
+  "id": "wipeout-xl-psx",
+  "install_dir_name": "wipeout-xl-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Wipeout_XL_Recompiled",
+    "macos": "Wipeout_XL_Recompiled",
+    "windows": "Wipeout_XL_Recompiled.exe"
+  },
+  "name": "Wipeout XL",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/wipeout-xl-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "18ebdeb3"
+    ],
+    "disc_serials": [
+      "SCUS-94351"
+    ],
+    "filenames": [
+      "Wipeout XL (USA).cue",
+      "Wipeout XL (USA) (Track 01).bin"
+    ],
+    "md5": [
+      "bee4ab5e4835235ccf6f16bc8caea5e6"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "5694008c30fa9896d17afdd6281e4bebb9f63953"
+    ],
+    "sha256": [
+      "965a6fab54f6a97d4580725a68df898e4b195cb62373fb95d5b51113393fbc06"
+    ],
+    "sizes": [
+      86045568
+    ],
+    "track_counts": [
+      12
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

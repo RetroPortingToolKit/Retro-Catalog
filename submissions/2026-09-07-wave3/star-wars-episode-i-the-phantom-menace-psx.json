@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/star-wars-episode-i-the-phantom-menace-recomp",
+      "ref": "ec95dfc7f6edf44adbc8e2f4a114e8a335ab0bf1"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Star Wars Episode I: The Phantom Menace.",
+  "homepage": "https://github.com/Alexbeav/star-wars-episode-i-the-phantom-menace-recomp",
+  "id": "star-wars-episode-i-the-phantom-menace-psx",
+  "install_dir_name": "star-wars-episode-i-the-phantom-menace-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Star_Wars_Episode_I__The_Phantom_Menace_Recompiled",
+    "macos": "Star_Wars_Episode_I__The_Phantom_Menace_Recompiled",
+    "windows": "Star_Wars_Episode_I__The_Phantom_Menace_Recompiled.exe"
+  },
+  "name": "Star Wars Episode I: The Phantom Menace",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/star-wars-episode-i-the-phantom-menace-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "7b7bbb11"
+    ],
+    "disc_serials": [
+      "SLES-02034"
+    ],
+    "filenames": [
+      "Star Wars - Episode I - The Phantom Menace (Europe).cue",
+      "Star Wars - Episode I - The Phantom Menace (Europe).bin"
+    ],
+    "md5": [
+      "42bee5c54967b84799674fdcb5b72294"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "e811ef4d2d65fcaae4625c7721be1ae2ec813bf9"
+    ],
+    "sha256": [
+      "f5fcb2c83ccf2425c393bfc4f132b73f7e8c132aa2919b988d79170ef5d45d6c"
+    ],
+    "sizes": [
+      675430896
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

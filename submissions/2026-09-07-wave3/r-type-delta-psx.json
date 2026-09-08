@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/r-type-delta-recomp",
+      "ref": "8aaf1f6f45c7c209b261b81f0de01060571bb340"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for R-Type Delta.",
+  "homepage": "https://github.com/Alexbeav/r-type-delta-recomp",
+  "id": "r-type-delta-psx",
+  "install_dir_name": "r-type-delta-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "R_Type_Delta_Recompiled",
+    "macos": "R_Type_Delta_Recompiled",
+    "windows": "R_Type_Delta_Recompiled.exe"
+  },
+  "name": "R-Type Delta",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/r-type-delta-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "0f2e538a"
+    ],
+    "disc_serials": [
+      "SLUS-00877"
+    ],
+    "filenames": [
+      "R-Type Delta (USA).cue",
+      "R-Type Delta (USA).bin"
+    ],
+    "md5": [
+      "37e64eafbf0a9bda92332d79f9a72e1e"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "33bec6c0f13de97d1fd5d2a5a35c6fca86242575"
+    ],
+    "sha256": [
+      "69c98c927c1fd8f696c470b53e55d789e8105f7d1e6d1ba2154fae17f3ceb0aa"
+    ],
+    "sizes": [
+      339381840
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

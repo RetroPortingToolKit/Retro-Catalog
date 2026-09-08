@@ -1,0 +1,233 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/fear-effect-recomp",
+      "ref": "667ac5ae96c735cc259c0c55afe6220bc47080d0"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Fear Effect.",
+  "homepage": "https://github.com/Alexbeav/fear-effect-recomp",
+  "id": "fear-effect-psx",
+  "install_dir_name": "fear-effect-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Fear_Effect_Recompiled",
+    "macos": "Fear_Effect_Recompiled",
+    "windows": "Fear_Effect_Recompiled.exe"
+  },
+  "name": "Fear Effect",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/fear-effect-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "0044d5f7",
+      "cb8e774f",
+      "fd0f561b",
+      "9853995e"
+    ],
+    "disc_serials": [
+      "SLUS-00920",
+      "SLUS-01056",
+      "SLUS-01057",
+      "SLUS-01058"
+    ],
+    "discs": [
+      {
+        "bin_name": "Fear Effect (USA) (Disc 1).bin",
+        "crc32": [
+          "0044d5f7"
+        ],
+        "cue_name": "Fear Effect (USA) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "e08b3a0d9694decd3ef9bc41c212bf1b"
+        ],
+        "serial": "SLUS-00920",
+        "sha1": [
+          "e96eb6d83dd890103b3d3511cb84da73adab2cde"
+        ],
+        "sha256": [
+          "735d72318f5076957aa6c51b523dfa2a4b3002d162f1725036475895e6dcfc98"
+        ],
+        "sizes": [
+          487435536
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Fear Effect (USA) (Disc 2).bin",
+        "crc32": [
+          "cb8e774f"
+        ],
+        "cue_name": "Fear Effect (USA) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "dff47ce1c1ec5a9c5a35820224486b22"
+        ],
+        "serial": "SLUS-01056",
+        "sha1": [
+          "0c2ffb3dd07ffb628b1fa69ca841cec141da11dd"
+        ],
+        "sha256": [
+          "178a0d89ab9530b176b6590dc6b0824fe8b230952648e875b564c6fafbd572cf"
+        ],
+        "sizes": [
+          505757616
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Fear Effect (USA) (Disc 3).bin",
+        "crc32": [
+          "fd0f561b"
+        ],
+        "cue_name": "Fear Effect (USA) (Disc 3).cue",
+        "index": 3,
+        "md5": [
+          "cd6fc71e6f452e1b4027250dd7d6d65c"
+        ],
+        "serial": "SLUS-01057",
+        "sha1": [
+          "a4205816f6486d8d1f5b97195370fd402003f983"
+        ],
+        "sha256": [
+          "c368bfee914453a19a6bf6df5ae0f376578a1b8d7687eb19a9e9948c48ad259d"
+        ],
+        "sizes": [
+          451666320
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Fear Effect (USA) (Disc 4).bin",
+        "crc32": [
+          "9853995e"
+        ],
+        "cue_name": "Fear Effect (USA) (Disc 4).cue",
+        "index": 4,
+        "md5": [
+          "e269350708617a92359ceef2d7838f3c"
+        ],
+        "serial": "SLUS-01058",
+        "sha1": [
+          "bc1762d51eb1e35b940ae304af6622e9d9eb989d"
+        ],
+        "sha256": [
+          "534254aca0e0c918a68f4496a80ef7f613b88384966baaf487bc2086e6be5f8c"
+        ],
+        "sizes": [
+          509955936
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "Fear Effect (USA) (Disc 1).cue",
+      "Fear Effect (USA) (Disc 1).bin",
+      "Fear Effect (USA) (Disc 2).cue",
+      "Fear Effect (USA) (Disc 2).bin",
+      "Fear Effect (USA) (Disc 3).cue",
+      "Fear Effect (USA) (Disc 3).bin",
+      "Fear Effect (USA) (Disc 4).cue",
+      "Fear Effect (USA) (Disc 4).bin"
+    ],
+    "md5": [
+      "e08b3a0d9694decd3ef9bc41c212bf1b",
+      "dff47ce1c1ec5a9c5a35820224486b22",
+      "cd6fc71e6f452e1b4027250dd7d6d65c",
+      "e269350708617a92359ceef2d7838f3c"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "e96eb6d83dd890103b3d3511cb84da73adab2cde",
+      "0c2ffb3dd07ffb628b1fa69ca841cec141da11dd",
+      "a4205816f6486d8d1f5b97195370fd402003f983",
+      "bc1762d51eb1e35b940ae304af6622e9d9eb989d"
+    ],
+    "sha256": [
+      "735d72318f5076957aa6c51b523dfa2a4b3002d162f1725036475895e6dcfc98",
+      "178a0d89ab9530b176b6590dc6b0824fe8b230952648e875b564c6fafbd572cf",
+      "c368bfee914453a19a6bf6df5ae0f376578a1b8d7687eb19a9e9948c48ad259d",
+      "534254aca0e0c918a68f4496a80ef7f613b88384966baaf487bc2086e6be5f8c"
+    ],
+    "sizes": [
+      487435536,
+      505757616,
+      451666320,
+      509955936
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. Setup starts with Disc 1. Later discs are selected when the game requests them; direct startup of every distinct later-disc program and connected disc transitions are not qualified by this packet. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/g-police-recomp",
+      "ref": "ea2cdee9c891a1804ab4fe2056aa6efa5cc299a8"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for G-Police.",
+  "homepage": "https://github.com/Alexbeav/g-police-recomp",
+  "id": "g-police-psx",
+  "install_dir_name": "g-police-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "G_Police_Recompiled",
+    "macos": "G_Police_Recompiled",
+    "windows": "G_Police_Recompiled.exe"
+  },
+  "name": "G-Police",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/g-police-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "f43ae67c",
+      "ef1a5c8b"
+    ],
+    "disc_serials": [
+      "SLUS-00544",
+      "SLUS-00556"
+    ],
+    "discs": [
+      {
+        "bin_name": "G-Police (USA) (Disc 1).bin",
+        "crc32": [
+          "f43ae67c"
+        ],
+        "cue_name": "G-Police (USA) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "3194807be261b7d6c06f3a9ae8052585"
+        ],
+        "serial": "SLUS-00544",
+        "sha1": [
+          "2161d2860914b21d2bee457b3eda9d8e816d04a2"
+        ],
+        "sha256": [
+          "7ff1fb9bb11da95bf4e8a7ddc02fd108006ec5989d53672ee98adcc935f3453f"
+        ],
+        "sizes": [
+          730742880
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "G-Police (USA) (Disc 2).bin",
+        "crc32": [
+          "ef1a5c8b"
+        ],
+        "cue_name": "G-Police (USA) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "d2432e57bb30a2caf02255a418e0ef5e"
+        ],
+        "serial": "SLUS-00556",
+        "sha1": [
+          "7f6ba87da62bbe565ba5603de462e3ed7c68429d"
+        ],
+        "sha256": [
+          "3b985c340fdd34c9e9ffa01cb40a9d9f6a84c35696f7e38090e9fcecda89ce1b"
+        ],
+        "sizes": [
+          728964768
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "G-Police (USA) (Disc 1).cue",
+      "G-Police (USA) (Disc 1).bin",
+      "G-Police (USA) (Disc 2).cue",
+      "G-Police (USA) (Disc 2).bin"
+    ],
+    "md5": [
+      "3194807be261b7d6c06f3a9ae8052585",
+      "d2432e57bb30a2caf02255a418e0ef5e"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "2161d2860914b21d2bee457b3eda9d8e816d04a2",
+      "7f6ba87da62bbe565ba5603de462e3ed7c68429d"
+    ],
+    "sha256": [
+      "7ff1fb9bb11da95bf4e8a7ddc02fd108006ec5989d53672ee98adcc935f3453f",
+      "3b985c340fdd34c9e9ffa01cb40a9d9f6a84c35696f7e38090e9fcecda89ce1b"
+    ],
+    "sizes": [
+      730742880,
+      728964768
+    ],
+    "track_counts": [
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}

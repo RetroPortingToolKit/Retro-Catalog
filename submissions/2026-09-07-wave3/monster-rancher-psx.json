@@ -1,0 +1,111 @@
+{
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "bios_identity": {
+    "crc32": [
+      "d786f0b9"
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "required": true,
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "Alexbeav/monster-rancher-recomp",
+      "ref": "1bcc152676386bb2b2cdd90c597cbf6f26a5fac2"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "TechnicallyComputers/retcomm-toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "A recompilation setup kit for Monster Rancher.",
+  "homepage": "https://github.com/Alexbeav/monster-rancher-recomp",
+  "id": "monster-rancher-psx",
+  "install_dir_name": "monster-rancher-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Monster_Rancher_Recompiled",
+    "macos": "Monster_Rancher_Recompiled",
+    "windows": "Monster_Rancher_Recompiled.exe"
+  },
+  "name": "Monster Rancher",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip",
+      "windows": "*windows-x64.zip"
+    },
+    "github": "Alexbeav/monster-rancher-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "b1b85026"
+    ],
+    "disc_serials": [
+      "SLUS-00568"
+    ],
+    "filenames": [
+      "Monster Rancher (USA).cue",
+      "Monster Rancher (USA) (Track 1).bin"
+    ],
+    "md5": [
+      "818415b73c39255ae0294e24aa4e19d7"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "e79b66e3f41e345b0f5487103629ba93ca56ce03"
+    ],
+    "sha256": [
+      "520fcb8a08d7d0797bc7a36e7d85627b11fbfb7d3f2497ab3d9c8cb6c6edbf16"
+    ],
+    "sizes": [
+      325022880
+    ],
+    "track_counts": [
+      2
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}
