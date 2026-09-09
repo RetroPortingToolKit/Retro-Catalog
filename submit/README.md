@@ -3,7 +3,7 @@
 Static GitHub Pages app for proposing new `titles/<platform>/<id>.json` entries.
 
 **Live URL (after Pages is enabled):**  
-https://technicallycomputers.github.io/retcomm-catalog/submit/
+https://retroportingtoolkit.github.io/Retro-Catalog/submit/
 
 ## What it does
 

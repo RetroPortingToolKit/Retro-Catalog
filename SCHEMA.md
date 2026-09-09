@@ -109,7 +109,7 @@ Title manifests may still set `bios_identity` to override the default, or
 | `build.source.github` | string | `owner/repo` for the source zipball (default: `release.github`) |
 | `build.source.ref` | string | Tag / branch / commit pin for the source archive |
 | `build.sdk` | object | Tools identity. Prefer harvesting emitters from the game release zip (`id` only). Optional `github` + `asset_glob.{linux,windows,macos}` remains a legacy fallback for a separate tools pack (e.g. snesrecomp). |
-| `build.toolchain` | object | Prefer downloading `cmake-clang-v1` via `github` + `asset_glob` into the shared cache (`id` required; typically `TechnicallyComputers/retcomm-toolchains`). Set `min_version` to a semver floor against `retcomm-toolchain.json` / release tag (catalog build titles currently require `1.0.3+`). Optional harvest of a legacy game-zip `toolchain/` when download is unavailable. Offline: `RETCOMM_TOOLCHAIN_DIR`. |
+| `build.toolchain` | object | Prefer downloading `cmake-clang-v1` via `github` + `asset_glob` into the shared cache (`id` required; typically `RetroPortingToolKit/RetroPorting-Toolchains`). Set `min_version` to a semver floor against `retcomm-toolchain.json` / release tag (catalog build titles currently require `1.0.3+`). Optional harvest of a legacy game-zip `toolchain/` when download is unavailable. Offline: `RETCOMM_TOOLCHAIN_DIR`. |
 | `build.generate` | object | Engine-specific generate args (see below) |
 | `build.cmake` | object | `build_dir`, `target`, `config` (Release) |
 | `install_dir_name` | string | Folder under `apps/` |
@@ -170,7 +170,7 @@ Omit the object for zip-only / third-party distribution. When present with
 when it vendors engine/UI trees — otherwise the GitHub zipball at
 `build.source.ref`), harvests tools from that zip when present (or downloads a
 legacy `build.sdk` tools pack), fetches a toolchain pack from
-[retcomm-toolchains](https://github.com/TechnicallyComputers/retcomm-toolchains),
+[retcomm-toolchains](https://github.com/RetroPortingToolKit/RetroPorting-Toolchains),
 runs the SDK CLI `generate` against the user's verified ROM/disc, then
 `cmake --build`, and stages the launch binary into `apps/…/current`.
 
@@ -199,7 +199,7 @@ the library ROM as `--rom` plus optional `--bios`.
   },
   "toolchain": {
     "id": "cmake-clang-v1",
-    "github": "TechnicallyComputers/retcomm-toolchains",
+    "github": "RetroPortingToolKit/RetroPorting-Toolchains",
     "min_version": "1.0.3",
     "asset_glob": {
       "linux": "*cmake-clang-v1*linux*",
@@ -273,7 +273,7 @@ cannot pass the library / Install gate.
 
 ## Adding a title
 
-**Preferred:** use the [submission form](https://technicallycomputers.github.io/retcomm-catalog/submit/)
+**Preferred:** use the [submission form](https://retroportingtoolkit.github.io/Retro-Catalog/submit/)
 (GitHub login). It asks for the platform first, auto-fills digests and release
 globs from the source repo, and opens a review issue. A maintainer with write
 access adds the **`approved`** label to merge `titles/<platform>/<id>.json`,

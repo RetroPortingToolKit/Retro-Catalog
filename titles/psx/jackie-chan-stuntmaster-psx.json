@@ -43,7 +43,7 @@
         "macos": "*cmake-clang-v1*macos*",
         "windows": "*cmake-clang-v1*windows*"
       },
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "id": "cmake-clang-v1",
       "min_version": "1.0.3"
     }

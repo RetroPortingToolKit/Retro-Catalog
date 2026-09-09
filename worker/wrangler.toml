@@ -6,14 +6,14 @@ compatibility_date = "2026-07-01"
 #   wrangler secret put GITHUB_CLIENT_ID
 #   wrangler secret put GITHUB_CLIENT_SECRET
 #   wrangler secret put SESSION_SECRET
-#   wrangler secret put GITHUB_TOKEN          # fine-grained PAT: issues write on retcomm-catalog
+#   wrangler secret put GITHUB_TOKEN          # fine-grained PAT: issues write on Retro-Catalog
 #   wrangler secret put RESEND_API_KEY       # https://resend.com
 # Optional vars below can also be secrets.
 
 [vars]
-CATALOG_REPO = "TechnicallyComputers/retcomm-catalog"
-PAGES_ORIGIN = "https://technicallycomputers.github.io"
+CATALOG_REPO = "RetroPortingToolKit/Retro-Catalog"
+PAGES_ORIGIN = "https://retroportingtoolkit.github.io"
 FROM_EMAIL = "RetComM Catalog <onboarding@resend.dev>"
 # Approvers = human entries in submit/contributors.json ∪ repo collaborators (see resolveApprovers).
-CONTRIBUTORS_URL = "https://raw.githubusercontent.com/TechnicallyComputers/retcomm-catalog/main/submit/contributors.json"
-BANNED_USERS_URL = "https://raw.githubusercontent.com/TechnicallyComputers/retcomm-catalog/main/submit/banned-users.json"
+CONTRIBUTORS_URL = "https://raw.githubusercontent.com/RetroPortingToolKit/Retro-Catalog/main/submit/contributors.json"
+BANNED_USERS_URL = "https://raw.githubusercontent.com/RetroPortingToolKit/Retro-Catalog/main/submit/banned-users.json"

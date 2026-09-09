@@ -80,7 +80,7 @@
     },
     "toolchain": {
       "id": "cmake-clang-v1",
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "min_version": "1.0.3",
       "asset_glob": {
         "linux": "*cmake-clang-v1*linux*",

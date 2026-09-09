@@ -7,6 +7,6 @@ export const CONFIG = {
   // Example: "https://retcomm-catalog-submit.<account>.workers.dev"
   API_BASE: "https://retcomm-catalog-submit.technicallycomputers.workers.dev",
   // Local: "http://127.0.0.1:8787"
-  CATALOG_REPO: "TechnicallyComputers/retcomm-catalog",
+  CATALOG_REPO: "RetroPortingToolKit/Retro-Catalog",
   SCHEMA_URL: "../SCHEMA.md",
 };
