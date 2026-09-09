@@ -13,7 +13,7 @@ compatibility_date = "2026-07-01"
 [vars]
 CATALOG_REPO = "RetroPortingToolKit/Retro-Catalog"
 PAGES_ORIGIN = "https://retroportingtoolkit.github.io"
-FROM_EMAIL = "RetComM Catalog <onboarding@resend.dev>"
+FROM_EMAIL = "Retro Catalog <onboarding@resend.dev>"
 # Approvers = human entries in submit/contributors.json ∪ repo collaborators (see resolveApprovers).
 CONTRIBUTORS_URL = "https://raw.githubusercontent.com/RetroPortingToolKit/Retro-Catalog/main/submit/contributors.json"
 BANNED_USERS_URL = "https://raw.githubusercontent.com/RetroPortingToolKit/Retro-Catalog/main/submit/banned-users.json"

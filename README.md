@@ -1,6 +1,6 @@
-# RetComM Catalog
+# Retro Catalog
 
-Official title catalog for [RetComM Launcher](https://github.com/RetroPortingToolKit/Retro-Launcher).
+Official title catalog for [Retro Launcher](https://github.com/RetroPortingToolKit/Retro-Launcher).
 
 JSON manifests listing supported recomp/decomp titles, ROM/BIOS identity, and
 GitHub release asset patterns. The launcher downloads this catalog independently
@@ -46,7 +46,7 @@ Ban abusers via [`submit/banned-users.json`](submit/banned-users.json).
 Catalog releases use **date/time tags** (`vYYYY.MM.DD.HHMMSS…`). Approving a
 submission or tagging `v*` / running **Publish catalog** stamps `catalog_date`
 (UTC ISO-8601) + `release_tag` into `index.json`, packs `catalog.zip`, and
-publishes a GitHub Release (not a draft). RetComM checks that release identity /
+publishes a GitHub Release (not a draft). Retro checks that release identity /
 stamp on startup and downloads the zip only when the remote catalog is newer:
 
 `https://github.com/RetroPortingToolKit/Retro-Catalog/releases/latest/download/catalog.zip`

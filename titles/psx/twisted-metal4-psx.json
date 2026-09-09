@@ -69,5 +69,5 @@
   "romm": {
     "platforms": ["ps", "psx", "ps1"]
   },
-  "notes": "Digests auto-extracted from README. RetComM Build & Install / Update / Generate & Rebuild own disc\u2192C (not the in-game wizard)."
+  "notes": "Digests auto-extracted from README. Retro Build & Install / Update / Generate & Rebuild own disc\u2192C (not the in-game wizard)."
 }

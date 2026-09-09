@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "name": "RetComM supported titles",
+  "name": "Retro supported titles",
   "platform_defaults": {
     "gba": {
       "bios_identity": {

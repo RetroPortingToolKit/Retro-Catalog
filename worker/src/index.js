@@ -1,5 +1,5 @@
 /**
- * RetComM catalog submission API (Cloudflare Worker).
+ * Retro catalog submission API (Cloudflare Worker).
  *
  * Routes:
  *   GET  /api/health
@@ -2179,7 +2179,7 @@ function normalizeManifest(m) {
     out.bios_identity = m.bios_identity;
   }
   if (m.build && m.build.enabled) {
-    // Pass through probe-inferred RetComM local-build recipe (validated lightly).
+    // Pass through probe-inferred Retro local-build recipe (validated lightly).
     const b = m.build;
     out.build = {
       enabled: true,
@@ -2487,8 +2487,8 @@ async function sendApproverEmail(
     };
   }
 
-  const from = env.FROM_EMAIL || "RetComM Catalog <onboarding@resend.dev>";
-  const subject = `[RetComM catalog] New submission: ${manifest.id} (@${submitter})`;
+  const from = env.FROM_EMAIL || "Retro Catalog <onboarding@resend.dev>";
+  const subject = `[Retro catalog] New submission: ${manifest.id} (@${submitter})`;
   const text = [
     `New catalog submission from GitHub user @${submitter}`,
     ``,
