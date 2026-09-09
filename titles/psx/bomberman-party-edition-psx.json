@@ -60,7 +60,7 @@
     },
     "toolchain": {
       "id": "cmake-clang-v1",
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "min_version": "1.0.14",
       "asset_glob": {
         "linux": "*cmake-clang-v1*linux*",
@@ -85,5 +85,5 @@
       "ps1"
     ]
   },
-  "notes": "Digests auto-extracted from README, DISC.md. RetComM Build & Install / Update / Generate & Rebuild own disc\u2192C (not the in-game wizard)."
+  "notes": "Digests auto-extracted from README, DISC.md. Retro Build & Install / Update / Generate & Rebuild own disc\u2192C (not the in-game wizard)."
 }

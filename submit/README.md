@@ -3,7 +3,7 @@
 Static GitHub Pages app for proposing new `titles/<platform>/<id>.json` entries.
 
 **Live URL (after Pages is enabled):**  
-https://technicallycomputers.github.io/retcomm-catalog/submit/
+https://retroportingtoolkit.github.io/Retro-Catalog/submit/
 
 ## What it does
 
@@ -14,7 +14,7 @@ https://technicallycomputers.github.io/retcomm-catalog/submit/
    of the form stays locked until a platform is chosen, and the choice is sent
    with the probe so the Worker never has to guess it from the README
 3. Probes a public recomp/decomp repo (`catalog_identity.json`, README, `DISC.md`, `game.toml`, `VERSION`, CMake, latest release assets; SNES ports also `rom_identity.txt`, `tools/regen.sh`, `scripts/package_release.sh`)
-4. Auto-fills a catalog manifest — marketing **description**, PSX `track_counts` / `require_cue`, **netplay** lobby fields, and a RetComM **build** recipe when applicable (psxrecomp one-zip, or snesrecomp generate + cmake); submitter can edit every field
+4. Auto-fills a catalog manifest — marketing **description**, PSX `track_counts` / `require_cue`, **netplay** lobby fields, and a Retro **build** recipe when applicable (psxrecomp one-zip, or snesrecomp generate + cmake); submitter can edit every field
 5. **Required** client-side ROM hashing under “Rom Checksum Submission” (file never uploaded; submit blocked until digests are generated). Cart platforms (SNES, GBA, …): one file drop, gated to the platform's extensions; SNES strips a 512-byte copier header first. PSX: two labeled slots — `.cue` (fills `track_counts` + expected Track&nbsp;01 name), then that first BINARY `.bin`. `.iso` / `.chd` are rejected
 6. On submit:
    - Opens a GitHub issue (label `catalog-submission`) assigned to human contributors

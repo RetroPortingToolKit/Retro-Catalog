@@ -13,7 +13,7 @@ const state = {
    * Worker bundles the same file, so form and API agree on what exists.
    */
   platformDefaults: null,
-  /** Probe-inferred RetComM build recipe (included when f_build_enabled). */
+  /** Probe-inferred Retro build recipe (included when f_build_enabled). */
   probedBuild: null,
   /** True after the user successfully hashed a local ROM/disc dump. */
   romChecksumDone: false,

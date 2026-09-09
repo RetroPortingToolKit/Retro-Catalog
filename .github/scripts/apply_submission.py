@@ -177,7 +177,7 @@ def register_in_index(tid: str, platform: str, *, moved_from: str | None) -> Non
     # Rebuild with a stable key order so diffs stay readable.
     out = {
         "schema_version": idx["schema_version"],
-        "name": idx.get("name", "RetComM supported titles"),
+        "name": idx.get("name", "Retro supported titles"),
     }
     if "platform_defaults" in idx:
         out["platform_defaults"] = idx["platform_defaults"]

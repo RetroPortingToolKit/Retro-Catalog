@@ -1,5 +1,5 @@
 {
-  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. RetComM v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The Europe release also needs its matching player-owned SBI file; select it with the disc in the setup picker. The focused launcher correction is submitted at https://github.com/TechnicallyComputers/RetComM-Launcher/pull/5; submission does not mean it is merged or distributed.",
+  "author_notes": "Supply the complete listed Redump CUE/BIN set and your own SCPH5552 BIOS dump. Netplay is not qualified. Native Linux and macOS owned-input setup and gameplay remain unverified. Retro v0.6.36 still has a recorded SCPH5552 generated-source detection limitation; its automatic build can stop after generation. The Europe release also needs its matching player-owned SBI file; select it with the disc in the setup picker. The focused launcher correction is submitted at https://github.com/RetroPortingToolKit/Retro-Launcher/pull/5; submission does not mean it is merged or distributed.",
   "bios_identity": {
     "crc32": [
       "d786f0b9"
@@ -43,7 +43,7 @@
         "macos": "*cmake-clang-v1*macos*",
         "windows": "*cmake-clang-v1*windows*"
       },
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "id": "cmake-clang-v1",
       "min_version": "1.0.3"
     }

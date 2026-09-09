@@ -1,5 +1,5 @@
 /**
- * RetComM catalog submission API (Cloudflare Worker).
+ * Retro catalog submission API (Cloudflare Worker).
  *
  * Routes:
  *   GET  /api/health
@@ -103,7 +103,7 @@ function allowedOrigin(request, env) {
     .filter(Boolean);
   const allow = new Set([
     pages,
-    `${pages}/retcomm-catalog`,
+    `${pages}/Retro-Catalog`,
     "http://localhost:8787",
     "http://127.0.0.1:8787",
     "http://localhost:5500",
@@ -265,7 +265,7 @@ async function requireUser(request, env) {
 
 function pagesReturnUrl(env, next) {
   const base = (env.PAGES_ORIGIN || "").replace(/\/$/, "");
-  const path = env.PAGES_PATH || "/retcomm-catalog/submit/";
+  const path = env.PAGES_PATH || "/Retro-Catalog/submit/";
   const url = new URL(path, base + "/");
   if (next) url.searchParams.set("next", next);
   return url.toString();
@@ -1499,7 +1499,7 @@ function inferPsxBuildRecipe(slug, launchLinux) {
     },
     toolchain: {
       id: "cmake-clang-v1",
-      github: "TechnicallyComputers/retcomm-toolchains",
+      github: "RetroPortingToolKit/RetroPorting-Toolchains",
       min_version: "1.0.3",
       asset_glob: {
         linux: "*cmake-clang-v1*linux*",
@@ -1534,7 +1534,7 @@ function inferSnesBuildRecipe(slug, target, regen) {
     sdk: { id: "snesrecomp-tools" },
     toolchain: {
       id: "cmake-clang-v1",
-      github: "TechnicallyComputers/retcomm-toolchains",
+      github: "RetroPortingToolKit/RetroPorting-Toolchains",
       min_version: "1.0.3",
       asset_glob: {
         linux: "*cmake-clang-v1*linux*",
@@ -2179,7 +2179,7 @@ function normalizeManifest(m) {
     out.bios_identity = m.bios_identity;
   }
   if (m.build && m.build.enabled) {
-    // Pass through probe-inferred RetComM local-build recipe (validated lightly).
+    // Pass through probe-inferred Retro local-build recipe (validated lightly).
     const b = m.build;
     out.build = {
       enabled: true,
@@ -2226,7 +2226,7 @@ async function submit(request, env) {
     );
   }
 
-  const catalogRepo = env.CATALOG_REPO || "TechnicallyComputers/retcomm-catalog";
+  const catalogRepo = env.CATALOG_REPO || "RetroPortingToolKit/Retro-Catalog";
   const approvers = await resolveApprovers(env, catalogRepo);
   // GitHub allows at most 10 assignees per issue.
   const assignees = approvers.logins.slice(0, 10);
@@ -2487,8 +2487,8 @@ async function sendApproverEmail(
     };
   }
 
-  const from = env.FROM_EMAIL || "RetComM Catalog <onboarding@resend.dev>";
-  const subject = `[RetComM catalog] New submission: ${manifest.id} (@${submitter})`;
+  const from = env.FROM_EMAIL || "Retro Catalog <onboarding@resend.dev>";
+  const subject = `[Retro catalog] New submission: ${manifest.id} (@${submitter})`;
   const text = [
     `New catalog submission from GitHub user @${submitter}`,
     ``,

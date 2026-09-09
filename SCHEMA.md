@@ -1,6 +1,6 @@
 # Catalog schema
 
-RetComM ships a directory of JSON manifests. `index.json` registers the
+Retro ships a directory of JSON manifests. `index.json` registers the
 platforms and lists title ids per platform; each
 `titles/<platform>/<id>.json` describes one supported recomp/decomp.
 
@@ -27,7 +27,7 @@ fall back to `titles/<id>.json`.
 ```json
 {
   "schema_version": 2,
-  "name": "RetComM supported titles",
+  "name": "Retro supported titles",
   "platform_defaults": {
     "gba": { "bios_identity": { "required": true, "crc32": ["81977335"], "…": "…" } },
     "psx": { "bios_identity": { "required": true, "crc32": ["37157331"], "…": "…" } }
@@ -86,7 +86,7 @@ Title manifests may still set `bios_identity` to override the default, or
 | `rom_identity.sizes` | number[] | Optional byte lengths; when set, scan only hashes files of those sizes (disc dumps) |
 | `rom_identity.filenames` | string[] | Suggested basenames for the hub when unmatched (No-Intro / Redump); search hints, not hard matching |
 | `rom_identity.track_counts` | number[] | Optional exact cue `TRACK` counts (e.g. MotK Redump = `[17]`). Digests prove the data track; this proves full multi-track TOC. Empty / omit = no TOC gate |
-| `rom_identity.require_cue` | bool | When `true`, RetComM requires a `.cue` bind (auto-true when any `track_counts` entry is `> 1`). PSX titles use `.cue` + `.bin` — not `.iso`/`.chd`. A self-contained `.car` image (official re-releases, e.g. Steam Tomba!'s `t_data_u.car`) also satisfies the cue requirement for single-track titles: it is the whole disc in one file |
+| `rom_identity.require_cue` | bool | When `true`, Retro requires a `.cue` bind (auto-true when any `track_counts` entry is `> 1`). PSX titles use `.cue` + `.bin` — not `.iso`/`.chd`. A self-contained `.car` image (official re-releases, e.g. Steam Tomba!'s `t_data_u.car`) also satisfies the cue requirement for single-track titles: it is the whole disc in one file |
 | `rom_identity.discs` | object[] | **Multi-disc sets only** (2+ entries). One entry per disc, each with its own digests. Every disc listed is required to own the title. Omit for single-disc titles |
 | `rom_identity.discs[].index` | number | 1-based disc number; unique within the array |
 | `rom_identity.discs[].serial` | string | That disc's own serial (each disc of a set differs, e.g. `SCUS-94163` / `-64` / `-65`) |
@@ -104,12 +104,12 @@ Title manifests may still set `bios_identity` to override the default, or
 | `release.github` | string | `owner/repo` |
 | `release.allow_prerelease` | bool | Allow GitHub pre-releases when no stable latest exists |
 | `release.asset_glob` | object | Per-OS glob: `linux`, `windows`, `macos`. Prefer a pattern from the real asset name (`bpe-*linux*`, `*win64*`, …). The launcher treats Windows/Linux/macOS synonyms as matches and deprioritizes `*tools*` assets for non-tools globs. |
-| `build` | object | Optional local generate + cmake recipe. When `enabled`, RetComM **Install** prefers this path; omit for third-party zip-only titles. |
+| `build` | object | Optional local generate + cmake recipe. When `enabled`, Retro **Install** prefers this path; omit for third-party zip-only titles. |
 | `build.enabled` | bool | Primary install uses generate + toolchain packs |
 | `build.source.github` | string | `owner/repo` for the source zipball (default: `release.github`) |
 | `build.source.ref` | string | Tag / branch / commit pin for the source archive |
 | `build.sdk` | object | Tools identity. Prefer harvesting emitters from the game release zip (`id` only). Optional `github` + `asset_glob.{linux,windows,macos}` remains a legacy fallback for a separate tools pack (e.g. snesrecomp). |
-| `build.toolchain` | object | Prefer downloading `cmake-clang-v1` via `github` + `asset_glob` into the shared cache (`id` required; typically `TechnicallyComputers/retcomm-toolchains`). Set `min_version` to a semver floor against `retcomm-toolchain.json` / release tag (catalog build titles currently require `1.0.3+`). Optional harvest of a legacy game-zip `toolchain/` when download is unavailable. Offline: `RETCOMM_TOOLCHAIN_DIR`. |
+| `build.toolchain` | object | Prefer downloading `cmake-clang-v1` via `github` + `asset_glob` into the shared cache (`id` required; typically `RetroPortingToolKit/RetroPorting-Toolchains`). Set `min_version` to a semver floor against `retcomm-toolchain.json` / release tag (catalog build titles currently require `1.0.3+`). Optional harvest of a legacy game-zip `toolchain/` when download is unavailable. Offline: `RETCOMM_TOOLCHAIN_DIR`. |
 | `build.generate` | object | Engine-specific generate args (see below) |
 | `build.cmake` | object | `build_dir`, `target`, `config` (Release) |
 | `install_dir_name` | string | Folder under `apps/` |
@@ -160,17 +160,17 @@ metadata only pre-fills the form — the submitter still hashes every disc
 locally, since repo metadata is not proof of ownership.
 
 Identity should mirror what each game passes into `recomp-ui`
-(`known_sha1_hex` / `expected_crc` / MD5 tables / disc verify) so RetComM and
+(`known_sha1_hex` / `expected_crc` / MD5 tables / disc verify) so Retro and
 the game agree on “verified.”
 
 ### `build` (local generate + cmake)
 
 Omit the object for zip-only / third-party distribution. When present with
-`enabled: true`, RetComM obtains game source (preferring the host **release zip**
+`enabled: true`, Retro obtains game source (preferring the host **release zip**
 when it vendors engine/UI trees — otherwise the GitHub zipball at
 `build.source.ref`), harvests tools from that zip when present (or downloads a
 legacy `build.sdk` tools pack), fetches a toolchain pack from
-[retcomm-toolchains](https://github.com/TechnicallyComputers/retcomm-toolchains),
+[retcomm-toolchains](https://github.com/RetroPortingToolKit/RetroPorting-Toolchains),
 runs the SDK CLI `generate` against the user's verified ROM/disc, then
 `cmake --build`, and stages the launch binary into `apps/…/current`.
 
@@ -199,7 +199,7 @@ the library ROM as `--rom` plus optional `--bios`.
   },
   "toolchain": {
     "id": "cmake-clang-v1",
-    "github": "TechnicallyComputers/retcomm-toolchains",
+    "github": "RetroPortingToolKit/RetroPorting-Toolchains",
     "min_version": "1.0.3",
     "asset_glob": {
       "linux": "*cmake-clang-v1*linux*",
@@ -228,7 +228,7 @@ artifacts. Keep `rom_identity` digests aligned with the game's generate gate.
 ### `netplay` (recomp-net)
 
 Omit the object entirely when unsupported. When present with
-`supported: true`, RetComM may list the title in the multi-game lobby browser.
+`supported: true`, Retro may list the title in the multi-game lobby browser.
 Rooms are still keyed by `game_name` + `game_version` on the lobby server —
 peers must match exactly.
 
@@ -273,7 +273,7 @@ cannot pass the library / Install gate.
 
 ## Adding a title
 
-**Preferred:** use the [submission form](https://technicallycomputers.github.io/retcomm-catalog/submit/)
+**Preferred:** use the [submission form](https://retroportingtoolkit.github.io/Retro-Catalog/submit/)
 (GitHub login). It asks for the platform first, auto-fills digests and release
 globs from the source repo, and opens a review issue. A maintainer with write
 access adds the **`approved`** label to merge `titles/<platform>/<id>.json`,

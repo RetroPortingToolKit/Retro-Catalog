@@ -1,5 +1,5 @@
 {
-  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5552 BIOS dump. Additional RetComM installation, gameplay and relaunch tests were waived for this submission. Native Linux/macOS use and disc swaps remain unverified. The current macOS packages contain generators targeting macOS 15 and require external Homebrew SDL3. RetComM v0.6.35 has a known SCPH5552 generated-source detection limitation; automatic installation can stop after generation.",
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5552 BIOS dump. Additional Retro installation, gameplay and relaunch tests were waived for this submission. Native Linux/macOS use and disc swaps remain unverified. The current macOS packages contain generators targeting macOS 15 and require external Homebrew SDL3. Retro v0.6.35 has a known SCPH5552 generated-source detection limitation; automatic installation can stop after generation.",
   "bios_identity": {
     "required": true,
     "crc32": [
@@ -43,7 +43,7 @@
         "macos": "*cmake-clang-v1*macos*",
         "windows": "*cmake-clang-v1*windows*"
       },
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "id": "cmake-clang-v1",
       "min_version": "1.0.3"
     }

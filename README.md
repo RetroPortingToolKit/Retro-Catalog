@@ -1,6 +1,6 @@
-# RetComM Catalog
+# Retro Catalog
 
-Official title catalog for [RetComM Launcher](https://github.com/TechnicallyComputers/RetComM-Launcher).
+Official title catalog for [Retro Launcher](https://github.com/RetroPortingToolKit/Retro-Launcher).
 
 JSON manifests listing supported recomp/decomp titles, ROM/BIOS identity, and
 GitHub release asset patterns. The launcher downloads this catalog independently
@@ -28,7 +28,7 @@ readers that only want ids.
 
 ## Propose a title
 
-Use the [submission form](https://technicallycomputers.github.io/retcomm-catalog/submit/)
+Use the [submission form](https://retroportingtoolkit.github.io/Retro-Catalog/submit/)
 (GitHub login required). It asks for the platform first (PSX, SNES, …), probes
 the source repo for digests/release assets,
 lets you complete or override fields, then opens an approval issue and emails
@@ -46,10 +46,10 @@ Ban abusers via [`submit/banned-users.json`](submit/banned-users.json).
 Catalog releases use **date/time tags** (`vYYYY.MM.DD.HHMMSS…`). Approving a
 submission or tagging `v*` / running **Publish catalog** stamps `catalog_date`
 (UTC ISO-8601) + `release_tag` into `index.json`, packs `catalog.zip`, and
-publishes a GitHub Release (not a draft). RetComM checks that release identity /
+publishes a GitHub Release (not a draft). Retro checks that release identity /
 stamp on startup and downloads the zip only when the remote catalog is newer:
 
-`https://github.com/TechnicallyComputers/retcomm-catalog/releases/latest/download/catalog.zip`
+`https://github.com/RetroPortingToolKit/Retro-Catalog/releases/latest/download/catalog.zip`
 
 ## Local check
 

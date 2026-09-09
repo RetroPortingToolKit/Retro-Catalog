@@ -50,7 +50,7 @@
     "transports": ["lan", "ice"],
     "match_caps_schema": "psx-v1"
   },
-  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc]. RetComM Install / Update / Generate & Rebuild own disc→C (release zip is source, not a Play shortcut).",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc]. Retro Install / Update / Generate & Rebuild own disc→C (release zip is source, not a Play shortcut).",
   "build": {
     "enabled": true,
     "source": {
@@ -59,7 +59,7 @@
     },
     "toolchain": {
       "id": "cmake-clang-v1",
-      "github": "TechnicallyComputers/retcomm-toolchains",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
       "min_version": "1.0.14",
       "asset_glob": {
         "linux": "*cmake-clang-v1*linux*",

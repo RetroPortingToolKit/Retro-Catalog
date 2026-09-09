@@ -24,7 +24,7 @@ it they still get GitHub issue notifications when assigned.
 
 1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**
 2. Merge/push so [`.github/workflows/pages.yml`](../.github/workflows/pages.yml) runs
-3. Confirm: https://technicallycomputers.github.io/retcomm-catalog/submit/
+3. Confirm: https://retroportingtoolkit.github.io/Retro-Catalog/submit/
 
 ## 2. Create labels
 
@@ -32,7 +32,7 @@ These labels are created automatically by the approve workflow and (when the
 Worker token allows) by the submit Worker. You can also seed them once:
 
 ```sh
-export GITHUB_REPOSITORY=TechnicallyComputers/retcomm-catalog
+export GITHUB_REPOSITORY=RetroPortingToolKit/Retro-Catalog
 bash .github/scripts/ensure_submission_labels.sh
 ```
 
@@ -48,7 +48,7 @@ Rejecting a submission is just closing the issue (no special label).
 ## 3. GitHub OAuth App
 
 1. GitHub → **Settings → Developer settings → OAuth Apps → New**
-2. **Homepage URL:** `https://technicallycomputers.github.io/retcomm-catalog/submit/`
+2. **Homepage URL:** `https://retroportingtoolkit.github.io/Retro-Catalog/submit/`
 3. **Authorization callback URL:**  
    `https://retcomm-catalog-submit.<subdomain>.workers.dev/auth/callback`  
    (use your real Worker URL after the first deploy)
@@ -58,7 +58,7 @@ Rejecting a submission is just closing the issue (no special label).
 
 Create a fine-grained PAT (or classic with `repo` scope) that can:
 
-- Create issues on `TechnicallyComputers/retcomm-catalog`
+- Create issues on `RetroPortingToolKit/Retro-Catalog`
 - Assign collaborators on issues
 - Read collaborators (for the human-approver merge)
 
@@ -87,7 +87,7 @@ Edit [`worker/wrangler.toml`](../worker/wrangler.toml) vars if needed:
 
 | Var | Purpose |
 |---|---|
-| `PAGES_ORIGIN` | `https://technicallycomputers.github.io` |
+| `PAGES_ORIGIN` | `https://retroportingtoolkit.github.io` |
 | `FROM_EMAIL` | Verified Resend sender |
 | `CONTRIBUTORS_URL` | Raw URL of `submit/contributors.json` |
 | `BANNED_USERS_URL` | Raw URL of `submit/banned-users.json` |
