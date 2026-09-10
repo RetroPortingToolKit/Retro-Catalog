@@ -13,8 +13,8 @@ Checks (all fatal):
     the legacy flat location titles/<id>.json
   - `parked` ids (unlisted on purpose) name a manifest that exists on disk and
     do NOT appear in any published list
-  - every manifest carries a non-empty `launch` name for linux, windows and
-    macos
+  - every OS a manifest can install on (`release.asset_glob.<os>` set) also
+    names the executable to launch (`launch.<os>`)
 
 Run from anywhere: paths resolve relative to the repo root.
 """
@@ -45,28 +45,36 @@ LAUNCH_OSES = ("linux", "windows", "macos")
 
 
 def launch_errors(rel: Path, manifest: dict) -> list[str]:
-    """`launch.<os>` must name the executable the build actually produces.
+    """An installable OS must also say what to launch.
 
-    An empty string is not "unsupported here" to any reader: the launcher asks
-    for the host's name, gets "", and only finds out when staging looks for a
-    file called "" -- after a full generate + compile has already succeeded.
-    The build is then discarded and the hub reports the install folder as
-    having no launch binary, while the exe sits in the build tree working fine.
-    Cheaper to refuse the manifest.
+    `launch.<os>` names the executable the build produces, and staging looks for
+    exactly that file once the build finishes. An empty one is fine on an OS the
+    title does not ship for -- a Windows-only kit leaves linux/macos blank in
+    both `asset_glob` and `launch`, and supports_local_build() then declines it
+    up front. What must never happen is `asset_glob.<os>` set with `launch.<os>`
+    blank: the launcher accepts the install, generates and compiles the whole
+    title, and only then asks staging to find a file called "" -- discarding a
+    working build and reporting the install folder as having no launch binary.
     """
     launch = manifest.get("launch")
     if not isinstance(launch, dict):
         return [f"{rel}: `launch` object is required"]
+    globs = (manifest.get("release") or {}).get("asset_glob") or {}
     out = []
     for os_ in LAUNCH_OSES:
         if os_ not in launch:
-            out.append(f"{rel}: launch.{os_} is required")
-        elif not isinstance(launch[os_], str) or not launch[os_].strip():
+            out.append(f"{rel}: launch.{os_} is required (may be \"\" if not shipped)")
+            continue
+        name = launch[os_]
+        if not isinstance(name, str):
+            out.append(f"{rel}: launch.{os_} must be a string")
+        elif not name.strip() and str(globs.get(os_) or "").strip():
             out.append(
-                f"{rel}: launch.{os_} is empty -- name the executable the build "
-                f"produces (psxrecomp uses EXE_NAME, else MAKE_C_IDENTIFIER of "
-                f"WINDOW_TITLE; every other title's linux name is its windows "
-                f"name without '.exe')"
+                f"{rel}: release.asset_glob.{os_} is set but launch.{os_} is empty "
+                f"-- name the executable the build produces (psxrecomp uses "
+                f"EXE_NAME, else MAKE_C_IDENTIFIER of WINDOW_TITLE; every title "
+                f"here uses its windows name without '.exe'), or clear "
+                f"asset_glob.{os_} if the title does not ship for {os_}"
             )
     return out
 

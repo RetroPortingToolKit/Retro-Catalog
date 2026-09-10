@@ -134,7 +134,7 @@ Title manifests may still set `bios_identity` to override the default, or
 | `build.generate` | object | Engine-specific generate args (see below) |
 | `build.cmake` | object | `build_dir`, `target`, `config` (Release) |
 | `install_dir_name` | string | Folder under `apps/` |
-| `launch` | object | Relative binary names: `linux`, `windows`, `macos`. All three are **required and must be non-empty** — see below |
+| `launch` | object | Relative binary names: `linux`, `windows`, `macos`. All three keys required; `""` means the title does not ship for that OS — see below |
 | `romm` | object | Optional match hints |
 | `romm.platforms` | string[] | RomM platform slugs |
 | `romm.igdb_ids` | number[] | Optional |
@@ -156,20 +156,23 @@ algorithm their gate uses).
 
 ### `launch` names
 
-All three of `launch.linux`, `launch.windows` and `launch.macos` are required
-and must be non-empty; `validate_catalog.py` rejects a blank one. It names the
-executable the build actually produces, and staging looks for exactly that file
-once the build finishes. A blank value is not read as "unsupported on this OS":
-the launcher asks for the host's name, gets `""`, generates and compiles the
-whole title successfully, then fails while staging a file called `""` — leaving
-a working executable in the build tree and an install folder the hub reports as
-having no launch binary.
+All three of `launch.linux`, `launch.windows` and `launch.macos` must be
+present. `""` is a valid value and means the title does not ship for that OS —
+a Windows-only setup kit leaves `linux` and `macos` blank in both `launch` and
+`release.asset_glob`, and the launcher declines it on those hosts up front.
+
+What `validate_catalog.py` rejects is the mismatched pair: `asset_glob.<os>`
+set while `launch.<os>` is blank. That combination makes the launcher accept
+the install, generate and compile the entire title, and only then ask staging
+to find a file named `""` — discarding a working build and reporting the
+install folder as having no launch binary, with the executable sitting in the
+build tree running fine by hand.
 
 For a psxrecomp port the name is the `EXE_NAME` passed to
-`psxrecomp_add_game_runtime`, or — when the port does not pass one —
-CMake's `MAKE_C_IDENTIFIER` of its `WINDOW_TITLE` (each non-alphanumeric
-character becomes `_`). In practice the Linux and macOS names are the Windows
-name without `.exe`, which holds for every title in this catalog.
+`psxrecomp_add_game_runtime`, or — when the port does not pass one — CMake's
+`MAKE_C_IDENTIFIER` of its `WINDOW_TITLE` (each non-alphanumeric character
+becomes `_`). In practice the Linux and macOS names are the Windows name
+without `.exe`, which holds for every title in this catalog.
 
 ### Multi-disc titles
 
