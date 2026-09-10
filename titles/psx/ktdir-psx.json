@@ -47,9 +47,9 @@
   },
   "install_dir_name": "KTDIR",
   "launch": {
-    "linux": "",
+    "linux": "Kileak__The_DNA_Imperative_Recompiled",
     "windows": "Kileak__The_DNA_Imperative_Recompiled.exe",
-    "macos": ""
+    "macos": "Kileak__The_DNA_Imperative_Recompiled"
   },
   "romm": {
     "platforms": [

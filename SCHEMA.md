@@ -134,7 +134,7 @@ Title manifests may still set `bios_identity` to override the default, or
 | `build.generate` | object | Engine-specific generate args (see below) |
 | `build.cmake` | object | `build_dir`, `target`, `config` (Release) |
 | `install_dir_name` | string | Folder under `apps/` |
-| `launch` | object | Relative binary names: `linux`, `windows`, `macos` |
+| `launch` | object | Relative binary names: `linux`, `windows`, `macos`. All three are **required and must be non-empty** — see below |
 | `romm` | object | Optional match hints |
 | `romm.platforms` | string[] | RomM platform slugs |
 | `romm.igdb_ids` | number[] | Optional |
@@ -153,6 +153,23 @@ A title is considered to have a ROM identity when **any** of `crc32`, `md5`,
 `sha1`, `sha256`, or `disc_serials` is non-empty. Matching succeeds if **any**
 configured digest matches the scanned file (authors may publish only the
 algorithm their gate uses).
+
+### `launch` names
+
+All three of `launch.linux`, `launch.windows` and `launch.macos` are required
+and must be non-empty; `validate_catalog.py` rejects a blank one. It names the
+executable the build actually produces, and staging looks for exactly that file
+once the build finishes. A blank value is not read as "unsupported on this OS":
+the launcher asks for the host's name, gets `""`, generates and compiles the
+whole title successfully, then fails while staging a file called `""` — leaving
+a working executable in the build tree and an install folder the hub reports as
+having no launch binary.
+
+For a psxrecomp port the name is the `EXE_NAME` passed to
+`psxrecomp_add_game_runtime`, or — when the port does not pass one —
+CMake's `MAKE_C_IDENTIFIER` of its `WINDOW_TITLE` (each non-alphanumeric
+character becomes `_`). In practice the Linux and macOS names are the Windows
+name without `.exe`, which holds for every title in this catalog.
 
 ### Multi-disc titles
 

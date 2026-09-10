@@ -47,9 +47,9 @@
   },
   "install_dir_name": "PuyoPuyoBoxRecomp",
   "launch": {
-    "linux": "",
+    "linux": "PuyoPuyoBox_Recompiled",
     "windows": "PuyoPuyoBox_Recompiled.exe",
-    "macos": ""
+    "macos": "PuyoPuyoBox_Recompiled"
   },
   "romm": {
     "platforms": [

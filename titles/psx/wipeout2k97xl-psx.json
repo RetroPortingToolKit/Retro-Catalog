@@ -49,9 +49,9 @@
   },
   "install_dir_name": "Wipeout2K97XL",
   "launch": {
-    "linux": "",
+    "linux": "Wipeout2K97XL",
     "windows": "Wipeout2K97XL.exe",
-    "macos": ""
+    "macos": "Wipeout2K97XL"
   },
   "romm": {
     "platforms": [

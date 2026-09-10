@@ -13,6 +13,8 @@ Checks (all fatal):
     the legacy flat location titles/<id>.json
   - `parked` ids (unlisted on purpose) name a manifest that exists on disk and
     do NOT appear in any published list
+  - every manifest carries a non-empty `launch` name for linux, windows and
+    macos
 
 Run from anywhere: paths resolve relative to the repo root.
 """
@@ -37,6 +39,36 @@ def load_json(path: Path):
         return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         raise SystemExit(f"{path.relative_to(ROOT)}: invalid JSON: {e}") from e
+
+
+LAUNCH_OSES = ("linux", "windows", "macos")
+
+
+def launch_errors(rel: Path, manifest: dict) -> list[str]:
+    """`launch.<os>` must name the executable the build actually produces.
+
+    An empty string is not "unsupported here" to any reader: the launcher asks
+    for the host's name, gets "", and only finds out when staging looks for a
+    file called "" -- after a full generate + compile has already succeeded.
+    The build is then discarded and the hub reports the install folder as
+    having no launch binary, while the exe sits in the build tree working fine.
+    Cheaper to refuse the manifest.
+    """
+    launch = manifest.get("launch")
+    if not isinstance(launch, dict):
+        return [f"{rel}: `launch` object is required"]
+    out = []
+    for os_ in LAUNCH_OSES:
+        if os_ not in launch:
+            out.append(f"{rel}: launch.{os_} is required")
+        elif not isinstance(launch[os_], str) or not launch[os_].strip():
+            out.append(
+                f"{rel}: launch.{os_} is empty -- name the executable the build "
+                f"produces (psxrecomp uses EXE_NAME, else MAKE_C_IDENTIFIER of "
+                f"WINDOW_TITLE; every other title's linux name is its windows "
+                f"name without '.exe')"
+            )
+    return out
 
 
 def main() -> None:
@@ -95,6 +127,7 @@ def main() -> None:
                 errors.append(
                     f"{rel}: manifest platform {m.get('platform')!r} != folder platform {plat!r}"
                 )
+            errors.extend(launch_errors(rel, m))
 
     # Parked: a manifest kept on disk (and in catalog.zip) but deliberately
     # left out of the published lists, so no launcher offers it. Withdrawing a
@@ -126,6 +159,10 @@ def main() -> None:
                     errors.append(f"parked.titles.{tid}: manifest {str(rel)!r} not on disk")
                     continue
                 parked_rel.add(rel)
+                # Held to the same manifest rules as a listed title, so a park
+                # is a pause and not a place for a broken manifest to hide
+                # until someone un-parks it.
+                errors.extend(launch_errors(rel, load_json(ROOT / rel)))
 
     flat = idx.get("titles")
     if not isinstance(flat, list):
