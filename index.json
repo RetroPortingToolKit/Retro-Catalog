@@ -82,7 +82,6 @@
         "brave-fencer-musashi-psx",
         "colin-mcrae-rally-2-0-psx",
         "destruction-derby-2-psx",
-        "diablo-psx",
         "die-hard-trilogy-psx",
         "digimon-world-2003-psx",
         "driver-psx",
@@ -95,8 +94,6 @@
         "kings-field-psx",
         "koudelka-psx",
         "kula-world-psx",
-        "legacy-of-kain-soul-reaver-psx",
-        "mdk-psx",
         "medievil-ii-psx",
         "medievil-psx",
         "mega-man-legends-psx",
@@ -106,7 +103,6 @@
         "oddworld-abe-s-oddysee-psx",
         "parasite-eve-psx",
         "quake-ii-psx",
-        "spyro-the-dragon-psx",
         "syphon-filter-3-psx",
         "tenchu-stealth-assassins-psx",
         "the-lost-world-jurassic-park-special-edition-psx",
@@ -116,34 +112,7 @@
         "tony-hawk-s-pro-skater-4-psx",
         "tony-hawk-s-pro-skater-psx",
         "vampire-hunter-d-psx",
-        "vigilante-8-psx",
-        "wipeout-psx",
-        "apocalypse-psx",
-        "colony-wars-psx",
-        "crash-bandicoot-3-warped-psx",
-        "dino-crisis-psx",
-        "dino-crisis-2-psx",
-        "fear-effect-psx",
-        "final-fantasy-ix-psx",
-        "final-fantasy-viii-psx",
-        "g-police-psx",
-        "ghost-in-the-shell-psx",
-        "martian-gothic-psx",
-        "metal-gear-solid-psx",
-        "monster-rancher-psx",
-        "mortal-kombat-trilogy-psx",
-        "pro-pinball-timeshock-psx",
-        "r-type-delta-psx",
-        "resident-evil-3-psx",
-        "silent-bomber-psx",
-        "spider-man-psx",
-        "star-wars-episode-i-the-phantom-menace-psx",
-        "suikoden-psx",
-        "the-fifth-element-psx",
-        "threads-of-fate-psx",
-        "tokyo-highway-battle-psx",
-        "vib-ribbon-psx",
-        "wipeout-xl-psx"
+        "vigilante-8-psx"
       ]
     },
     "snes": {
@@ -187,7 +156,6 @@
     "brave-fencer-musashi-psx",
     "colin-mcrae-rally-2-0-psx",
     "destruction-derby-2-psx",
-    "diablo-psx",
     "die-hard-trilogy-psx",
     "digimon-world-2003-psx",
     "driver-psx",
@@ -200,8 +168,6 @@
     "kings-field-psx",
     "koudelka-psx",
     "kula-world-psx",
-    "legacy-of-kain-soul-reaver-psx",
-    "mdk-psx",
     "medievil-ii-psx",
     "medievil-psx",
     "mega-man-legends-psx",
@@ -211,7 +177,6 @@
     "oddworld-abe-s-oddysee-psx",
     "parasite-eve-psx",
     "quake-ii-psx",
-    "spyro-the-dragon-psx",
     "syphon-filter-3-psx",
     "tenchu-stealth-assassins-psx",
     "the-lost-world-jurassic-park-special-edition-psx",
@@ -222,37 +187,10 @@
     "tony-hawk-s-pro-skater-psx",
     "vampire-hunter-d-psx",
     "vigilante-8-psx",
-    "wipeout-psx",
-    "apocalypse-psx",
-    "colony-wars-psx",
-    "crash-bandicoot-3-warped-psx",
-    "dino-crisis-psx",
-    "dino-crisis-2-psx",
-    "fear-effect-psx",
-    "final-fantasy-ix-psx",
-    "final-fantasy-viii-psx",
-    "g-police-psx",
-    "ghost-in-the-shell-psx",
-    "martian-gothic-psx",
-    "metal-gear-solid-psx",
-    "monster-rancher-psx",
-    "mortal-kombat-trilogy-psx",
-    "pro-pinball-timeshock-psx",
-    "r-type-delta-psx",
-    "resident-evil-3-psx",
-    "silent-bomber-psx",
-    "spider-man-psx",
-    "star-wars-episode-i-the-phantom-menace-psx",
-    "suikoden-psx",
-    "the-fifth-element-psx",
-    "threads-of-fate-psx",
-    "tokyo-highway-battle-psx",
-    "vib-ribbon-psx",
-    "wipeout-xl-psx",
     "gundam-wing-endless-duel-snes"
   ],
   "parked": {
-    "reason": "Unlisted, not withdrawn. Both titles pin the SCPH-5552 (PAL) BIOS backend, which the launcher's build path does not support yet: psx_generated_ready() / bios_generated_present() only recognise OpenBIOS_dispatch.c and SCPH1001_dispatch.c, the SDK harvest drops bios/SCPH5552.toml and recompiler/seeds/phase2_ghidra_seeds_SCPH5552.json, and psxrecomp_cli.py 'generate --bios' stages every dump as bios/SCPH1001.BIN and regenerates from bios/SCPH1001.toml. Installing either one leaves an install folder with no launch binary. Manifests stay on disk and ship in catalog.zip; to un-park, re-add each id to platforms.<p>.titles, rebuild titles[] as the platform lists concatenated, and drop the entry from here.",
+    "reason": "Unlisted, not withdrawn. Every title here pins the SCPH-5552 (PAL) BIOS backend (sha1 f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0) and sets build.enabled, so each one takes the launcher's local generate+cmake path -- which does not support that backend yet: psx_generated_ready() / bios_generated_present() only recognise OpenBIOS_dispatch.c and SCPH1001_dispatch.c, the SDK harvest drops bios/SCPH5552.toml and recompiler/seeds/phase2_ghidra_seeds_SCPH5552.json, and psxrecomp_cli.py 'generate --bios' stages every dump as bios/SCPH1001.BIN and regenerates from bios/SCPH1001.toml. Installing any of them leaves an install folder with no launch binary; each manifest's own author_notes records the same limitation. Measured on alien-resurrection-psx and alone-in-the-dark-the-new-nightmare-psx; the rest are parked by class (identical BIOS identity and build shape), not individually reproduced. Manifests stay on disk and ship in catalog.zip. To un-park, re-add each id to platforms.<p>.titles, rebuild titles[] as the platform lists concatenated, and drop the entry from here.",
     "since": "2026-09-10",
     "titles": {
       "alien-resurrection-psx": {
@@ -262,6 +200,130 @@
       "alone-in-the-dark-the-new-nightmare-psx": {
         "platform": "psx",
         "manifest": "titles/psx/alone-in-the-dark-the-new-nightmare-psx.json"
+      },
+      "apocalypse-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/apocalypse-psx.json"
+      },
+      "colony-wars-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/colony-wars-psx.json"
+      },
+      "crash-bandicoot-3-warped-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/crash-bandicoot-3-warped-psx.json"
+      },
+      "diablo-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/diablo-psx.json"
+      },
+      "dino-crisis-2-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/dino-crisis-2-psx.json"
+      },
+      "dino-crisis-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/dino-crisis-psx.json"
+      },
+      "fear-effect-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/fear-effect-psx.json"
+      },
+      "final-fantasy-ix-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/final-fantasy-ix-psx.json"
+      },
+      "final-fantasy-viii-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/final-fantasy-viii-psx.json"
+      },
+      "g-police-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/g-police-psx.json"
+      },
+      "ghost-in-the-shell-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/ghost-in-the-shell-psx.json"
+      },
+      "legacy-of-kain-soul-reaver-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/legacy-of-kain-soul-reaver-psx.json"
+      },
+      "martian-gothic-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/martian-gothic-psx.json"
+      },
+      "mdk-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/mdk-psx.json"
+      },
+      "metal-gear-solid-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/metal-gear-solid-psx.json"
+      },
+      "monster-rancher-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/monster-rancher-psx.json"
+      },
+      "mortal-kombat-trilogy-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/mortal-kombat-trilogy-psx.json"
+      },
+      "pro-pinball-timeshock-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/pro-pinball-timeshock-psx.json"
+      },
+      "r-type-delta-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/r-type-delta-psx.json"
+      },
+      "resident-evil-3-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/resident-evil-3-psx.json"
+      },
+      "silent-bomber-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/silent-bomber-psx.json"
+      },
+      "spider-man-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/spider-man-psx.json"
+      },
+      "spyro-the-dragon-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/spyro-the-dragon-psx.json"
+      },
+      "star-wars-episode-i-the-phantom-menace-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/star-wars-episode-i-the-phantom-menace-psx.json"
+      },
+      "suikoden-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/suikoden-psx.json"
+      },
+      "the-fifth-element-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/the-fifth-element-psx.json"
+      },
+      "threads-of-fate-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/threads-of-fate-psx.json"
+      },
+      "tokyo-highway-battle-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/tokyo-highway-battle-psx.json"
+      },
+      "vib-ribbon-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/vib-ribbon-psx.json"
+      },
+      "wipeout-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/wipeout-psx.json"
+      },
+      "wipeout-xl-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/wipeout-xl-psx.json"
       }
     }
   },
