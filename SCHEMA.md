@@ -37,6 +37,13 @@ fall back to `titles/<id>.json`.
     "snes": { "name": "Super Nintendo Entertainment System", "dir": "titles/snes", "titles": ["metal-warriors-snes"] }
   },
   "titles": ["tomba-psx", "...", "metal-warriors-snes"],
+  "parked": {
+    "reason": "why these are unlisted, and what un-parks them",
+    "since": "2026-09-10",
+    "titles": {
+      "some-title-psx": { "platform": "psx", "manifest": "titles/psx/some-title-psx.json" }
+    }
+  },
   "catalog_date": "2026-07-29T18:41:00Z",
   "release_tag": "v2026.07.29.184100.12"
 }
@@ -54,6 +61,20 @@ fall back to `titles/<id>.json`.
 | `titles` | string[] | Every id, platform lists concatenated in `platforms` order. Kept for id-only readers; must match the per-platform lists exactly |
 | `platform_defaults` | object | Optional per-platform defaults keyed by catalog `platform` |
 | `platform_defaults.<platform>.bios_identity` | object | Applied to titles on that platform that omit `bios_identity` |
+| `parked` | object | Optional. Manifests kept on disk but deliberately left out of the published lists |
+| `parked.reason` | string | Required when `parked` is present: why they are unlisted and what un-parks them |
+| `parked.since` | string | `YYYY-MM-DD` the parking started |
+| `parked.titles.<id>` | object | `platform` + `manifest` (path from the catalog root) for one parked id |
+
+**Parking a title.** Withdrawing a title deletes its manifest; parking one
+keeps it. Drop the id from `platforms.<p>.titles` (rebuild `titles[]` to
+match) and add it under `parked`. The manifest stays where it is and still
+ships inside `catalog.zip`, but no launcher offers it: readers load titles by
+id from the published lists and never scan the folder. `validate_catalog.py`
+enforces that a parked id names a manifest that exists and appears in no
+published list, so a parked title cannot rot unnoticed or come back by
+accident. Un-parking is the same diff in reverse.
+
 
 A platform appears in `platforms` once it has a folder; the approve workflow
 adds the entry the first time a title for a new platform is merged. The

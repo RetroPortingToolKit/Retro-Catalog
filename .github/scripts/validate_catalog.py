@@ -11,6 +11,8 @@ Checks (all fatal):
     (that list is what older readers still consume)
   - no manifest on disk is missing from the index, and nothing is left at
     the legacy flat location titles/<id>.json
+  - `parked` ids (unlisted on purpose) name a manifest that exists on disk and
+    do NOT appear in any published list
 
 Run from anywhere: paths resolve relative to the repo root.
 """
@@ -94,6 +96,37 @@ def main() -> None:
                     f"{rel}: manifest platform {m.get('platform')!r} != folder platform {plat!r}"
                 )
 
+    # Parked: a manifest kept on disk (and in catalog.zip) but deliberately
+    # left out of the published lists, so no launcher offers it. Withdrawing a
+    # title deletes it; parking one keeps the record and the diff to undo.
+    parked_rel: set[Path] = set()
+    parked = idx.get("parked") or {}
+    if parked:
+        if not isinstance(parked, dict):
+            errors.append("index.json `parked` must be an object")
+        else:
+            if not str(parked.get("reason") or "").strip():
+                errors.append("index.json parked.reason is required (say why)")
+            entries = parked.get("titles")
+            if not isinstance(entries, dict):
+                errors.append("index.json parked.titles must be an object of id -> entry")
+                entries = {}
+            for tid, entry in entries.items():
+                if not isinstance(tid, str) or not ID_RE.match(tid):
+                    errors.append(f"parked: bad title id {tid!r}")
+                    continue
+                if tid in seen:
+                    errors.append(f"parked title {tid!r} is still listed under {seen[tid]}")
+                    continue
+                if not isinstance(entry, dict):
+                    errors.append(f"parked.titles.{tid} must be an object")
+                    continue
+                rel = Path(str(entry.get("manifest") or ""))
+                if not str(rel) or not (ROOT / rel).is_file():
+                    errors.append(f"parked.titles.{tid}: manifest {str(rel)!r} not on disk")
+                    continue
+                parked_rel.add(rel)
+
     flat = idx.get("titles")
     if not isinstance(flat, list):
         errors.append("index.json `titles` must be a list")
@@ -103,7 +136,7 @@ def main() -> None:
             f"platform order (expected {len(ordered)} ids: {ordered[:3]}…)"
         )
 
-    for rel in sorted(on_disk - listed):
+    for rel in sorted(on_disk - listed - parked_rel):
         if rel.parent == Path("titles"):
             errors.append(f"{rel}: legacy flat location — move to titles/<platform>/")
         else:
@@ -113,8 +146,9 @@ def main() -> None:
         raise SystemExit("Catalog validation failed:\n- " + "\n- ".join(errors))
 
     per = ", ".join(f"{p}={len(e.get('titles') or [])}" for p, e in platforms.items())
+    note = f"; {len(parked_rel)} parked" if parked_rel else ""
     print(
-        f"{len(ordered)} titles ok ({per}); catalog_date={idx.get('catalog_date')} "
+        f"{len(ordered)} titles ok ({per}){note}; catalog_date={idx.get('catalog_date')} "
         f"release_tag={idx.get('release_tag')}"
     )
 

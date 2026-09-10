@@ -74,8 +74,6 @@
         "ace-combat-3-electrosphere-usa-psx",
         "xena-warrior-princess-psx",
         "ace-combat-3-electrosphere-psx",
-        "alien-resurrection-psx",
-        "alone-in-the-dark-the-new-nightmare-psx",
         "alundra-psx",
         "ape-escape-psx",
         "armored-core-psx",
@@ -181,8 +179,6 @@
     "ace-combat-3-electrosphere-usa-psx",
     "xena-warrior-princess-psx",
     "ace-combat-3-electrosphere-psx",
-    "alien-resurrection-psx",
-    "alone-in-the-dark-the-new-nightmare-psx",
     "alundra-psx",
     "ape-escape-psx",
     "armored-core-psx",
@@ -255,6 +251,20 @@
     "wipeout-xl-psx",
     "gundam-wing-endless-duel-snes"
   ],
+  "parked": {
+    "reason": "Unlisted, not withdrawn. Both titles pin the SCPH-5552 (PAL) BIOS backend, which the launcher's build path does not support yet: psx_generated_ready() / bios_generated_present() only recognise OpenBIOS_dispatch.c and SCPH1001_dispatch.c, the SDK harvest drops bios/SCPH5552.toml and recompiler/seeds/phase2_ghidra_seeds_SCPH5552.json, and psxrecomp_cli.py 'generate --bios' stages every dump as bios/SCPH1001.BIN and regenerates from bios/SCPH1001.toml. Installing either one leaves an install folder with no launch binary. Manifests stay on disk and ship in catalog.zip; to un-park, re-add each id to platforms.<p>.titles, rebuild titles[] as the platform lists concatenated, and drop the entry from here.",
+    "since": "2026-09-10",
+    "titles": {
+      "alien-resurrection-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/alien-resurrection-psx.json"
+      },
+      "alone-in-the-dark-the-new-nightmare-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/alone-in-the-dark-the-new-nightmare-psx.json"
+      }
+    }
+  },
   "catalog_date": "2026-09-06T07:46:42Z",
   "release_tag": "v2026.09.06.074642.32"
 }
