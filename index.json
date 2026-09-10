@@ -112,7 +112,9 @@
         "tony-hawk-s-pro-skater-4-psx",
         "tony-hawk-s-pro-skater-psx",
         "vampire-hunter-d-psx",
-        "vigilante-8-psx"
+        "vigilante-8-psx",
+        "wipeout2k97xl-psx",
+        "puyo-puyo-box-psx"
       ]
     },
     "snes": {
@@ -187,6 +189,8 @@
     "tony-hawk-s-pro-skater-psx",
     "vampire-hunter-d-psx",
     "vigilante-8-psx",
+    "wipeout2k97xl-psx",
+    "puyo-puyo-box-psx",
     "gundam-wing-endless-duel-snes"
   ],
   "parked": {
@@ -327,6 +331,6 @@
       }
     }
   },
-  "catalog_date": "2026-09-06T07:46:42Z",
-  "release_tag": "v2026.09.06.074642.32"
+  "catalog_date": "2026-09-10T21:18:09Z",
+  "release_tag": "v2026.09.10.211809.41"
 }

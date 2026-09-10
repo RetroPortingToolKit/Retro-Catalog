@@ -1,0 +1,103 @@
+{
+  "id": "wipeout2k97xl-psx",
+  "name": "Wipeout2K97XL",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Wipeout XL USA SCUS-94351 Windows x64 setup kit. OpenBIOS, configurable NeGcon dual sticks, optional widescreen and extended draw distance. Supply your own disc.",
+  "homepage": "https://github.com/NJH-1001/Wipeout2K97XL",
+  "rom_identity": {
+    "crc32": [
+      "18ebdeb3"
+    ],
+    "md5": [
+      "bee4ab5e4835235ccf6f16bc8caea5e6"
+    ],
+    "sha1": [
+      "5694008c30fa9896d17afdd6281e4bebb9f63953"
+    ],
+    "sha256": [
+      "965a6fab54f6a97d4580725a68df898e4b195cb62373fb95d5b51113393fbc06"
+    ],
+    "disc_serials": [
+      "SCUS-94351"
+    ],
+    "sizes": [
+      86045568
+    ],
+    "filenames": [
+      "Wipeout XL (USA).cue",
+      "Wipeout XL (USA) (Track 01).bin",
+      "Wipeout XL (USA) (Track 02).bin",
+      "Wipeout XL (USA) (Track 03).bin"
+    ],
+    "track_counts": [
+      12
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "NJH-1001/Wipeout2K97XL",
+    "asset_glob": {
+      "linux": "",
+      "windows": "*windows*",
+      "macos": ""
+    }
+  },
+  "install_dir_name": "Wipeout2K97XL",
+  "launch": {
+    "linux": "",
+    "windows": "Wipeout2K97XL.exe",
+    "macos": ""
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Wipeout2K97XL",
+    "game_version": "0.1.0",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  },
+  "author_notes": "Improved modern controls with NeGcon, increased draw distance, 16:9 support, JVC/Trinitron CRT filters added",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "NJH-1001/Wipeout2K97XL",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

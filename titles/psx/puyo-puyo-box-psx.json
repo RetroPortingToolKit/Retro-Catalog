@@ -1,0 +1,101 @@
+{
+  "id": "puyo-puyo-box-psx",
+  "name": "Puyo Puyo Box",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "a static recompilation of Puyo Puyo Box made with PSXrecomp",
+  "homepage": "https://github.com/kirby1237/PuyoPuyoBoxRecomp",
+  "rom_identity": {
+    "crc32": [
+      "0c0ad833"
+    ],
+    "md5": [
+      "8d59d404d8d74d35f2cc18296e51e506"
+    ],
+    "sha1": [
+      "ca01a98ccc5ca796df082782a6dd1adee856c064"
+    ],
+    "sha256": [
+      "8403b1e2354107457063c5c1a8637a1ca706d6e6b19dd59c68885399256085fc"
+    ],
+    "disc_serials": [
+      "SLPS-03114"
+    ],
+    "sizes": [
+      141853824
+    ],
+    "filenames": [
+      "Puyo Puyo Box (Japan).cue",
+      "Puyo Puyo Box (Japan).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "kirby1237/PuyoPuyoBoxRecomp",
+    "asset_glob": {
+      "linux": "",
+      "windows": "*windows*",
+      "macos": ""
+    }
+  },
+  "install_dir_name": "PuyoPuyoBoxRecomp",
+  "launch": {
+    "linux": "",
+    "windows": "PuyoPuyoBox_Recompiled.exe",
+    "macos": ""
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "PuyoPuyoBox",
+    "game_version": "v.0.1.1",
+    "max_slots": 4,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  },
+  "author_notes": "the multiplayer modes haven't been tested yet",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "kirby1237/PuyoPuyoBoxRecomp",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
