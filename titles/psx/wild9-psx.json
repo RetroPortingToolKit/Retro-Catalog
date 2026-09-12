@@ -1,0 +1,89 @@
+{
+  "id": "wild9-psx",
+  "name": "Wild 9",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Wild 9 is a side-scrolling action/platformer developed by the creators of Earthworm Jim. You play as Wex Major, the last free member of the \"Wild 9\" team, on a mission to rescue his eight kidnapped teammates from the evil Karn.",
+  "homepage": "https://github.com/plinkr/Wild9Recomp",
+  "rom_identity": {
+    "crc32": [
+      "c6f94075"
+    ],
+    "md5": [
+      "1a58ca1f04ba1529f71f585ac01f247a"
+    ],
+    "sha1": [
+      "8603e46a1f8f69a0962fdb83f45d11b1e86ca9e3"
+    ],
+    "sha256": [
+      "50899c4ce9cf834769b283f46fc7547ed07909268c567a8aeb7f053b868206b9"
+    ],
+    "disc_serials": [
+      "SLUS-00425"
+    ],
+    "sizes": [
+      578312112
+    ],
+    "filenames": [
+      "Wild 9 (USA).cue",
+      "Wild 9 (USA).bin"
+    ],
+    "track_counts": [
+      15
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "plinkr/Wild9Recomp",
+    "asset_glob": {
+      "linux": "*linux*",
+      "windows": "*windows*",
+      "macos": "*macos*"
+    }
+  },
+  "install_dir_name": "Wild9Recomp",
+  "launch": {
+    "linux": "Wild9_Recompiled",
+    "windows": "Wild9_Recompiled.exe",
+    "macos": "Wild9_Recompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Please report any issues or requests at: https://github.com/plinkr/Wild9Recomp/issues",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "plinkr/Wild9Recomp",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

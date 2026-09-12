@@ -114,7 +114,8 @@
         "vampire-hunter-d-psx",
         "vigilante-8-psx",
         "wipeout2k97xl-psx",
-        "puyo-puyo-box-psx"
+        "puyo-puyo-box-psx",
+        "wild9-psx"
       ]
     },
     "snes": {
@@ -191,6 +192,7 @@
     "vigilante-8-psx",
     "wipeout2k97xl-psx",
     "puyo-puyo-box-psx",
+    "wild9-psx",
     "gundam-wing-endless-duel-snes"
   ],
   "parked": {
@@ -331,6 +333,6 @@
       }
     }
   },
-  "catalog_date": "2026-09-10T21:18:09Z",
-  "release_tag": "v2026.09.10.211809.41"
+  "catalog_date": "2026-09-12T01:41:42Z",
+  "release_tag": "v2026.09.12.014142.44"
 }
