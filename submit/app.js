@@ -565,7 +565,27 @@ function fillForm(draft, meta = {}) {
   state.romHashingFile = "";
   resetPsxCueState();
   syncChecksumSlots();
-  setChecksumUi("pending", pendingChecksumMessage(platform));
+  // Unless the repository itself carries the identity: a cartridge port
+  // scaffolded by snesrecomp's wizard commits rom_identity.txt with every
+  // digest (crc32, md5, sha1, sha256), the size and the dump's filename, of
+  // the bare image. The worker verified the file is complete
+  // (meta.identity_from_repo), so the local hash becomes an optional
+  // re-check rather than the gate.
+  const repoIdentity =
+    !!meta.identity_from_repo &&
+    !isDiscPlatform(platform) &&
+    ["crc32", "md5", "sha1", "sha256"].every((k) => (ri[k] || []).length);
+  if (repoIdentity) {
+    state.romChecksumDone = true;
+    state.romChecksumFile = "rom_identity.txt (from the repository)";
+    setChecksumUi(
+      "ok",
+      "Identity taken from the repository's rom_identity.txt (crc32, md5, sha1, sha256, size). " +
+        "Hashing your own dump here is optional and only re-checks those digests. You can submit."
+    );
+  } else {
+    setChecksumUi("pending", pendingChecksumMessage(platform));
+  }
 
   const chips = $("assetChips");
   chips.innerHTML = "";
@@ -581,6 +601,7 @@ function fillForm(draft, meta = {}) {
   if (meta.digest_sources?.length) {
     parts.push(`digests from ${meta.digest_sources.join(", ")}`);
   }
+  if (repoIdentity) parts.push("identity complete in rom_identity.txt (local hash optional)");
   $("metaLine").textContent = parts.length
     ? `Auto-filled: ${parts.join(" · ")}. Edit anything before submitting.`
     : "Draft loaded. Fill missing fields before submitting.";

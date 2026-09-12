@@ -765,8 +765,14 @@ function parseRomIdentityTxt(text) {
     md5: [],
     sha1: [],
     sha256: [],
+    sizes: [],
     filenames: [],
     display_name: "",
+    // True when the file carries every digest the catalog matches on plus
+    // the size and filename -- the shape snesrecomp's new-project wizard
+    // writes since 2026-09 -- so the form can accept it as the identity and
+    // make the local hash optional.
+    complete: false,
   };
   if (!text || typeof text !== "string") return out;
   const kv = {};
@@ -789,8 +795,11 @@ function parseRomIdentityTxt(text) {
   if (md5) out.md5.push(md5);
   if (sha1) out.sha1.push(sha1);
   if (sha256) out.sha256.push(sha256);
+  const size = parseInt(String(kv.rom_size || "").trim(), 10);
+  if (Number.isFinite(size) && size > 0) out.sizes.push(size);
   if (kv.rom_file) out.filenames.push(kv.rom_file);
   if (kv.display_name) out.display_name = kv.display_name;
+  out.complete = !!(crc && md5 && sha1 && sha256 && out.sizes.length && out.filenames.length);
   return out;
 }
 
@@ -1909,6 +1918,10 @@ async function probe(request, env) {
         release_tag: release?.tag_name || null,
         assets,
         digest_sources: digests.sources,
+        // A repository whose rom_identity.txt carries the whole identity
+        // (crc32, md5, sha1, sha256, size, filename) proves it the way a
+        // local hash would; the form treats hashing as optional then.
+        identity_from_repo: !!romIdentityTxt.complete,
         field_sources,
         warnings: [...warnings, ...(discSet.warnings || [])],
         catalog_path: platform ? catalogTitlePath(platform, draft.id) : "",
