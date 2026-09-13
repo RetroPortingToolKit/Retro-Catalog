@@ -122,7 +122,8 @@
       "name": "Super Nintendo Entertainment System",
       "dir": "titles/snes",
       "titles": [
-        "gundam-wing-endless-duel-snes"
+        "gundam-wing-endless-duel-snes",
+        "super-metroid-snes"
       ]
     }
   },
@@ -193,7 +194,8 @@
     "wipeout2k97xl-psx",
     "puyo-puyo-box-psx",
     "wild9-psx",
-    "gundam-wing-endless-duel-snes"
+    "gundam-wing-endless-duel-snes",
+    "super-metroid-snes"
   ],
   "parked": {
     "reason": "Unlisted, not withdrawn. Every title here pins the SCPH-5552 (PAL) BIOS backend (sha1 f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0) and sets build.enabled, so each one takes the launcher's local generate+cmake path -- which does not support that backend yet: psx_generated_ready() / bios_generated_present() only recognise OpenBIOS_dispatch.c and SCPH1001_dispatch.c, the SDK harvest drops bios/SCPH5552.toml and recompiler/seeds/phase2_ghidra_seeds_SCPH5552.json, and psxrecomp_cli.py 'generate --bios' stages every dump as bios/SCPH1001.BIN and regenerates from bios/SCPH1001.toml. Installing any of them leaves an install folder with no launch binary; each manifest's own author_notes records the same limitation. Measured on alien-resurrection-psx and alone-in-the-dark-the-new-nightmare-psx; the rest are parked by class (identical BIOS identity and build shape), not individually reproduced. Manifests stay on disk and ship in catalog.zip. To un-park, re-add each id to platforms.<p>.titles, rebuild titles[] as the platform lists concatenated, and drop the entry from here.",
@@ -333,6 +335,6 @@
       }
     }
   },
-  "catalog_date": "2026-09-12T01:41:42Z",
-  "release_tag": "v2026.09.12.014142.44"
+  "catalog_date": "2026-09-13T05:07:48Z",
+  "release_tag": "v2026.09.13.050748.45"
 }

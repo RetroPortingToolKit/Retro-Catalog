@@ -1,0 +1,96 @@
+{
+  "id": "super-metroid-snes",
+  "name": "Super Metroid",
+  "kind": "recomp",
+  "platform": "snes",
+  "description": "Super Metroid recompiled for the Super Nintendo using snesrecomp · Part of the R.A.I.D. community",
+  "homepage": "https://github.com/mstan/SuperMetroidRecomp",
+  "rom_identity": {
+    "crc32": [
+      "d63ed5f8"
+    ],
+    "md5": [
+      "21f3e98df4780ee1c667b84e57d88675"
+    ],
+    "sha1": [
+      "da957f0d63d14cb441d215462904c4fa8519c613"
+    ],
+    "sha256": [
+      "12b77c4bc9c1832cee8881244659065ee1d84c70c3d29e6eaf92e6798cc2ca72"
+    ],
+    "disc_serials": [],
+    "sizes": [
+      3145728
+    ],
+    "filenames": [
+      "Super Metroid (Japan",
+      "USA) (En",
+      "Ja).sfc",
+      "Ja).smc",
+      "Super Metroid (Japan",
+      "USA) (En",
+      "Ja).sfc"
+    ],
+    "track_counts": [],
+    "require_cue": false
+  },
+  "rom_extensions": [
+    ".sfc",
+    ".smc",
+    ".fig",
+    ".swc"
+  ],
+  "release": {
+    "github": "mstan/SuperMetroidRecomp",
+    "asset_glob": {
+      "linux": "*linux*",
+      "windows": "*windows*",
+      "macos": "*macos*"
+    }
+  },
+  "install_dir_name": "SuperMetroidRecomp",
+  "launch": {
+    "linux": "SuperMetroidSNESRecomp",
+    "windows": "SuperMetroidSNESRecomp.exe",
+    "macos": "SuperMetroidSNESRecomp"
+  },
+  "romm": {
+    "platforms": [
+      "snes"
+    ]
+  },
+  "author_notes": "Super Metroid (Japan, USA) (En,Ja)",
+  "notes": "Digests auto-extracted from README, rom_identity.txt, tools/regen.sh.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "mstan/SuperMetroidRecomp",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "snesrecomp",
+      "cfg_dir": "recomp",
+      "out_dir": "src/gen",
+      "funcs_h": "recomp/funcs.h",
+      "cfg_roots": true
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "sm_render_capture",
+      "config": "Release"
+    },
+    "sdk": {
+      "id": "snesrecomp-tools"
+    }
+  }
+}
