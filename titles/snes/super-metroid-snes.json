@@ -82,11 +82,17 @@
       "cfg_dir": "recomp",
       "out_dir": "src/gen",
       "funcs_h": "recomp/funcs.h",
-      "cfg_roots": true
+      "cfg_roots": false,
+      "extra_args": [
+        "--source-root",
+        "src",
+        "--profile-manifest",
+        "profiles/attract_tier2.json"
+      ]
     },
     "cmake": {
       "build_dir": "build",
-      "target": "sm_render_capture",
+      "target": "SuperMetroidSNESRecomp",
       "config": "Release"
     },
     "sdk": {

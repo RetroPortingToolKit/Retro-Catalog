@@ -717,19 +717,41 @@ function pickBestLaunchName(names, { wantExe = false } = {}) {
 
 /**
  * The game executable target from a snesrecomp-style CMakeLists.txt:
- * `add_executable(MetalWarriorsSNESRecomp …)`. Test helpers and `${VAR}`
- * targets are skipped; `project(Name …)` is the fallback.
+ * `add_executable(MetalWarriorsSNESRecomp …)`.
+ *
+ * Preference order, because file order is not a signal: SuperMetroidRecomp
+ * declares its tests and a tools/ render-capture helper *before* the game
+ * target, and the first-match rule submitted "sm_render_capture" as the
+ * cmake target (issue #45) — a target that builds cleanly and never produces
+ * the launch binary, so every install died at staging.
+ *   1. the target named after `project(Name …)` — every snesrecomp port pairs
+ *      the two, and no test/tool helper carries that name;
+ *   2. a *Recomp-suffixed target, the convention for the game binary;
+ *   3. the first target that is not a test/tool helper by name or by source
+ *      directory (tests/, tools/, bench/).
+ * `${VAR}` targets are skipped; `project(Name …)` is the fallback.
  */
 function inferCmakeExecutableTarget(cmakeText) {
   if (!cmakeText) return "";
-  for (const m of cmakeText.matchAll(/\badd_executable\s*\(\s*([^\s)]+)/gi)) {
+  const proj = cmakeText.match(/\bproject\s*\(\s*([A-Za-z0-9_.-]+)/i)?.[1] || "";
+  const candidates = [];
+  for (const m of cmakeText.matchAll(/\badd_executable\s*\(\s*([^\s)]+)([^)]*)\)/gi)) {
     const name = m[1];
     if (name.startsWith("$")) continue;
-    if (/test|bench|tool|helper/i.test(name)) continue;
-    return name;
+    candidates.push({ name, sources: m[2] || "" });
   }
-  const proj = cmakeText.match(/\bproject\s*\(\s*([A-Za-z0-9_.-]+)/i);
-  return proj?.[1] || "";
+  const byProject = candidates.find(
+    (c) => proj && c.name.toLowerCase() === proj.toLowerCase(),
+  );
+  if (byProject) return byProject.name;
+  const byConvention = candidates.find((c) => /recomp$/i.test(c.name));
+  if (byConvention) return byConvention.name;
+  for (const c of candidates) {
+    if (/test|bench|tool|helper|capture|dump|probe/i.test(c.name)) continue;
+    if (/(^|[\s"(])(tests?|tools?|bench(marks?)?)\//i.test(c.sources)) continue;
+    return c.name;
+  }
+  return proj;
 }
 
 function inferLaunchFromCmake(cmakeText) {
@@ -818,6 +840,7 @@ function parseRegenScript(text) {
     out_dir: "",
     funcs_h: "",
     cfg_roots: false,
+    extra_args: [],
   };
   if (!text || typeof text !== "string") return out;
   out.ok = /snesrecomp_cli|generate/i.test(text);
@@ -842,7 +865,92 @@ function parseRegenScript(text) {
   out.cfg_dir = arg("--cfg-dir");
   out.out_dir = arg("--out-dir");
   out.funcs_h = arg("--funcs-h");
-  out.cfg_roots = /--cfg-roots/.test(text);
+  const gen = collectUnconditionalGenArgs(text);
+  out.cfg_roots = gen.cfg_roots;
+  out.extra_args = gen.extra_args;
+  return out;
+}
+
+/**
+ * What tools/regen.sh actually passes to `generate` when run with no flags —
+ * the port's canonical build. Two things the old "does the text mention
+ * --cfg-roots" test got wrong for SuperMetroidRecomp (issue #45):
+ *   - `--cfg-roots` was an *opt-in* flag (CFG_ROOTS=0 unless --cfg-roots is
+ *     given), so the manifest said cfg_roots: true and Retro seeded roots the
+ *     port never does;
+ *   - `--source-root src --profile-manifest profiles/attract_tier2.json` are
+ *     unconditional and change the AOT/LLE split, so the C Retro generated
+ *     without them referenced variants that were never emitted and the link
+ *     failed on eleven undefined symbols.
+ * Only GEN_ARGS assignments at the top level count (not inside if/case/loops),
+ * `$VAR` is resolved from plain `VAR=value` lines, anything still holding a
+ * `$` is dropped, and the options Retro supplies itself are stripped.
+ */
+function collectUnconditionalGenArgs(text) {
+  const out = { cfg_roots: false, extra_args: [] };
+  if (!text) return out;
+  const vars = {};
+  for (const m of text.matchAll(
+    /^\s*([A-Za-z_][A-Za-z0-9_]*)=(?:"([^"$]*)"|'([^']*)'|([^\s"'$][^\s;]*))\s*(?:#.*)?$/gm,
+  )) {
+    vars[m[1]] = m[2] ?? m[3] ?? m[4] ?? "";
+  }
+  if (vars.CFG_ROOTS === "1") out.cfg_roots = true;
+  const resolve = (tok) =>
+    tok.replace(/\$\{([A-Za-z_][A-Za-z0-9_]*)\}|\$([A-Za-z_][A-Za-z0-9_]*)/g, (all, a, b) => {
+      const k = a || b;
+      return Object.prototype.hasOwnProperty.call(vars, k) ? vars[k] : all;
+    });
+  const opener = /(^|[;\s&|(])(if|case|while|until|for)\b/g;
+  const closer = /(^|[;\s])(fi|esac|done)\b/g;
+  const bodies = [];
+  let depth = 0;
+  let pending = null; // multi-line GEN_ARGS=( … ) accumulator
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.replace(/(^|\s)#.*$/, "").trim();
+    if (pending !== null) {
+      pending += " " + line;
+      if (line.includes(")")) {
+        bodies.push(pending.slice(0, pending.indexOf(")")));
+        pending = null;
+      }
+      continue;
+    }
+    if (!line) continue;
+    const opens = (line.match(opener) || []).length;
+    const closes = (line.match(closer) || []).length;
+    const m = line.match(/\bGEN_ARGS\+?=\((.*)$/);
+    if (m && depth === 0 && opens === 0) {
+      if (m[1].includes(")")) bodies.push(m[1].slice(0, m[1].indexOf(")")));
+      else pending = m[1];
+    }
+    depth = Math.max(0, depth + opens - closes);
+  }
+  const supplied = new Set([
+    "--rom", "--cfg-dir", "--out-dir", "--funcs-h", "--project-root",
+    "--expected-crc32", "--expected-sha256", "--json-progress",
+  ]);
+  const tokens = [];
+  for (const body of bodies) {
+    for (const t of body.match(/"[^"]*"|'[^']*'|\S+/g) || []) {
+      tokens.push(resolve(t.replace(/^["']|["']$/g, "")));
+    }
+  }
+  for (let i = 0; i < tokens.length; i++) {
+    const tok = tokens[i];
+    if (!tok.startsWith("--")) continue; // stray value / unresolved array splat
+    const hasValue = i + 1 < tokens.length && !tokens[i + 1].startsWith("--");
+    const value = hasValue ? tokens[i + 1] : "";
+    if (hasValue) i++;
+    if (tok === "--cfg-roots") {
+      out.cfg_roots = true;
+      continue;
+    }
+    if (supplied.has(tok)) continue;
+    if (tok.includes("$") || value.includes("$")) continue;
+    out.extra_args.push(tok);
+    if (hasValue) out.extra_args.push(value);
+  }
   return out;
 }
 
@@ -1557,6 +1665,7 @@ function inferSnesBuildRecipe(slug, target, regen) {
       out_dir: regen?.out_dir || "src/gen",
       funcs_h: regen?.funcs_h || "recomp/funcs.h",
       cfg_roots: regen?.cfg_roots ?? true,
+      ...(regen?.extra_args?.length ? { extra_args: regen.extra_args } : {}),
     },
     cmake: {
       build_dir: "build",

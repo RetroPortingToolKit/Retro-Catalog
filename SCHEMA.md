@@ -217,7 +217,13 @@ runs the SDK CLI `generate` against the user's verified ROM/disc, then
 
 `build.generate.engine`: `"snesrecomp"` | `"psxrecomp"` | `"gbarecomp"`
 (default from `platform`: SNES→snesrecomp, PSX→psxrecomp, GBA→gbarecomp).
-SNES uses `cfg_dir` / `out_dir` / `funcs_h` / `cfg_roots`. PSX uses `config`
+SNES uses `cfg_dir` / `out_dir` / `funcs_h` / `cfg_roots`, plus optional
+`extra_args`: verbatim additional `generate` options the port's own
+`tools/regen.sh` passes unconditionally (e.g. `["--source-root", "src",
+"--profile-manifest", "profiles/attract_tier2.json"]`). They change which
+functions are AOT vs LLE, so a manifest without them does not reproduce the
+port's own build; `cfg_roots` must likewise reflect what the script passes by
+default, not merely whether it offers the flag. PSX uses `config`
 (default `game.toml`) and passes the library disc as `--disc`. GBA uses
 `config` (per-binary symbols TOML), `out_dir` (cart `generated/`), and passes
 the library ROM as `--rom` plus optional `--bios`.
