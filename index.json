@@ -115,7 +115,8 @@
         "vigilante-8-psx",
         "wipeout2k97xl-psx",
         "puyo-puyo-box-psx",
-        "wild9-psx"
+        "wild9-psx",
+        "crash-team-racing-psx"
       ]
     },
     "snes": {
@@ -194,6 +195,7 @@
     "wipeout2k97xl-psx",
     "puyo-puyo-box-psx",
     "wild9-psx",
+    "crash-team-racing-psx",
     "gundam-wing-endless-duel-snes",
     "super-metroid-snes"
   ],
@@ -335,6 +337,6 @@
       }
     }
   },
-  "catalog_date": "2026-09-13T05:07:48Z",
-  "release_tag": "v2026.09.13.050748.45"
+  "catalog_date": "2026-09-18T22:34:57Z",
+  "release_tag": "v2026.09.18.223457.47"
 }

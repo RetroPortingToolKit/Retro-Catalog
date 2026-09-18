@@ -1,0 +1,101 @@
+{
+  "id": "crash-team-racing-psx",
+  "name": "Crash Team Racing",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Made with PSXrecomp, a Sony PlayStation game static recompiler ecosystem · Part of the R.A.I.D. community",
+  "homepage": "https://github.com/TechnicallyComputers/Crash-Team-Racing-Recomp",
+  "rom_identity": {
+    "crc32": [
+      "9a742438"
+    ],
+    "md5": [
+      "6b662975a9c75a365853da389de7d6ab"
+    ],
+    "sha1": [
+      "1bb785082def3fe25f6b46be06d4eaf33c5bc772"
+    ],
+    "sha256": [
+      "f780bf2331476aabfc00772fa758b12dd95ebfbc907968132cbd3cdd4e2c07c0"
+    ],
+    "disc_serials": [
+      "SCUS-94426"
+    ],
+    "sizes": [
+      605698800
+    ],
+    "filenames": [
+      "CTR - Crash Team Racing (USA).cue",
+      "CTR - Crash Team Racing (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "TechnicallyComputers/Crash-Team-Racing-Recomp",
+    "asset_glob": {
+      "linux": "*linux*",
+      "windows": "*windows*",
+      "macos": "*macos*"
+    }
+  },
+  "install_dir_name": "Crash-Team-Racing-Recomp",
+  "launch": {
+    "linux": "Crash_Team_Racing__Recompiled",
+    "windows": "Crash_Team_Racing__Recompiled.exe",
+    "macos": "Crash_Team_Racing__Recompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Crash-Team-Racing-Recomp",
+    "game_version": "0.2.4",
+    "max_slots": 4,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  },
+  "author_notes": "REDUMP USA Disc format image.  Rerelease of CTR with bugfixes.",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "TechnicallyComputers/Crash-Team-Racing-Recomp",
+      "ref": "main"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
