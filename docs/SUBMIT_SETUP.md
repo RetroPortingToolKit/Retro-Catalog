@@ -70,17 +70,20 @@ Invite contributor accounts as collaborators so assignment succeeds.
 cd worker
 npm install
 npx wrangler login
-npx wrangler deploy
+npx wrangler deploy -c wrangler.toml
 ```
+
+Pass `-c wrangler.toml` to every wrangler command here. Without it, wrangler finds the
+repository root's `wrangler.jsonc` first and acts on the static site Worker instead.
 
 Put secrets:
 
 ```sh
-npx wrangler secret put GITHUB_CLIENT_ID
-npx wrangler secret put GITHUB_CLIENT_SECRET
-npx wrangler secret put SESSION_SECRET          # long random string
-npx wrangler secret put GITHUB_TOKEN            # PAT from step 4
-npx wrangler secret put RESEND_API_KEY          # from https://resend.com
+npx wrangler secret put GITHUB_CLIENT_ID -c wrangler.toml
+npx wrangler secret put GITHUB_CLIENT_SECRET -c wrangler.toml
+npx wrangler secret put SESSION_SECRET -c wrangler.toml          # long random string
+npx wrangler secret put GITHUB_TOKEN -c wrangler.toml            # PAT from step 4
+npx wrangler secret put RESEND_API_KEY -c wrangler.toml          # from https://resend.com
 ```
 
 Edit [`worker/wrangler.toml`](../worker/wrangler.toml) vars if needed:
@@ -146,7 +149,7 @@ OAuth, the Worker redirects with `#session=<token>`; the page stores it in
 
 ```sh
 # terminal 1
-cd worker && npm install && npx wrangler dev
+cd worker && npm install && npx wrangler dev -c wrangler.toml
 
 # terminal 2 — any static server for submit/
 cd submit && python3 -m http.server 5500
