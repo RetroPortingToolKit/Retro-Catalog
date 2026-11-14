@@ -1,0 +1,60 @@
+{
+  "id": "vs-super-mario-bros-nes",
+  "name": "VS. Super Mario Bros.",
+  "kind": "recomp",
+  "platform": "nes",
+  "description": "Nintendo's arcade VS. Super Mario Bros. (Vs. System, 1986) as a native game, statically recompiled from your own dump of the board. Optional Super Mario All-Stars graphics and music from your own SNES ROM.",
+  "homepage": "https://github.com/jsp244/vs-smb-recomp",
+  "author_notes": "Bring your own dump of the VS. Super Mario Bros. board as an iNES .nes file. MAME's suprmrio.zip / suprmrioa.zip also load in the game itself, but cannot be matched by hash here. For the All-Stars graphics and music, choose your own Super Mario All-Stars (USA) ROM in the game's menu.",
+  "rom_identity": {
+    "crc32": [
+      "242fcd29",
+      "216848d3"
+    ],
+    "md5": [
+      "b4e90b95a3e18f2bd79bbecf5009a28b",
+      "e448025d8d332d431b6177b006441d65"
+    ],
+    "sha1": [
+      "5b59c4a106293da6068a79462958094ce4219041",
+      "ee2300532b133b6f3a8420d134942abcda769a5e"
+    ],
+    "sha256": [
+      "95a9c2b6d1456f5b460fdb3d1a2908e438afa4e493b9aaded21647e6e06735c0",
+      "3707175f2ad8cefb4d4f941d99d0ea67eb404e9f9866d54f38a6a533469aa206"
+    ],
+    "disc_serials": [],
+    "sizes": [
+      49168
+    ],
+    "filenames": [
+      "VS Super Mario Bros (VS).nes",
+      "VS Super Mario Bros (VS) [a1].nes"
+    ],
+    "track_counts": [],
+    "require_cue": false
+  },
+  "rom_extensions": [
+    ".nes"
+  ],
+  "release": {
+    "github": "jsp244/vs-smb-recomp",
+    "asset_glob": {
+      "linux": "*linux-x86_64.tar.gz",
+      "windows": "*win64.zip",
+      "macos": ""
+    }
+  },
+  "install_dir_name": "vs-smb-recomp",
+  "launch": {
+    "linux": "vssmb",
+    "windows": "vssmb.exe",
+    "macos": ""
+  },
+  "romm": {
+    "platforms": [
+      "nes"
+    ]
+  },
+  "notes": "Digests are of the whole GoodNES files, header included, because the launcher hashes NES files whole. The game itself checks the PRG+CHR data without the header: sha1 b21aa940728ed80c72ee23c251c96e42cc84b2d6 (crc32 98e3c75a) for MAME suprmrio, and 91fa719b4b05adbac0b9d507d2051ed361d1ded4 (crc32 7cff0f84) for suprmrioa / GoodNES [a1]. Dumps with other headers load in the game but will not match here."
+}
