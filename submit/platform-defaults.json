@@ -56,5 +56,14 @@
     "rom_extensions": [".bin", ".md", ".gen", ".smd"],
     "romm_platforms": ["genesis", "smd", "megadrive"],
     "saves": { "sram_glob": ["*.srm", "saves/*.srm"] }
+  },
+  "nes": {
+    "label": "Nintendo Entertainment System",
+    "short": "NES",
+    "blurb": "You will hash one .nes dump: the whole file, its 16-byte iNES header included.",
+    "media": "cart",
+    "catalog_dir": "titles/nes",
+    "rom_extensions": [".nes"],
+    "romm_platforms": ["nes"]
   }
 }
