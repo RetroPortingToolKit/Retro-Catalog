@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/in-cold-blood-recomp",
-      "ref": "f92ea0f04d19b89929417c8114d1f98125e98246"
+      "github": "alexbeavs-ps1-ports/in-cold-blood-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for In Cold Blood.",
-  "homepage": "https://github.com/Alexbeav/in-cold-blood-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/in-cold-blood-recomp",
   "id": "in-cold-blood-psx",
   "install_dir_name": "in-cold-blood-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "In_Cold_Blood_Recompiled"
   },
   "name": "In Cold Blood",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/in-cold-blood-recomp",
+    "github": "alexbeavs-ps1-ports/in-cold-blood-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

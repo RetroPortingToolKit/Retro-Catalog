@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/mega-man-legends-recomp",
-      "ref": "9e7cc71d5b2704c1152a6c73582ddd9a59d0cab4"
+      "github": "alexbeavs-ps1-ports/mega-man-legends-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Mega Man Legends.",
-  "homepage": "https://github.com/Alexbeav/mega-man-legends-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/mega-man-legends-recomp",
   "id": "mega-man-legends-psx",
   "install_dir_name": "mega-man-legends-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Mega_Man_Legends_Recompiled"
   },
   "name": "Mega Man Legends",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/mega-man-legends-recomp",
+    "github": "alexbeavs-ps1-ports/mega-man-legends-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

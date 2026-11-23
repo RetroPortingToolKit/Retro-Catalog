@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/ace-combat-3-electrosphere-recomp",
-      "ref": "1c0c156fca1dd8ea8978efe3c66b5f3667760efa"
+      "github": "alexbeavs-ps1-ports/ace-combat-3-electrosphere-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for Ace Combat 3: Electrosphere (Japan).",
-  "homepage": "https://github.com/Alexbeav/ace-combat-3-electrosphere-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/ace-combat-3-electrosphere-recomp",
   "id": "ace-combat-3-electrosphere-psx",
   "install_dir_name": "ace-combat-3-electrosphere-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Ace_Combat_3__Electrosphere__Japan__Recompiled"
   },
   "name": "Ace Combat 3: Electrosphere (Japan)",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/ace-combat-3-electrosphere-recomp",
+    "github": "alexbeavs-ps1-ports/ace-combat-3-electrosphere-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

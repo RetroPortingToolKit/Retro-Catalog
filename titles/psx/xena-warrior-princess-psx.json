@@ -4,7 +4,7 @@
   "kind": "recomp",
   "platform": "psx",
   "description": "Xena: Warrior Princess recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/xena-warrior-princess-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/xena-warrior-princess-recomp",
   "rom_identity": {
     "crc32": [
       "3ff3122d"
@@ -38,7 +38,7 @@
     ".bin"
   ],
   "release": {
-    "github": "Alexbeav/xena-warrior-princess-recomp",
+    "github": "alexbeavs-ps1-ports/xena-warrior-princess-recomp",
     "asset_glob": {
       "linux": "*linux*",
       "windows": "*windows*",
@@ -59,12 +59,12 @@
     ]
   },
   "author_notes": "Use the verified USA SLUS-00977 single-track CUE/BIN dump and your own SCPH-1001 BIOS dump. Windows installation, generation, build, gameplay and relaunch have been tested. Linux and macOS full installation and gameplay remain unverified. Current Mac archives require macOS 15 for their generators and external Homebrew SDL3; a package refresh is pending.",
-  "notes": "Approved Windows-tested entry. Record the accepted public release source commit and explicit SCPH1001 BIOS identity. These fields implement the corrections requested in the original approval issue and its September 6 follow-up. Linux/macOS acceptance is not claimed.",
+  "notes": "Approved Windows-tested entry. Record the accepted public release source commit and explicit SCPH1001 BIOS identity. These fields implement the corrections requested in the original approval issue and its September 6 follow-up. Linux/macOS acceptance is not claimed. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "build": {
     "enabled": true,
     "source": {
-      "github": "Alexbeav/xena-warrior-princess-recomp",
-      "ref": "acb27a20e1c940a243447a1e4b27bccaafdd82eb"
+      "github": "alexbeavs-ps1-ports/xena-warrior-princess-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "id": "cmake-clang-v1",

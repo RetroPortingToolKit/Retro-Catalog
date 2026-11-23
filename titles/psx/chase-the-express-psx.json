@@ -1,0 +1,147 @@
+{
+  "id": "chase-the-express-psx",
+  "name": "Chase the Express",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Chase the Express.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/chase-the-express-recomp",
+  "rom_identity": {
+    "crc32": [
+      "4d8fd5e7",
+      "3cee0ef6"
+    ],
+    "md5": [
+      "63cdb18e61fc6d444b10afa89a152809",
+      "1f53b7b638f04a86071c65afb0060a6d"
+    ],
+    "sha1": [
+      "241ba4b899ebcaf1c339aa029150f11a77b9bc9b",
+      "d77320fecc5755f1560b4a466083dc6cd53b4947"
+    ],
+    "sha256": [
+      "ee1107f7cfc562cbdd31a341cbf01d47bd10e9cb54eb3ca63092df4c06a33460",
+      "cb213ef751af593d926087d34c16ab67a1feb0ba71079936c94f1cf32b3ed566"
+    ],
+    "disc_serials": [
+      "SLUS-01151",
+      "SLUS-01157"
+    ],
+    "sizes": [
+      658576464,
+      680468880
+    ],
+    "filenames": [
+      "Covert Ops - Nuclear Dawn (USA) (Disc 1).cue",
+      "Covert Ops - Nuclear Dawn (USA) (Disc 1).bin",
+      "Covert Ops - Nuclear Dawn (USA) (Disc 2).cue",
+      "Covert Ops - Nuclear Dawn (USA) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-01151",
+        "cue_name": "Covert Ops - Nuclear Dawn (USA) (Disc 1).cue",
+        "bin_name": "Covert Ops - Nuclear Dawn (USA) (Disc 1).bin",
+        "crc32": [
+          "4d8fd5e7"
+        ],
+        "md5": [
+          "63cdb18e61fc6d444b10afa89a152809"
+        ],
+        "sha1": [
+          "241ba4b899ebcaf1c339aa029150f11a77b9bc9b"
+        ],
+        "sha256": [
+          "ee1107f7cfc562cbdd31a341cbf01d47bd10e9cb54eb3ca63092df4c06a33460"
+        ],
+        "sizes": [
+          658576464
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-01157",
+        "cue_name": "Covert Ops - Nuclear Dawn (USA) (Disc 2).cue",
+        "bin_name": "Covert Ops - Nuclear Dawn (USA) (Disc 2).bin",
+        "crc32": [
+          "3cee0ef6"
+        ],
+        "md5": [
+          "1f53b7b638f04a86071c65afb0060a6d"
+        ],
+        "sha1": [
+          "d77320fecc5755f1560b4a466083dc6cd53b4947"
+        ],
+        "sha256": [
+          "cb213ef751af593d926087d34c16ab67a1feb0ba71079936c94f1cf32b3ed566"
+        ],
+        "sizes": [
+          680468880
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/chase-the-express-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "chase-the-express-recomp",
+  "launch": {
+    "linux": "chase_the_express",
+    "windows": "chase_the_express.exe",
+    "macos": "chase_the_express"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/chase-the-express-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

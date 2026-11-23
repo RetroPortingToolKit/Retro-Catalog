@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/spyro-the-dragon-recomp",
-      "ref": "cd26a8aed89c3c929692295a69523d4dbe035200"
+      "github": "alexbeavs-ps1-ports/spyro-the-dragon-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Spyro the Dragon recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/spyro-the-dragon-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/spyro-the-dragon-recomp",
   "id": "spyro-the-dragon-psx",
   "install_dir_name": "spyro-the-dragon-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Spyro_the_Dragon_Recompiled"
   },
   "name": "Spyro the Dragon",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/spyro-the-dragon-recomp",
+    "github": "alexbeavs-ps1-ports/spyro-the-dragon-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

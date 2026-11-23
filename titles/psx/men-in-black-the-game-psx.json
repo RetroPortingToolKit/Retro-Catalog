@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/men-in-black-the-game-recomp",
-      "ref": "dbc330f3616e68a16cb17c5a2493ba0b309e142b"
+      "github": "alexbeavs-ps1-ports/men-in-black-the-game-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for Men in Black: The Game.",
-  "homepage": "https://github.com/Alexbeav/men-in-black-the-game-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/men-in-black-the-game-recomp",
   "id": "men-in-black-the-game-psx",
   "install_dir_name": "men-in-black-the-game-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Men_in_Black__The_Game_Recompiled"
   },
   "name": "Men in Black: The Game",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/men-in-black-the-game-recomp",
+    "github": "alexbeavs-ps1-ports/men-in-black-the-game-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

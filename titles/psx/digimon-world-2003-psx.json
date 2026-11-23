@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/digimon-world-2003-recomp",
-      "ref": "cebada963263459d292da7e3dee07b0fbc9f01e9"
+      "github": "alexbeavs-ps1-ports/digimon-world-2003-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for Digimon World 2003.",
-  "homepage": "https://github.com/Alexbeav/digimon-world-2003-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/digimon-world-2003-recomp",
   "id": "digimon-world-2003-psx",
   "install_dir_name": "digimon-world-2003-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Digimon_World_2003_Recompiled"
   },
   "name": "Digimon World",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/digimon-world-2003-recomp",
+    "github": "alexbeavs-ps1-ports/digimon-world-2003-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

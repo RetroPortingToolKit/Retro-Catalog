@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/medievil-recomp",
-      "ref": "6a3ef2ce1788e0e457f425bb0e70662bbd5eeb82"
+      "github": "alexbeavs-ps1-ports/medievil-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "MediEvil recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/medievil-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/medievil-recomp",
   "id": "medievil-psx",
   "install_dir_name": "medievil-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "MediEvil_Recompiled"
   },
   "name": "MediEvil",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/medievil-recomp",
+    "github": "alexbeavs-ps1-ports/medievil-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

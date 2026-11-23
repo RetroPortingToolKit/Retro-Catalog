@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/colin-mcrae-rally-2-0-recomp",
-      "ref": "3aba2be4a6c6f54abfc8818a93891ed3131237d0"
+      "github": "alexbeavs-ps1-ports/colin-mcrae-rally-2-0-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for Colin McRae Rally 2.0.",
-  "homepage": "https://github.com/Alexbeav/colin-mcrae-rally-2-0-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/colin-mcrae-rally-2-0-recomp",
   "id": "colin-mcrae-rally-2-0-psx",
   "install_dir_name": "colin-mcrae-rally-2-0-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Colin_McRae_Rally_2_0_Recompiled"
   },
   "name": "Colin McRae Rally 2.0",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/colin-mcrae-rally-2-0-recomp",
+    "github": "alexbeavs-ps1-ports/colin-mcrae-rally-2-0-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

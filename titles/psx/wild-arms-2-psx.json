@@ -1,0 +1,147 @@
+{
+  "id": "wild-arms-2-psx",
+  "name": "Wild Arms 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Wild Arms 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/wild-arms-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "4321aa8d",
+      "32154aae"
+    ],
+    "md5": [
+      "6f087363c1ed530464d4614d0dafc7e3",
+      "67fe49cd4a3614b03024bbe9abe34096"
+    ],
+    "sha1": [
+      "85479cd7045cca3404aca702e109b97fda4e5ee7",
+      "276f4952644a155be550d62b5ae2c72a9e0e8944"
+    ],
+    "sha256": [
+      "2e4c828d296bdc41fa003bceb2784cf77e5a7ed4f58de9d1246eb9b97a343b40",
+      "78a312659dbb763e182d9f61d7149290d0611c581dff9291ed6fabccb90cfdbe"
+    ],
+    "disc_serials": [
+      "SCUS-94484",
+      "SCUS-94498"
+    ],
+    "sizes": [
+      515619552,
+      562311456
+    ],
+    "filenames": [
+      "Wild Arms 2 (USA) (Disc 1).cue",
+      "Wild Arms 2 (USA) (Disc 1).bin",
+      "Wild Arms 2 (USA) (Disc 2).cue",
+      "Wild Arms 2 (USA) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SCUS-94484",
+        "cue_name": "Wild Arms 2 (USA) (Disc 1).cue",
+        "bin_name": "Wild Arms 2 (USA) (Disc 1).bin",
+        "crc32": [
+          "4321aa8d"
+        ],
+        "md5": [
+          "6f087363c1ed530464d4614d0dafc7e3"
+        ],
+        "sha1": [
+          "85479cd7045cca3404aca702e109b97fda4e5ee7"
+        ],
+        "sha256": [
+          "2e4c828d296bdc41fa003bceb2784cf77e5a7ed4f58de9d1246eb9b97a343b40"
+        ],
+        "sizes": [
+          515619552
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SCUS-94498",
+        "cue_name": "Wild Arms 2 (USA) (Disc 2).cue",
+        "bin_name": "Wild Arms 2 (USA) (Disc 2).bin",
+        "crc32": [
+          "32154aae"
+        ],
+        "md5": [
+          "67fe49cd4a3614b03024bbe9abe34096"
+        ],
+        "sha1": [
+          "276f4952644a155be550d62b5ae2c72a9e0e8944"
+        ],
+        "sha256": [
+          "78a312659dbb763e182d9f61d7149290d0611c581dff9291ed6fabccb90cfdbe"
+        ],
+        "sizes": [
+          562311456
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/wild-arms-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "wild-arms-2-recomp",
+  "launch": {
+    "linux": "wild_arms_2",
+    "windows": "wild_arms_2.exe",
+    "macos": "wild_arms_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/wild-arms-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

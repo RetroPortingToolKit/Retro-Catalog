@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/armored-core-recomp",
-      "ref": "80060c45a009ed8963e83fbb742eb3ef956cc9fc"
+      "github": "alexbeavs-ps1-ports/armored-core-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for Armored Core.",
-  "homepage": "https://github.com/Alexbeav/armored-core-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/armored-core-recomp",
   "id": "armored-core-psx",
   "install_dir_name": "armored-core-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Armored_Core_Recompiled"
   },
   "name": "Armored Core",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/armored-core-recomp",
+    "github": "alexbeavs-ps1-ports/armored-core-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

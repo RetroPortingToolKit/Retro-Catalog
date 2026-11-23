@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/duke-nukem-time-to-kill-recomp",
-      "ref": "62f7313c39e96a1146967df3beecae06a81df18b"
+      "github": "alexbeavs-ps1-ports/duke-nukem-time-to-kill-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Duke Nukem: Time to Kill.",
-  "homepage": "https://github.com/Alexbeav/duke-nukem-time-to-kill-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/duke-nukem-time-to-kill-recomp",
   "id": "duke-nukem-time-to-kill-psx",
   "install_dir_name": "duke-nukem-time-to-kill-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Duke_Nukem__Time_to_Kill_Recompiled"
   },
   "name": "Duke Nukem: Time to Kill",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/duke-nukem-time-to-kill-recomp",
+    "github": "alexbeavs-ps1-ports/duke-nukem-time-to-kill-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

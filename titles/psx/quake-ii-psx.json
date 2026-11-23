@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/quake-ii-recomp",
-      "ref": "348015cc55f945d71dd13edba2f975bbab34bcdb"
+      "github": "alexbeavs-ps1-ports/quake-ii-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Quake II recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/quake-ii-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/quake-ii-recomp",
   "id": "quake-ii-psx",
   "install_dir_name": "quake-ii-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Quake_II_Recompiled"
   },
   "name": "Quake II",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/quake-ii-recomp",
+    "github": "alexbeavs-ps1-ports/quake-ii-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

@@ -4,7 +4,7 @@
   "kind": "recomp",
   "platform": "psx",
   "description": "Metal Slug X is a run and gun video game in the Metal Slug series. The PlayStation version was released in North America and PAL regions by Agetec and features the same \"Combat School\" mode featured in the console versions of the first two games.",
-  "homepage": "https://github.com/TechnicallyComputers/Metal-Slug-X-Recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/metal-slug-x-recomp",
   "author_notes": "Use USA Redump image",
   "rom_identity": {
     "crc32": [
@@ -39,7 +39,7 @@
     ".bin"
   ],
   "release": {
-    "github": "TechnicallyComputers/Metal-Slug-X-Recomp",
+    "github": "alexbeavs-ps1-ports/metal-slug-x-recomp",
     "asset_glob": {
       "linux": "*linux*",
       "windows": "*windows*",
@@ -59,24 +59,12 @@
       "ps1"
     ]
   },
-  "netplay": {
-    "supported": true,
-    "stack": "recomp-net",
-    "game_name": "Metal Slug X",
-    "game_version": "0.1.1",
-    "max_slots": 2,
-    "transports": [
-      "lan",
-      "ice"
-    ],
-    "match_caps_schema": "psx-v1"
-  },
-  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "build": {
     "enabled": true,
     "source": {
-      "github": "TechnicallyComputers/Metal-Slug-X-Recomp",
-      "ref": "main"
+      "github": "alexbeavs-ps1-ports/metal-slug-x-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "id": "cmake-clang-v1",

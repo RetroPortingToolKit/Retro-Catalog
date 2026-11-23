@@ -1,0 +1,89 @@
+{
+  "id": "rival-schools-psx",
+  "name": "Rival Schools: United by Fate",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Rival Schools: United by Fate.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/rival-schools-recomp",
+  "rom_identity": {
+    "crc32": [
+      "be1ce7d9"
+    ],
+    "md5": [
+      "742089ecce542ff076d862694e150370"
+    ],
+    "sha1": [
+      "4bc0b5d38806d7836850d869654bf662b00490d9"
+    ],
+    "sha256": [
+      "bbf78ce4149be0538b83fcc00843473957c459b25f0a2da43fb0c253204e4f23"
+    ],
+    "disc_serials": [
+      "SLUS-00681"
+    ],
+    "sizes": [
+      725629632
+    ],
+    "filenames": [
+      "Rival Schools - United by Fate (USA) (Disc 1) (Arcade Disc).cue",
+      "Rival Schools - United by Fate (USA) (Disc 1) (Arcade Disc).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/rival-schools-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "rival-schools-recomp",
+  "launch": {
+    "linux": "Rival_Schools_Arcade",
+    "windows": "Rival_Schools_Arcade.exe",
+    "macos": "Rival_Schools_Arcade"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.3.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/rival-schools-recomp",
+      "ref": "v0.1.3"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

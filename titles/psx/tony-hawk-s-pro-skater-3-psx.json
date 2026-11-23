@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/tony-hawk-s-pro-skater-3-recomp",
-      "ref": "f9daa11db99d4ad6140151c41c006e9a4e52718c"
+      "github": "alexbeavs-ps1-ports/tony-hawk-s-pro-skater-3-recomp",
+      "ref": "v0.1.5"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Tony Hawk's Pro Skater 3 recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/tony-hawk-s-pro-skater-3-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/tony-hawk-s-pro-skater-3-recomp",
   "id": "tony-hawk-s-pro-skater-3-psx",
   "install_dir_name": "tony-hawk-s-pro-skater-3-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Tony_Hawks_Pro_Skater_3_Recompiled"
   },
   "name": "Tony Hawk's Pro Skater 3",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.5.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/tony-hawk-s-pro-skater-3-recomp",
+    "github": "alexbeavs-ps1-ports/tony-hawk-s-pro-skater-3-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

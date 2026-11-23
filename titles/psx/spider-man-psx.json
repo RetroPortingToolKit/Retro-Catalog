@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/spider-man-recomp",
-      "ref": "36ad0e9a17e0f7f5d903d680fb95355c8ef8bf15"
+      "github": "alexbeavs-ps1-ports/spider-man-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Spider-Man.",
-  "homepage": "https://github.com/Alexbeav/spider-man-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/spider-man-recomp",
   "id": "spider-man-psx",
   "install_dir_name": "spider-man-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Spider_Man_Recompiled.exe"
   },
   "name": "Spider-Man",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/spider-man-recomp"
+    "github": "alexbeavs-ps1-ports/spider-man-recomp"
   },
   "rom_extensions": [
     ".cue",

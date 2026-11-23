@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/jackie-chan-stuntmaster-recomp",
-      "ref": "2e8fc000e833581c5ead69ea4d2d156cba2050a4"
+      "github": "alexbeavs-ps1-ports/jackie-chan-stuntmaster-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Jackie Chan Stuntmaster recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/jackie-chan-stuntmaster-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/jackie-chan-stuntmaster-recomp",
   "id": "jackie-chan-stuntmaster-psx",
   "install_dir_name": "jackie-chan-stuntmaster-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Jackie_Chan_Stuntmaster_Recompiled"
   },
   "name": "Jackie Chan Stuntmaster",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/jackie-chan-stuntmaster-recomp",
+    "github": "alexbeavs-ps1-ports/jackie-chan-stuntmaster-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

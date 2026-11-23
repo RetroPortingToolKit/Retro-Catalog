@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/oddworld-abe-s-oddysee-recomp",
-      "ref": "0a9298cdf9e7f8acfdc7a7f5621254b6f321f50a"
+      "github": "alexbeavs-ps1-ports/oddworld-abe-s-oddysee-recomp",
+      "ref": "v0.1.5"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Oddworld: Abe's Oddysee recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/oddworld-abe-s-oddysee-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/oddworld-abe-s-oddysee-recomp",
   "id": "oddworld-abe-s-oddysee-psx",
   "install_dir_name": "oddworld-abe-s-oddysee-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Oddworld__Abe_s_Oddysee_Recompiled"
   },
   "name": "Oddworld: Abe's Oddysee",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.5.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/oddworld-abe-s-oddysee-recomp",
+    "github": "alexbeavs-ps1-ports/oddworld-abe-s-oddysee-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",
