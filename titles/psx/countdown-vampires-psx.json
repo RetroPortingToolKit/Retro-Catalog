@@ -1,0 +1,147 @@
+{
+  "id": "countdown-vampires-psx",
+  "name": "Countdown Vampires",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Countdown Vampires.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/countdown-vampires-recomp",
+  "rom_identity": {
+    "crc32": [
+      "e505fc6d",
+      "9474b511"
+    ],
+    "md5": [
+      "bfd2bb5e58e152ba4cfac0eb1283ed87",
+      "f8b6735eea83f52017ce7cc022455ca0"
+    ],
+    "sha1": [
+      "5ee460a19a8ea606e8d058f216383133615a95d3",
+      "23900a207a6a5dd3aa6880ecafd71e00270082ce"
+    ],
+    "sha256": [
+      "5b972b876ee0c6d07467679811767e945840d5412bb4719da27f570315fa0c3c",
+      "5fb723b8ca6fb46c3c0e56e26ce97fbe256f1a1aaae7f47cce63cc1780758086"
+    ],
+    "disc_serials": [
+      "SLUS-00898",
+      "SLUS-01199"
+    ],
+    "sizes": [
+      575113392,
+      586539408
+    ],
+    "filenames": [
+      "Countdown Vampires (USA) (Disc 1).cue",
+      "Countdown Vampires (USA) (Disc 1).bin",
+      "Countdown Vampires (USA) (Disc 2).cue",
+      "Countdown Vampires (USA) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-00898",
+        "cue_name": "Countdown Vampires (USA) (Disc 1).cue",
+        "bin_name": "Countdown Vampires (USA) (Disc 1).bin",
+        "crc32": [
+          "e505fc6d"
+        ],
+        "md5": [
+          "bfd2bb5e58e152ba4cfac0eb1283ed87"
+        ],
+        "sha1": [
+          "5ee460a19a8ea606e8d058f216383133615a95d3"
+        ],
+        "sha256": [
+          "5b972b876ee0c6d07467679811767e945840d5412bb4719da27f570315fa0c3c"
+        ],
+        "sizes": [
+          575113392
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-01199",
+        "cue_name": "Countdown Vampires (USA) (Disc 2).cue",
+        "bin_name": "Countdown Vampires (USA) (Disc 2).bin",
+        "crc32": [
+          "9474b511"
+        ],
+        "md5": [
+          "f8b6735eea83f52017ce7cc022455ca0"
+        ],
+        "sha1": [
+          "23900a207a6a5dd3aa6880ecafd71e00270082ce"
+        ],
+        "sha256": [
+          "5fb723b8ca6fb46c3c0e56e26ce97fbe256f1a1aaae7f47cce63cc1780758086"
+        ],
+        "sizes": [
+          586539408
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/countdown-vampires-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "countdown-vampires-recomp",
+  "launch": {
+    "linux": "countdown_vampires",
+    "windows": "countdown_vampires.exe",
+    "macos": "countdown_vampires"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/countdown-vampires-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

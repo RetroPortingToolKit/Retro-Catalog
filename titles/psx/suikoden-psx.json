@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/suikoden-recomp",
-      "ref": "4824b3c15d92f26c3859dc615c8bfc47e61c702b"
+      "github": "alexbeavs-ps1-ports/suikoden-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Suikoden.",
-  "homepage": "https://github.com/Alexbeav/suikoden-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/suikoden-recomp",
   "id": "suikoden-psx",
   "install_dir_name": "suikoden-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Suikoden_Recompiled.exe"
   },
   "name": "Suikoden",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/suikoden-recomp"
+    "github": "alexbeavs-ps1-ports/suikoden-recomp"
   },
   "rom_extensions": [
     ".cue",

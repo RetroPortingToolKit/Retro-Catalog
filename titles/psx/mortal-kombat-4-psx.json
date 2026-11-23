@@ -4,7 +4,7 @@
   "kind": "recomp",
   "platform": "psx",
   "description": "Mortal Kombat 4 recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/mortal-kombat-4-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/mortal-kombat-4-recomp",
   "rom_identity": {
     "crc32": [
       "8f6b19f1"
@@ -38,7 +38,7 @@
     ".bin"
   ],
   "release": {
-    "github": "Alexbeav/mortal-kombat-4-recomp",
+    "github": "alexbeavs-ps1-ports/mortal-kombat-4-recomp",
     "asset_glob": {
       "linux": "*linux*",
       "windows": "*windows*",
@@ -62,7 +62,7 @@
     "supported": true,
     "stack": "recomp-net",
     "game_name": "Mortal Kombat 4",
-    "game_version": "0.3.5",
+    "game_version": "0.3.7",
     "max_slots": 2,
     "transports": [
       "lan",
@@ -71,12 +71,12 @@
     "match_caps_schema": "psx-v1"
   },
   "author_notes": "Use the verified USA SLUS-00605 single-track CUE/BIN dump and a legal SCPH-1001 BIOS dump.",
-  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json.",
+  "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.7.",
   "build": {
     "enabled": true,
     "source": {
-      "github": "Alexbeav/mortal-kombat-4-recomp",
-      "ref": "main"
+      "github": "alexbeavs-ps1-ports/mortal-kombat-4-recomp",
+      "ref": "v0.3.7"
     },
     "toolchain": {
       "id": "cmake-clang-v1",

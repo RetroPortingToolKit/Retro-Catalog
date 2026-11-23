@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/wipeout-recomp",
-      "ref": "75307bd0d0c56ed13e09a34efeb1efc7f5625d15"
+      "github": "alexbeavs-ps1-ports/wipeout-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "WipEout recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/wipeout-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/wipeout-recomp",
   "id": "wipeout-psx",
   "install_dir_name": "wipeout-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "WipEout_Recompiled"
   },
   "name": "WipEout",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/wipeout-recomp",
+    "github": "alexbeavs-ps1-ports/wipeout-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

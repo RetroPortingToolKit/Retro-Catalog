@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/pro-pinball-timeshock-recomp",
-      "ref": "4155217532f2a1857d2fc7438d5ecfe1554c219e"
+      "github": "alexbeavs-ps1-ports/pro-pinball-timeshock-recomp",
+      "ref": "v0.1.1"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Pro Pinball: Timeshock!.",
-  "homepage": "https://github.com/Alexbeav/pro-pinball-timeshock-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/pro-pinball-timeshock-recomp",
   "id": "pro-pinball-timeshock-psx",
   "install_dir_name": "pro-pinball-timeshock-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Pro_Pinball__Timeshock__Recompiled.exe"
   },
   "name": "Pro Pinball: Timeshock!",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.1.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/pro-pinball-timeshock-recomp"
+    "github": "alexbeavs-ps1-ports/pro-pinball-timeshock-recomp"
   },
   "rom_extensions": [
     ".cue",

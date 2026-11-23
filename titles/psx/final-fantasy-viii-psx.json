@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/final-fantasy-viii-recomp",
-      "ref": "22aca481ef3e22586ecf04732cf1f8baef4db842"
+      "github": "alexbeavs-ps1-ports/final-fantasy-viii-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Final Fantasy VIII.",
-  "homepage": "https://github.com/Alexbeav/final-fantasy-viii-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/final-fantasy-viii-recomp",
   "id": "final-fantasy-viii-psx",
   "install_dir_name": "final-fantasy-viii-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Final_Fantasy_VIII_Recompiled.exe"
   },
   "name": "Final Fantasy VIII",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/final-fantasy-viii-recomp"
+    "github": "alexbeavs-ps1-ports/final-fantasy-viii-recomp"
   },
   "rom_extensions": [
     ".cue",

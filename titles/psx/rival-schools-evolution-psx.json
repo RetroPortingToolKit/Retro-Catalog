@@ -1,0 +1,101 @@
+{
+  "id": "rival-schools-evolution-psx",
+  "name": "Rival Schools: Evolution Disc",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Rival Schools: Evolution Disc.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/rival-schools-evolution-recomp",
+  "rom_identity": {
+    "crc32": [
+      "a1134215"
+    ],
+    "md5": [
+      "a7af7e5b80c23fdd08db6b629399dfd7"
+    ],
+    "sha1": [
+      "2bf1af92ed996ebd4d624046496d21567aac39f0"
+    ],
+    "sha256": [
+      "7e9265de0072e66085528d80bcc4dea71423d6e8efd47b2ebd135e25b14a05a3"
+    ],
+    "disc_serials": [
+      "SLUS-00771"
+    ],
+    "sizes": [
+      385655088
+    ],
+    "filenames": [
+      "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).cue",
+      "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/rival-schools-evolution-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "rival-schools-evolution-recomp",
+  "launch": {
+    "linux": "Rival_Schools_Evolution",
+    "windows": "Rival_Schools_Evolution.exe",
+    "macos": "Rival_Schools_Evolution"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/rival-schools-evolution-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Rival Schools: Evolution Disc",
+    "game_version": "0.1.0",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  }
+}

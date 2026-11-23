@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/the-fifth-element-recomp",
-      "ref": "5fa4de22e2a51d42f992f9602948d1bead88d509"
+      "github": "alexbeavs-ps1-ports/the-fifth-element-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for The Fifth Element.",
-  "homepage": "https://github.com/Alexbeav/the-fifth-element-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/the-fifth-element-recomp",
   "id": "the-fifth-element-psx",
   "install_dir_name": "the-fifth-element-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "The_Fifth_Element_Recompiled.exe"
   },
   "name": "The Fifth Element",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/the-fifth-element-recomp"
+    "github": "alexbeavs-ps1-ports/the-fifth-element-recomp"
   },
   "rom_extensions": [
     ".cue",

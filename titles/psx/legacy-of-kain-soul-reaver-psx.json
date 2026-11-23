@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/legacy-of-kain-soul-reaver-recomp",
-      "ref": "7c23425d3b43156c925041dffe34322c7db8f42e"
+      "github": "alexbeavs-ps1-ports/legacy-of-kain-soul-reaver-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Legacy of Kain: Soul Reaver recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/legacy-of-kain-soul-reaver-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/legacy-of-kain-soul-reaver-recomp",
   "id": "legacy-of-kain-soul-reaver-psx",
   "install_dir_name": "legacy-of-kain-soul-reaver-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Legacy_of_Kain__Soul_Reaver_Recompiled"
   },
   "name": "Legacy of Kain: Soul Reaver",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/legacy-of-kain-soul-reaver-recomp",
+    "github": "alexbeavs-ps1-ports/legacy-of-kain-soul-reaver-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

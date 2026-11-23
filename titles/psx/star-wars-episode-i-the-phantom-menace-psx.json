@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/star-wars-episode-i-the-phantom-menace-recomp",
-      "ref": "ec95dfc7f6edf44adbc8e2f4a114e8a335ab0bf1"
+      "github": "alexbeavs-ps1-ports/star-wars-episode-i-the-phantom-menace-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Star Wars Episode I: The Phantom Menace.",
-  "homepage": "https://github.com/Alexbeav/star-wars-episode-i-the-phantom-menace-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/star-wars-episode-i-the-phantom-menace-recomp",
   "id": "star-wars-episode-i-the-phantom-menace-psx",
   "install_dir_name": "star-wars-episode-i-the-phantom-menace-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Star_Wars_Episode_I__The_Phantom_Menace_Recompiled.exe"
   },
   "name": "Star Wars Episode I: The Phantom Menace",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/star-wars-episode-i-the-phantom-menace-recomp"
+    "github": "alexbeavs-ps1-ports/star-wars-episode-i-the-phantom-menace-recomp"
   },
   "rom_extensions": [
     ".cue",

@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/alien-resurrection-recomp",
-      "ref": "4ec32992bc4cbb0b3a98c80c123b7e5f53672fbc"
+      "github": "alexbeavs-ps1-ports/alien-resurrection-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Alien Resurrection recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/alien-resurrection-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/alien-resurrection-recomp",
   "id": "alien-resurrection-psx",
   "install_dir_name": "alien-resurrection-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Alien_Resurrection_Recompiled"
   },
   "name": "Alien Resurrection",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/alien-resurrection-recomp",
+    "github": "alexbeavs-ps1-ports/alien-resurrection-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

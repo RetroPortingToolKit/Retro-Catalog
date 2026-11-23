@@ -1,0 +1,211 @@
+{
+  "id": "the-x-files-psx",
+  "name": "The X-Files",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for The X-Files.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/the-x-files-recomp",
+  "rom_identity": {
+    "crc32": [
+      "2a424254",
+      "59c0fb21",
+      "f3db0598",
+      "c73abde0"
+    ],
+    "md5": [
+      "e3a7fc1a9b3a390ad709e75e9f79d786",
+      "e542f4c340b521f07de4a0018044f5ba",
+      "4c99e26f356b85ae8fa2ed95eecfc35f",
+      "3724190d308e95b2d244f760b6b292f5"
+    ],
+    "sha1": [
+      "679f0d21aa87a1216cad6f5fc9e8a721a0e4d64b",
+      "2a8bcb5613a912f73c5b6b283bc229c2afa53a1b",
+      "47db5a887cde5a8c36f40283d7e7d4b0dc3b5c38",
+      "f672585e5ffb86e9e90b38d837e065ae88a62ef9"
+    ],
+    "sha256": [
+      "fda340ed8c26d9f732730f9d184795eb72e3ace1d7aecaa5860372abd3f1748d",
+      "36f9a7d58b501c0f709e8568077b6cd9b32cb9eb9ec262ae48d2f498e8588b00",
+      "f25c17f568009de3ff0134d4467c0bb1289ae49b16cda6ab8a3847bad777dfe4",
+      "b409c15497f8b113da3452d8fb9e967463a7b7b2bcb5b9767771e520e91e85e1"
+    ],
+    "disc_serials": [
+      "SLUS-00915",
+      "SLUS-00949",
+      "SLUS-00950",
+      "SLUS-00951"
+    ],
+    "sizes": [
+      613401600,
+      719229840,
+      606583152,
+      729606864
+    ],
+    "filenames": [
+      "X-Files, The (USA) (Disc 1).cue",
+      "X-Files, The (USA) (Disc 1).bin",
+      "X-Files, The (USA) (Disc 2).cue",
+      "X-Files, The (USA) (Disc 2).bin",
+      "X-Files, The (USA) (Disc 3).cue",
+      "X-Files, The (USA) (Disc 3).bin",
+      "X-Files, The (USA) (Disc 4).cue",
+      "X-Files, The (USA) (Disc 4).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-00915",
+        "cue_name": "X-Files, The (USA) (Disc 1).cue",
+        "bin_name": "X-Files, The (USA) (Disc 1).bin",
+        "crc32": [
+          "2a424254"
+        ],
+        "md5": [
+          "e3a7fc1a9b3a390ad709e75e9f79d786"
+        ],
+        "sha1": [
+          "679f0d21aa87a1216cad6f5fc9e8a721a0e4d64b"
+        ],
+        "sha256": [
+          "fda340ed8c26d9f732730f9d184795eb72e3ace1d7aecaa5860372abd3f1748d"
+        ],
+        "sizes": [
+          613401600
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-00949",
+        "cue_name": "X-Files, The (USA) (Disc 2).cue",
+        "bin_name": "X-Files, The (USA) (Disc 2).bin",
+        "crc32": [
+          "59c0fb21"
+        ],
+        "md5": [
+          "e542f4c340b521f07de4a0018044f5ba"
+        ],
+        "sha1": [
+          "2a8bcb5613a912f73c5b6b283bc229c2afa53a1b"
+        ],
+        "sha256": [
+          "36f9a7d58b501c0f709e8568077b6cd9b32cb9eb9ec262ae48d2f498e8588b00"
+        ],
+        "sizes": [
+          719229840
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 3,
+        "serial": "SLUS-00950",
+        "cue_name": "X-Files, The (USA) (Disc 3).cue",
+        "bin_name": "X-Files, The (USA) (Disc 3).bin",
+        "crc32": [
+          "f3db0598"
+        ],
+        "md5": [
+          "4c99e26f356b85ae8fa2ed95eecfc35f"
+        ],
+        "sha1": [
+          "47db5a887cde5a8c36f40283d7e7d4b0dc3b5c38"
+        ],
+        "sha256": [
+          "f25c17f568009de3ff0134d4467c0bb1289ae49b16cda6ab8a3847bad777dfe4"
+        ],
+        "sizes": [
+          606583152
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 4,
+        "serial": "SLUS-00951",
+        "cue_name": "X-Files, The (USA) (Disc 4).cue",
+        "bin_name": "X-Files, The (USA) (Disc 4).bin",
+        "crc32": [
+          "c73abde0"
+        ],
+        "md5": [
+          "3724190d308e95b2d244f760b6b292f5"
+        ],
+        "sha1": [
+          "f672585e5ffb86e9e90b38d837e065ae88a62ef9"
+        ],
+        "sha256": [
+          "b409c15497f8b113da3452d8fb9e967463a7b7b2bcb5b9767771e520e91e85e1"
+        ],
+        "sizes": [
+          729606864
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/the-x-files-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "the-x-files-recomp",
+  "launch": {
+    "linux": "the_x_files",
+    "windows": "the_x_files.exe",
+    "macos": "the_x_files"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/the-x-files-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

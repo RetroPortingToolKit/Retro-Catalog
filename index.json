@@ -116,7 +116,47 @@
         "wipeout2k97xl-psx",
         "puyo-puyo-box-psx",
         "wild9-psx",
-        "crash-team-racing-psx"
+        "crash-team-racing-psx",
+        "alundra-2-psx",
+        "c-12-final-resistance-psx",
+        "chase-the-express-psx",
+        "countdown-vampires-psx",
+        "die-hard-trilogy-2-psx",
+        "duke-nukem-total-meltdown-psx",
+        "fighting-force-2-psx",
+        "gran-turismo-psx",
+        "jet-moto-psx",
+        "kings-field-ii-psx",
+        "resident-evil-2-claire-psx",
+        "rollcage-psx",
+        "tenchu-2-birth-of-the-stealth-assassins-psx",
+        "the-x-files-psx",
+        "valkyrie-profile-psx",
+        "wild-arms-2-psx",
+        "wwf-attitude-psx",
+        "wwf-in-your-house-psx",
+        "wwf-smackdown-psx",
+        "wwf-war-zone-psx",
+        "armored-core-master-of-arena-psx",
+        "armored-core-project-phantasma-psx",
+        "azure-dreams-psx",
+        "bushido-blade-2-psx",
+        "colony-wars-red-sun-psx",
+        "destruction-derby-raw-psx",
+        "digimon-world-2-psx",
+        "fear-effect-2-retro-helix-psx",
+        "g-police-weapons-of-justice-psx",
+        "incredible-crisis-psx",
+        "jade-cocoon-psx",
+        "kartia-psx",
+        "nightmare-creatures-ii-psx",
+        "rival-schools-evolution-psx",
+        "rival-schools-psx",
+        "rollcage-stage-ii-psx",
+        "spider-man-2-enter-electro-psx",
+        "suikoden-ii-psx",
+        "tail-concerto-psx",
+        "wild-arms-psx"
       ]
     },
     "snes": {
@@ -205,6 +245,46 @@
     "puyo-puyo-box-psx",
     "wild9-psx",
     "crash-team-racing-psx",
+    "alundra-2-psx",
+    "c-12-final-resistance-psx",
+    "chase-the-express-psx",
+    "countdown-vampires-psx",
+    "die-hard-trilogy-2-psx",
+    "duke-nukem-total-meltdown-psx",
+    "fighting-force-2-psx",
+    "gran-turismo-psx",
+    "jet-moto-psx",
+    "kings-field-ii-psx",
+    "resident-evil-2-claire-psx",
+    "rollcage-psx",
+    "tenchu-2-birth-of-the-stealth-assassins-psx",
+    "the-x-files-psx",
+    "valkyrie-profile-psx",
+    "wild-arms-2-psx",
+    "wwf-attitude-psx",
+    "wwf-in-your-house-psx",
+    "wwf-smackdown-psx",
+    "wwf-war-zone-psx",
+    "armored-core-master-of-arena-psx",
+    "armored-core-project-phantasma-psx",
+    "azure-dreams-psx",
+    "bushido-blade-2-psx",
+    "colony-wars-red-sun-psx",
+    "destruction-derby-raw-psx",
+    "digimon-world-2-psx",
+    "fear-effect-2-retro-helix-psx",
+    "g-police-weapons-of-justice-psx",
+    "incredible-crisis-psx",
+    "jade-cocoon-psx",
+    "kartia-psx",
+    "nightmare-creatures-ii-psx",
+    "rival-schools-evolution-psx",
+    "rival-schools-psx",
+    "rollcage-stage-ii-psx",
+    "spider-man-2-enter-electro-psx",
+    "suikoden-ii-psx",
+    "tail-concerto-psx",
+    "wild-arms-psx",
     "gundam-wing-endless-duel-snes",
     "super-metroid-snes",
     "mega-man-x-snes",
@@ -346,6 +426,54 @@
       "wipeout-xl-psx": {
         "platform": "psx",
         "manifest": "titles/psx/wipeout-xl-psx.json"
+      },
+      "broken-sword-the-shadow-of-the-templars-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/broken-sword-the-shadow-of-the-templars-psx.json"
+      },
+      "dreams-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/dreams-psx.json"
+      },
+      "resident-evil-directors-cut-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/resident-evil-directors-cut-psx.json"
+      },
+      "super-pang-collection-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/super-pang-collection-psx.json"
+      },
+      "toca-2-touring-cars-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/toca-2-touring-cars-psx.json"
+      },
+      "devil-dice-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/devil-dice-psx.json"
+      },
+      "dragon-ball-z-ultimate-battle-22-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/dragon-ball-z-ultimate-battle-22-psx.json"
+      },
+      "future-cop-lapd-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/future-cop-lapd-psx.json"
+      },
+      "galerians-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/galerians-psx.json"
+      },
+      "mega-man-legends-2-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/mega-man-legends-2-psx.json"
+      },
+      "misadventures-of-tron-bonne-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/misadventures-of-tron-bonne-psx.json"
+      },
+      "team-buddies-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/team-buddies-psx.json"
       }
     }
   },

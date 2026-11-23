@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/duke-nukem-land-of-the-babes-recomp",
-      "ref": "bc7f7e4e15f024bf821d58b4216673b3dd47036b"
+      "github": "alexbeavs-ps1-ports/duke-nukem-land-of-the-babes-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Duke Nukem: Land of the Babes.",
-  "homepage": "https://github.com/Alexbeav/duke-nukem-land-of-the-babes-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/duke-nukem-land-of-the-babes-recomp",
   "id": "duke-nukem-land-of-the-babes-psx",
   "install_dir_name": "duke-nukem-land-of-the-babes-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Duke_Nukem__Land_of_the_Babes_Recompiled"
   },
   "name": "Duke Nukem: Land of the Babes",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/duke-nukem-land-of-the-babes-recomp",
+    "github": "alexbeavs-ps1-ports/duke-nukem-land-of-the-babes-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

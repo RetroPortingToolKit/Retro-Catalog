@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/crash-bandicoot-3-warped-recomp",
-      "ref": "9417e74f79d4d6b1eaa0f856ef1c6c09177cf87d"
+      "github": "alexbeavs-ps1-ports/crash-bandicoot-3-warped-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Crash Bandicoot 3: Warped.",
-  "homepage": "https://github.com/Alexbeav/crash-bandicoot-3-warped-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/crash-bandicoot-3-warped-recomp",
   "id": "crash-bandicoot-3-warped-psx",
   "install_dir_name": "crash-bandicoot-3-warped-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Crash_Bandicoot_3__Warped_Recompiled.exe"
   },
   "name": "Crash Bandicoot 3: Warped",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/crash-bandicoot-3-warped-recomp"
+    "github": "alexbeavs-ps1-ports/crash-bandicoot-3-warped-recomp"
   },
   "rom_extensions": [
     ".cue",

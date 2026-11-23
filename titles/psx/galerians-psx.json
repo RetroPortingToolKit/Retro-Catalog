@@ -1,0 +1,213 @@
+{
+  "id": "galerians-psx",
+  "name": "Galerians",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Galerians.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/galerians-recomp",
+  "rom_identity": {
+    "crc32": [
+      "4f8c21f8",
+      "b6b5fe85",
+      "912a15df"
+    ],
+    "md5": [
+      "6ff87c94b34d9371fd57a744b245a74e",
+      "fdc2d4e05af3a9cded3c667c77544fc5",
+      "3a54d9ce02016a20c0dc085b21bf1975"
+    ],
+    "sha1": [
+      "b35fe93b79226fb23f31a4822487d8cbade42d89",
+      "77637261f9b2c61979c0be735fa43dc7a5457512",
+      "3f0656c644b243bf7c9c61bf45d974a2244b170f"
+    ],
+    "sha256": [
+      "d72a3bf69d051fc982abc8c6a2a9bad00acedd6fcef852f395779824f372beda",
+      "e8df91b120e3844639b030d3631839c06c92f2a5c9577b452acbf66da482053b",
+      "794cf4bf0da688a23cca061895daad4e2802d31fdd0c85ff2a46cda06aafd809"
+    ],
+    "disc_serials": [
+      "SLES-02328",
+      "SLES-12328",
+      "SLES-22328"
+    ],
+    "sizes": [
+      683248944,
+      672867216,
+      595923888
+    ],
+    "filenames": [
+      "Galerians (Europe) (Disc 1).cue",
+      "Galerians (Europe) (Disc 1).bin",
+      "Galerians (Europe) (Disc 2).cue",
+      "Galerians (Europe) (Disc 2).bin",
+      "Galerians (Europe) (Disc 3).cue",
+      "Galerians (Europe) (Disc 3).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLES-02328",
+        "cue_name": "Galerians (Europe) (Disc 1).cue",
+        "bin_name": "Galerians (Europe) (Disc 1).bin",
+        "crc32": [
+          "4f8c21f8"
+        ],
+        "md5": [
+          "6ff87c94b34d9371fd57a744b245a74e"
+        ],
+        "sha1": [
+          "b35fe93b79226fb23f31a4822487d8cbade42d89"
+        ],
+        "sha256": [
+          "d72a3bf69d051fc982abc8c6a2a9bad00acedd6fcef852f395779824f372beda"
+        ],
+        "sizes": [
+          683248944
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLES-12328",
+        "cue_name": "Galerians (Europe) (Disc 2).cue",
+        "bin_name": "Galerians (Europe) (Disc 2).bin",
+        "crc32": [
+          "b6b5fe85"
+        ],
+        "md5": [
+          "fdc2d4e05af3a9cded3c667c77544fc5"
+        ],
+        "sha1": [
+          "77637261f9b2c61979c0be735fa43dc7a5457512"
+        ],
+        "sha256": [
+          "e8df91b120e3844639b030d3631839c06c92f2a5c9577b452acbf66da482053b"
+        ],
+        "sizes": [
+          672867216
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 3,
+        "serial": "SLES-22328",
+        "cue_name": "Galerians (Europe) (Disc 3).cue",
+        "bin_name": "Galerians (Europe) (Disc 3).bin",
+        "crc32": [
+          "912a15df"
+        ],
+        "md5": [
+          "3a54d9ce02016a20c0dc085b21bf1975"
+        ],
+        "sha1": [
+          "3f0656c644b243bf7c9c61bf45d974a2244b170f"
+        ],
+        "sha256": [
+          "794cf4bf0da688a23cca061895daad4e2802d31fdd0c85ff2a46cda06aafd809"
+        ],
+        "sizes": [
+          595923888
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/galerians-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "galerians-recomp",
+  "launch": {
+    "linux": "Galerians",
+    "windows": "Galerians.exe",
+    "macos": "Galerians"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5552 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.3.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/galerians-recomp",
+      "ref": "v0.1.3"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Galerians",
+    "game_version": "0.1.3",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ]
+  }
+}

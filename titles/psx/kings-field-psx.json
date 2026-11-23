@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/kings-field-recomp",
-      "ref": "95d4b9ef47ba1e73be981e6f72f3bb16788b80c6"
+      "github": "alexbeavs-ps1-ports/kings-field-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A native recompilation setup host for King's Field.",
-  "homepage": "https://github.com/Alexbeav/kings-field-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/kings-field-recomp",
   "id": "kings-field-psx",
   "install_dir_name": "kings-field-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "King_s_Field_Recompiled"
   },
   "name": "King's Field",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.3.6 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/kings-field-recomp",
+    "github": "alexbeavs-ps1-ports/kings-field-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

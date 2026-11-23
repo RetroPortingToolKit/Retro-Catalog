@@ -1,0 +1,89 @@
+{
+  "id": "duke-nukem-total-meltdown-psx",
+  "name": "Duke Nukem: Total Meltdown",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Duke Nukem: Total Meltdown.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/duke-nukem-total-meltdown-recomp",
+  "rom_identity": {
+    "crc32": [
+      "e52219ba"
+    ],
+    "md5": [
+      "b9c1668e906bc97e64aa34edffd03558"
+    ],
+    "sha1": [
+      "54f92d540edefac02f41079dc2002d28f9749e85"
+    ],
+    "sha256": [
+      "4f2f229f8e97470c5364e2730b4d0f8ff8f33b3dcbfc40b2f0b5957e0f87f47d"
+    ],
+    "disc_serials": [
+      "SLUS-00355"
+    ],
+    "sizes": [
+      564091920
+    ],
+    "filenames": [
+      "Duke Nukem - Total Meltdown (USA).cue",
+      "Duke Nukem - Total Meltdown (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      4
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/duke-nukem-total-meltdown-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "duke-nukem-total-meltdown-recomp",
+  "launch": {
+    "linux": "duke_nukem_total_meltdown",
+    "windows": "duke_nukem_total_meltdown.exe",
+    "macos": "duke_nukem_total_meltdown"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/duke-nukem-total-meltdown-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

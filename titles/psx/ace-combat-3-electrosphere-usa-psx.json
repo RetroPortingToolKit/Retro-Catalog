@@ -4,7 +4,7 @@
   "kind": "recomp",
   "platform": "psx",
   "description": "Ace Combat 3: Electrosphere (USA) recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/ace-combat-3-electrosphere-usa-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/ace-combat-3-electrosphere-usa-recomp",
   "rom_identity": {
     "crc32": [
       "a9dbe00f"
@@ -38,7 +38,7 @@
     ".bin"
   ],
   "release": {
-    "github": "Alexbeav/ace-combat-3-electrosphere-usa-recomp",
+    "github": "alexbeavs-ps1-ports/ace-combat-3-electrosphere-usa-recomp",
     "asset_glob": {
       "linux": "*linux*",
       "windows": "*windows*",
@@ -59,12 +59,12 @@
     ]
   },
   "author_notes": "Use the verified USA SLUS-00972 single-track CUE/BIN dump and your own SCPH-1001 BIOS dump. Windows installation, generation, build, gameplay and relaunch have been tested. Linux and macOS full installation and gameplay remain unverified. Current Mac archives require macOS 15 for their generators and external Homebrew SDL3; a package refresh is pending.",
-  "notes": "Approved Windows-tested entry. Record the accepted public release source commit and explicit SCPH1001 BIOS identity. These fields implement the corrections requested in the original approval issue and its September 6 follow-up. Linux/macOS acceptance is not claimed.",
+  "notes": "Approved Windows-tested entry. Record the accepted public release source commit and explicit SCPH1001 BIOS identity. These fields implement the corrections requested in the original approval issue and its September 6 follow-up. Linux/macOS acceptance is not claimed. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.8.",
   "build": {
     "enabled": true,
     "source": {
-      "github": "Alexbeav/ace-combat-3-electrosphere-usa-recomp",
-      "ref": "6969f481fb52dd581c01efa331a434f0a902a685"
+      "github": "alexbeavs-ps1-ports/ace-combat-3-electrosphere-usa-recomp",
+      "ref": "v0.3.8"
     },
     "toolchain": {
       "id": "cmake-clang-v1",

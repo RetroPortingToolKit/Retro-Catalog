@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/syphon-filter-3-recomp",
-      "ref": "a7a3fbc58828422f78f21bd3402d3a92bce20011"
+      "github": "alexbeavs-ps1-ports/syphon-filter-3-recomp",
+      "ref": "v0.1.5"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Syphon Filter 3 recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/syphon-filter-3-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/syphon-filter-3-recomp",
   "id": "syphon-filter-3-psx",
   "install_dir_name": "syphon-filter-3-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Syphon_Filter_3_Recompiled"
   },
   "name": "Syphon Filter 3",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.5.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/syphon-filter-3-recomp",
+    "github": "alexbeavs-ps1-ports/syphon-filter-3-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

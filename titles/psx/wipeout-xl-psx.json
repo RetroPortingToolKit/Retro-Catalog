@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/wipeout-xl-recomp",
-      "ref": "cd3b9e04b6e6698542e532bc70f1e469d3bc08cd"
+      "github": "alexbeavs-ps1-ports/wipeout-xl-recomp",
+      "ref": "v0.1.4"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "A recompilation setup kit for Wipeout XL.",
-  "homepage": "https://github.com/Alexbeav/wipeout-xl-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/wipeout-xl-recomp",
   "id": "wipeout-xl-psx",
   "install_dir_name": "wipeout-xl-recomp",
   "kind": "recomp",
@@ -59,7 +59,7 @@
     "windows": "Wipeout_XL_Recompiled.exe"
   },
   "name": "Wipeout XL",
-  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified.",
+  "notes": "Wave 3 v0.1.0 owned-input setup release. Source fallback is pinned to the exact tested commit. Windows automated setup and isolated start/restart checks passed; GUI, audio, controls, save/load and gameplay are not qualified by those checks. Native Linux/macOS owned-input setup and gameplay remain unverified. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "platform": "psx",
   "release": {
     "asset_glob": {
@@ -67,7 +67,7 @@
       "macos": "*macos-*.zip",
       "windows": "*windows-x64.zip"
     },
-    "github": "Alexbeav/wipeout-xl-recomp"
+    "github": "alexbeavs-ps1-ports/wipeout-xl-recomp"
   },
   "rom_extensions": [
     ".cue",

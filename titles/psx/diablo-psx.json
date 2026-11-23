@@ -34,8 +34,8 @@
       "engine": "psxrecomp"
     },
     "source": {
-      "github": "Alexbeav/diablo-recomp",
-      "ref": "6ccdefcb1ce0bac74939526593eddd45ef6fd773"
+      "github": "alexbeavs-ps1-ports/diablo-recomp",
+      "ref": "v0.1.6"
     },
     "toolchain": {
       "asset_glob": {
@@ -49,7 +49,7 @@
     }
   },
   "description": "Diablo recompiled for modern systems using psxrecomp.",
-  "homepage": "https://github.com/Alexbeav/diablo-recomp",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/diablo-recomp",
   "id": "diablo-psx",
   "install_dir_name": "diablo-recomp",
   "kind": "recomp",
@@ -59,10 +59,10 @@
     "macos": "Diablo_Recompiled"
   },
   "name": "Diablo",
-  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver.",
+  "notes": "Bulk submission authorized by Alexbeav on 2026-09-06. Public v0.1.2 Windows package digest and executable name inspected; owned disc identity measured locally. No new generation, compilation or gameplay test is claimed. Fixed source ref and explicit BIOS identity must be preserved. Netplay is not qualified. SCPH5552 automatic-install route remains unresolved; submitted under the explicit test waiver. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.6.",
   "platform": "psx",
   "release": {
-    "github": "Alexbeav/diablo-recomp",
+    "github": "alexbeavs-ps1-ports/diablo-recomp",
     "asset_glob": {
       "windows": "*windows-x64.zip",
       "linux": "*linux-x64.zip",

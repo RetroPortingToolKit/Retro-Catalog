@@ -1,0 +1,101 @@
+{
+  "id": "tail-concerto-psx",
+  "name": "Tail Concerto",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Tail Concerto.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/tail-concerto-recomp",
+  "rom_identity": {
+    "crc32": [
+      "02d2d3b6"
+    ],
+    "md5": [
+      "bc9c9e0ff03e13b7762aacfda2a82041"
+    ],
+    "sha1": [
+      "d52bc3ff4cfcbbb9ed68d3299596dcd3213b1971"
+    ],
+    "sha256": [
+      "8b1c47bd12a17833b4b8232b9e1cb65b1ae28ebdb2f0fd3d173cc9a6af7759e7"
+    ],
+    "disc_serials": [
+      "SLUS-00660"
+    ],
+    "sizes": [
+      596434272
+    ],
+    "filenames": [
+      "Tail Concerto (USA).cue",
+      "Tail Concerto (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/tail-concerto-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "tail-concerto-recomp",
+  "launch": {
+    "linux": "Tail_Concerto",
+    "windows": "Tail_Concerto.exe",
+    "macos": "Tail_Concerto"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.3.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/tail-concerto-recomp",
+      "ref": "v0.1.3"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Tail Concerto",
+    "game_version": "0.1.3",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  }
+}
