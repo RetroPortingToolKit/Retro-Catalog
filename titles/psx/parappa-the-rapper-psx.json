@@ -1,0 +1,98 @@
+{
+  "id": "parappa-the-rapper-psx",
+  "name": "PaRappa The Rapper",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "a static recompilation of PaRappa the Rapper made with psxrecomp",
+  "homepage": "https://github.com/kirby1237/PaRappaTheRapperRecomp",
+  "rom_identity": {
+    "crc32": [
+      "d94ea30c"
+    ],
+    "md5": [
+      "007a1016d499e5fe6eb2702f41ca6c63"
+    ],
+    "sha1": [
+      "181e2efd2a29c028b28e52ac7827ef7a172ca8b4"
+    ],
+    "sha256": [
+      "3f7d330bb10e2e3ae6c1f8a16239060fc137cab2cb384d12ccdb7bbebbe285c6"
+    ],
+    "disc_serials": [
+      "SCUS-94183"
+    ],
+    "sizes": [
+      727718208
+    ],
+    "filenames": [
+      "PaRappa the Rapper (USA) (En",
+      "Fr",
+      "De",
+      "Es",
+      "It).cue",
+      "It).bin",
+      "PaRappa the Rapper (USA) (En",
+      "Fr",
+      "De",
+      "Es",
+      "It).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "kirby1237/PaRappaTheRapperRecomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": ""
+    }
+  },
+  "install_dir_name": "PaRappaTheRapperRecomp",
+  "launch": {
+    "linux": "PaRappaTheRapper_Recompiled",
+    "windows": "PaRappaTheRapper_Recompiled.exe",
+    "macos": ""
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "notes": "The original disc identity matches the released package.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "kirby1237/PaRappaTheRapperRecomp",
+      "ref": "cff6e6908e7f44032b6fa0edf6136cf360bfea8b"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": null
+}

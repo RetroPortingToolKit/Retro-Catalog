@@ -1,0 +1,76 @@
+{
+  "id": "tobal2-psx",
+  "name": "Tobal 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Tobal 2 (Japan) statically recompiled to native code with psxrecomp. English or original Japanese text.",
+  "homepage": "https://github.com/MatheusLeffa/Tobal2Recomp",
+  "rom_identity": {
+    "crc32": [],
+    "md5": [],
+    "sha1": [],
+    "sha256": [],
+    "disc_serials": [
+      "SLPM-86033"
+    ],
+    "sizes": [],
+    "filenames": [],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "MatheusLeffa/Tobal2Recomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": "*-macos-*.zip"
+    }
+  },
+  "install_dir_name": "Tobal2Recomp",
+  "launch": {
+    "linux": "Tobal_2_Recompiled",
+    "windows": "Tobal_2_Recompiled.exe",
+    "macos": "Tobal_2_Recompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "notes": "Setup uses the original Japanese disc with serial SLPM-86033.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "MatheusLeffa/Tobal2Recomp",
+      "ref": "592867eac17c3447befc79cef1a5023b007b1781"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": null
+}

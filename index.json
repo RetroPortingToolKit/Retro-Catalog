@@ -157,7 +157,14 @@
         "suikoden-ii-psx",
         "tail-concerto-psx",
         "wild-arms-psx",
-        "motor-toon-grand-prix-psx"
+        "motor-toon-grand-prix-psx",
+        "syphon-filter-2-psx",
+        "parappa-the-rapper-psx",
+        "toy-story2-psx",
+        "bugs-bunny-lostin-time-psx",
+        "dragon-valor-psx",
+        "medal-of-honor-pal-psx",
+        "tobal2-psx"
       ]
     },
     "snes": {
@@ -287,6 +294,13 @@
     "tail-concerto-psx",
     "wild-arms-psx",
     "motor-toon-grand-prix-psx",
+    "syphon-filter-2-psx",
+    "parappa-the-rapper-psx",
+    "toy-story2-psx",
+    "bugs-bunny-lostin-time-psx",
+    "dragon-valor-psx",
+    "medal-of-honor-pal-psx",
+    "tobal2-psx",
     "gundam-wing-endless-duel-snes",
     "super-metroid-snes",
     "mega-man-x-snes",

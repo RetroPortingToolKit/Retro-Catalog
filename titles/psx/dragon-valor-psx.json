@@ -1,0 +1,122 @@
+{
+  "id": "dragon-valor-psx",
+  "name": "Dragon Valor",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Dragon Valor (USA) statically recompiled to run natively on PC with psxrecomp. Unofficial fan project; requires your own discs.",
+  "homepage": "https://github.com/victor-takai/dragon-valor-recomp",
+  "rom_identity": {
+    "crc32": [
+      "16aae053",
+      "99727f4a"
+    ],
+    "md5": [
+      "2c9782f6009ac474217dc748337078a8",
+      "80bf8b4b01e57d63d9e49942f72b4aa7"
+    ],
+    "sha1": [
+      "110e7239892f1b7fe0848eea46fa75325cf16111",
+      "15e75aee2fdb989f8ba62d9269317949e835f325"
+    ],
+    "sha256": [
+      "9b41965d1c1bd8ab909d3a5301f376aaf4be346039aae070869b018afe59c59f",
+      "6a639b8055f8b80dfec909722704d09d3e50344b7bddb4ff7dfc8c5fa4710de7"
+    ],
+    "disc_serials": [],
+    "sizes": [
+      590288496,
+      657981408
+    ],
+    "filenames": [
+      "Dragon Valor (USA) (Disc 1).cue",
+      "Dragon Valor (USA) (Disc 1) (Track 1).bin",
+      "Dragon Valor (USA) (Disc 1) (Track 2).bin",
+      "Dragon Valor (USA) (Disc 2).cue",
+      "Dragon Valor (USA) (Disc 2) (Track 1).bin",
+      "Dragon Valor (USA) (Disc 2) (Track 2).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "",
+        "cue_name": "Dragon Valor (USA) (Disc 1).cue",
+        "bin_name": "Dragon Valor (USA) (Disc 1) (Track 1).bin",
+        "crc32": [
+          "16aae053"
+        ],
+        "md5": [
+          "2c9782f6009ac474217dc748337078a8"
+        ],
+        "sha1": [
+          "110e7239892f1b7fe0848eea46fa75325cf16111"
+        ],
+        "sha256": [
+          "9b41965d1c1bd8ab909d3a5301f376aaf4be346039aae070869b018afe59c59f"
+        ],
+        "sizes": [
+          590288496
+        ],
+        "track_counts": [
+          2
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "",
+        "cue_name": "Dragon Valor (USA) (Disc 2).cue",
+        "bin_name": "Dragon Valor (USA) (Disc 2) (Track 1).bin",
+        "crc32": [
+          "99727f4a"
+        ],
+        "md5": [
+          "80bf8b4b01e57d63d9e49942f72b4aa7"
+        ],
+        "sha1": [
+          "15e75aee2fdb989f8ba62d9269317949e835f325"
+        ],
+        "sha256": [
+          "6a639b8055f8b80dfec909722704d09d3e50344b7bddb4ff7dfc8c5fa4710de7"
+        ],
+        "sizes": [
+          657981408
+        ],
+        "track_counts": [
+          2
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "victor-takai/dragon-valor-recomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": "*-macos-*.zip"
+    },
+    "allow_prerelease": true
+  },
+  "install_dir_name": "dragon-valor-recomp",
+  "launch": {
+    "linux": "DragonValorRecompiled",
+    "windows": "DragonValorRecompiled.exe",
+    "macos": "DragonValorRecompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Bring your own Dragon Valor (USA) discs: Redump cue/bin sets with both tracks (see DISC.md in the repo). No BIOS needed: the bundled OpenBIOS runs the game. Preview release: played into chapter 2 on Windows; playing on from disc 2, the ending and the Linux and macOS builds are untested. Unofficial fan project, not affiliated with Bandai Namco or Sony.",
+  "notes": "This title uses the current preview ZIP. The catalog records both required discs.",
+  "bios_identity": null
+}

@@ -1,0 +1,94 @@
+{
+  "id": "bugs-bunny-lostin-time-psx",
+  "name": "Bugs Bunny: Lost in Time Recomp",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Bugs Bunny: Lost in Time (USA, SLUS-00838) statically recompiled to a native PC executable with PSXRecomp.",
+  "homepage": "https://github.com/PeriBluGaming/BugsBunnyLostinTimeRecomp",
+  "rom_identity": {
+    "crc32": [
+      "54b8f5a3"
+    ],
+    "md5": [
+      "ba5450777c860ac420df5d4f30e2c010"
+    ],
+    "sha1": [
+      "6024341f559c3789b5612e941c8d0ab227ff6361"
+    ],
+    "sha256": [
+      "f3c33c86af195ef275ec805a10637960f1a05ac5a88d2851800f9658c2b062e2"
+    ],
+    "disc_serials": [
+      "SLUS-00838"
+    ],
+    "sizes": [
+      587047440
+    ],
+    "filenames": [
+      "Bugs Bunny - Lost in Time (USA) (En",
+      "Fr",
+      "Es).cue",
+      "Es).bin",
+      "Bugs Bunny - Lost in Time (USA) (En",
+      "Fr",
+      "Es).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "PeriBluGaming/BugsBunnyLostinTimeRecomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": "*-macos-*.zip"
+    }
+  },
+  "install_dir_name": "BugsBunnyLostinTimeRecomp",
+  "launch": {
+    "linux": "BugsBunnyLostinTime",
+    "windows": "BugsBunnyLostinTime.exe",
+    "macos": "BugsBunnyLostinTime"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "notes": "The original disc identity matches the released package.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "PeriBluGaming/BugsBunnyLostinTimeRecomp",
+      "ref": "1b22cf4deb159c634045b8901ac8aaaeafd345d4"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": null
+}

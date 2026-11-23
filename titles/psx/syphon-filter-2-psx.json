@@ -1,0 +1,170 @@
+{
+  "author_notes": "Setup kit: supply both discs of the listed Redump set (CUE/BIN or CHD) and your own SCPH1001 BIOS dump. Setup starts from Disc 1; change discs in game from the F1 menu (Disc > Change disc). The game reads saves from memory card slot 1 only. Windows setup and gameplay were tested with the published package; Linux x64 and macOS x64 setup and start-up were checked by automated replay; macOS ARM64 is built only. Known issue: after a CHD setup the launcher disc selector can show Disc 2 as failing verification; the in-game F1 disc change works. Netplay is not qualified.",
+  "bios_identity": {
+    "crc32": [
+      "37157331"
+    ],
+    "filenames": [
+      "SCPH1001.BIN",
+      "scph1001.bin"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "required": true,
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ]
+  },
+  "build": {
+    "cmake": {
+      "build_dir": "build",
+      "config": "Release",
+      "target": "psx-runtime"
+    },
+    "enabled": true,
+    "generate": {
+      "config": "game.toml",
+      "engine": "psxrecomp"
+    },
+    "source": {
+      "github": "alexbeavs-ps1-ports/syphon-filter-2-recomp",
+      "ref": "bb588c8b54f910ccc05b10b5cef8a695c75fdfb6"
+    },
+    "toolchain": {
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "macos": "*cmake-clang-v1*macos*",
+        "windows": "*cmake-clang-v1*windows*"
+      },
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.3"
+    }
+  },
+  "description": "Syphon Filter 2 recompiled for modern systems using psxrecomp.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/syphon-filter-2-recomp",
+  "id": "syphon-filter-2-psx",
+  "install_dir_name": "syphon-filter-2-recomp",
+  "kind": "recomp",
+  "launch": {
+    "linux": "Syphon_Filter_2_Recompiled",
+    "macos": "Syphon_Filter_2_Recompiled",
+    "windows": "Syphon_Filter_2_Recompiled.exe"
+  },
+  "name": "Syphon Filter 2",
+  "notes": "v0.2.0 public release (bb588c8, framework 6bef1b1c). Both disc identities measured from owned Redump media. 2 local players.",
+  "platform": "psx",
+  "release": {
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "macos": "*-macos-*.zip",
+      "windows": "*-windows-x64.zip"
+    },
+    "github": "alexbeavs-ps1-ports/syphon-filter-2-recomp"
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "92a84c22",
+      "aecba0bc"
+    ],
+    "disc_serials": [
+      "SCUS-94451",
+      "SCUS-94492"
+    ],
+    "discs": [
+      {
+        "bin_name": "Syphon Filter 2 (USA) (Disc 1).bin",
+        "crc32": [
+          "92a84c22"
+        ],
+        "cue_name": "Syphon Filter 2 (USA) (Disc 1).cue",
+        "index": 1,
+        "md5": [
+          "10c32787ad95a64c1232b774943914d0"
+        ],
+        "serial": "SCUS-94451",
+        "sha1": [
+          "5901886282b7d12a39853b9ca16b64344d6d555e"
+        ],
+        "sha256": [
+          "e52dbc28b02046a14863863d51d92f95cbf2d9e9dd36bf91246f1ac0999a69e4"
+        ],
+        "sizes": [
+          732723264
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "bin_name": "Syphon Filter 2 (USA) (Disc 2).bin",
+        "crc32": [
+          "aecba0bc"
+        ],
+        "cue_name": "Syphon Filter 2 (USA) (Disc 2).cue",
+        "index": 2,
+        "md5": [
+          "e65e166ecfe76f63329addd9720737b6"
+        ],
+        "serial": "SCUS-94492",
+        "sha1": [
+          "ebd4c83bf55e64f1241d8fbb4743bdd6820d5d5e"
+        ],
+        "sha256": [
+          "673f9a41d4070952526555cccc83c0b5e6152d915c3b181c323df68dea70f06a"
+        ],
+        "sizes": [
+          737784768
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ],
+    "filenames": [
+      "Syphon Filter 2 (USA) (Disc 1).cue",
+      "Syphon Filter 2 (USA) (Disc 1).bin",
+      "Syphon Filter 2 (USA) (Disc 2).cue",
+      "Syphon Filter 2 (USA) (Disc 2).bin"
+    ],
+    "md5": [
+      "10c32787ad95a64c1232b774943914d0",
+      "e65e166ecfe76f63329addd9720737b6"
+    ],
+    "require_cue": true,
+    "sha1": [
+      "5901886282b7d12a39853b9ca16b64344d6d555e",
+      "ebd4c83bf55e64f1241d8fbb4743bdd6820d5d5e"
+    ],
+    "sha256": [
+      "e52dbc28b02046a14863863d51d92f95cbf2d9e9dd36bf91246f1ac0999a69e4",
+      "673f9a41d4070952526555cccc83c0b5e6152d915c3b181c323df68dea70f06a"
+    ],
+    "sizes": [
+      732723264,
+      737784768
+    ],
+    "track_counts": [
+      1,
+      1
+    ]
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}
