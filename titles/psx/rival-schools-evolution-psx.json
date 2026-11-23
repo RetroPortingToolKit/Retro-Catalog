@@ -47,9 +47,9 @@
   },
   "install_dir_name": "rival-schools-evolution-recomp",
   "launch": {
-    "linux": "Rival_Schools_Evolution",
-    "windows": "Rival_Schools_Evolution.exe",
-    "macos": "Rival_Schools_Evolution"
+    "linux": "Rival_Schools_Evolution_Disc",
+    "windows": "Rival_Schools_Evolution_Disc.exe",
+    "macos": "Rival_Schools_Evolution_Disc"
   },
   "romm": {
     "platforms": [
