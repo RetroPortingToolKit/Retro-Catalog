@@ -1,0 +1,64 @@
+{
+  "author_notes": "Native PC port by static recompilation. Supply your own Motor Toon Grand Prix (USA) disc (SCUS-94355, Redump CUE/BIN). No BIOS dump is needed: the release bundles OpenBIOS (MIT). Boot, menus, Championship races and the Goodies bonus programs are tested on Windows; Linux and macOS packages are built by CI but untested by hand. Two Player Battle is the link-cable mode and is not supported.",
+  "bios_identity": null,
+  "description": "Cartoon kart racing from Polyphony Digital, recompiled natively for PC.",
+  "homepage": "https://github.com/Cr1TiKa7/MotorToonGrandPrixRecomp",
+  "id": "motor-toon-grand-prix-psx",
+  "install_dir_name": "MotorToonGrandPrixRecomp",
+  "kind": "recomp",
+  "launch": {
+    "windows": "Motor_Toon_Grand_Prix_Recompiled.exe",
+    "linux": "Motor_Toon_Grand_Prix_Recompiled",
+    "macos": "Motor_Toon_Grand_Prix_Recompiled"
+  },
+  "name": "Motor Toon Grand Prix",
+  "notes": "Prebuilt zips only (no local build block): CI builds the committed generated C. bios_identity is null because the packages ship OpenBIOS; the framework is pinned to Cr1TiKa7/psxrecomp (upstream plus an OpenBIOS SetConf fix). Disc digests are the Redump Track 01 values for Motor Toon Grand Prix (USA).",
+  "platform": "psx",
+  "release": {
+    "github": "Cr1TiKa7/MotorToonGrandPrixRecomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "rom_identity": {
+    "crc32": [
+      "f8447d90"
+    ],
+    "md5": [
+      "82cdb35aceed9c3a7b255e8b999b1536"
+    ],
+    "sha1": [
+      "16925b62621871a66a7fd3dd858214f546d8092f"
+    ],
+    "sha256": [
+      "2a3c8bc76f98d1005d19951be5807784e3c188a249342a05d15f78f1e48f519f"
+    ],
+    "sizes": [
+      568967616
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_serials": [
+      "SCUS-94355"
+    ],
+    "filenames": [
+      "Motor Toon Grand Prix (USA).cue",
+      "Motor Toon Grand Prix (USA).bin"
+    ],
+    "require_cue": true
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  }
+}
