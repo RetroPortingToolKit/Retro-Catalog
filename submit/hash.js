@@ -41,20 +41,23 @@ export function md5Hex(bytes) {
   }
 
   const len = bytes.length;
-  const nBlocks = (((len + 8) >>> 6) + 1) * 16;
-  const words = new Uint32Array(nBlocks);
+  const wordCount = (Math.floor((len + 8) / 64) + 1) * 16;
+  const words = new Uint32Array(wordCount);
   for (let i = 0; i < len; i++) {
-    words[i >> 2] |= bytes[i] << ((i % 4) * 8);
+    words[Math.floor(i / 4)] |= bytes[i] << ((i % 4) * 8);
   }
-  words[len >> 2] |= 0x80 << ((len % 4) * 8);
-  words[nBlocks - 2] = len * 8;
+  words[Math.floor(len / 4)] |= 0x80 << ((len % 4) * 8);
+  const bitLength = len * 8;
+  // MD5 appends the 64-bit bit length, with the low word first.
+  words[wordCount - 2] = bitLength;
+  words[wordCount - 1] = Math.floor(bitLength / 0x100000000);
 
   let a = 0x67452301;
   let b = 0xefcdab89;
   let c = 0x98badcfe;
   let d = 0x10325476;
 
-  for (let i = 0; i < nBlocks; i += 16) {
+  for (let i = 0; i < wordCount; i += 16) {
     const oa = a,
       ob = b,
       oc = c,
