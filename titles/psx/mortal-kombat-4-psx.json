@@ -58,18 +58,6 @@
       "ps1"
     ]
   },
-  "netplay": {
-    "supported": true,
-    "stack": "recomp-net",
-    "game_name": "Mortal Kombat 4",
-    "game_version": "0.3.7",
-    "max_slots": 2,
-    "transports": [
-      "lan",
-      "ice"
-    ],
-    "match_caps_schema": "psx-v1"
-  },
   "author_notes": "Use the verified USA SLUS-00605 single-track CUE/BIN dump and a legal SCPH-1001 BIOS dump.",
   "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.3.7.",
   "build": {

@@ -85,17 +85,5 @@
       "target": "psx-runtime",
       "config": "Release"
     }
-  },
-  "netplay": {
-    "supported": true,
-    "stack": "recomp-net",
-    "game_name": "Rival Schools: Evolution Disc",
-    "game_version": "0.1.0",
-    "max_slots": 2,
-    "transports": [
-      "lan",
-      "ice"
-    ],
-    "match_caps_schema": "psx-v1"
   }
 }

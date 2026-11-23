@@ -59,18 +59,6 @@
       "ps1"
     ]
   },
-  "netplay": {
-    "supported": true,
-    "stack": "recomp-net",
-    "game_name": "Metal Slug X",
-    "game_version": "0.1.4",
-    "max_slots": 2,
-    "transports": [
-      "lan",
-      "ice"
-    ],
-    "match_caps_schema": "psx-v1"
-  },
   "notes": "Digests auto-extracted from README, game.toml[netplay], game.toml[prepare_disc], catalog_identity.json. Refreshed 2026-11-23: repository moved to alexbeavs-ps1-ports; source ref and release follow v0.1.4.",
   "build": {
     "enabled": true,
