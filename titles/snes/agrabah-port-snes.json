@@ -1,0 +1,91 @@
+{
+  "id": "agrabah-port-snes",
+  "name": "AgrabahPort",
+  "kind": "recomp",
+  "platform": "snes",
+  "description": "Unofficial native PC port of the USA Super Nintendo release of Disney?s Aladdin.",
+  "homepage": "https://github.com/testsenvergonha-sys/AgrabahPort",
+  "rom_identity": {
+    "crc32": [
+      "124d8e4d"
+    ],
+    "md5": [
+      "8e00910312b30663768d907114d301c2"
+    ],
+    "sha1": [
+      "bd5fea18ce7456cc0231a39473927d8ea9c6589b"
+    ],
+    "sha256": [
+      "aa768b8b00123717c8d49f2c6731cdbfd80ab6a54128bae7594e93f45e38a19e"
+    ],
+    "disc_serials": [],
+    "sizes": [
+      1310720
+    ],
+    "filenames": [
+      "Aladdin.smc",
+      "aladdin.sfc",
+      "aladdin.smc",
+      "Aladdin.sfc"
+    ],
+    "track_counts": [],
+    "require_cue": false
+  },
+  "rom_extensions": [
+    ".sfc",
+    ".smc"
+  ],
+  "release": {
+    "github": "testsenvergonha-sys/AgrabahPort",
+    "asset_glob": {
+      "windows": "*-windows-x64-portable.zip",
+      "linux": "*-linux-x64.zip",
+      "macos": "*-macos-*.zip"
+    }
+  },
+  "install_dir_name": "AgrabahPort",
+  "launch": {
+    "linux": "AgrabahPort",
+    "windows": "AgrabahPort.exe",
+    "macos": "AgrabahPort"
+  },
+  "romm": {
+    "platforms": [
+      "snes"
+    ]
+  },
+  "notes": "Use the original headerless USA Aladdin ROM. Windows has a portable build. The Linux and macOS setup tools build the game from the selected ROM.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "testsenvergonha-sys/AgrabahPort",
+      "ref": "3153b5b15fb4aeddca1640a3fa0bd006cb2e89aa"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "snesrecomp",
+      "cfg_dir": "recomp",
+      "out_dir": "src/gen",
+      "funcs_h": "recomp/funcs.h",
+      "cfg_roots": true
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "AladdinSNESRecomp",
+      "config": "Release"
+    },
+    "sdk": {
+      "id": "snesrecomp-tools"
+    }
+  },
+  "bios_identity": null
+}

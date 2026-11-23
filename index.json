@@ -173,7 +173,8 @@
       "titles": [
         "gundam-wing-endless-duel-snes",
         "super-metroid-snes",
-        "mega-man-x-snes"
+        "mega-man-x-snes",
+        "agrabah-port-snes"
       ]
     },
     "nes": {
@@ -304,6 +305,7 @@
     "gundam-wing-endless-duel-snes",
     "super-metroid-snes",
     "mega-man-x-snes",
+    "agrabah-port-snes",
     "startropics-nes",
     "vs-super-mario-bros-nes"
   ],
