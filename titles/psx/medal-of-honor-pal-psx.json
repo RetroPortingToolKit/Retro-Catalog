@@ -1,0 +1,64 @@
+{
+  "id": "medal-of-honor-pal-psx",
+  "name": "Medal of Honor (PAL)",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "World War II first-person shooter by DreamWorks Interactive, recompiled natively for PC.",
+  "homepage": "https://github.com/Cr1TiKa7/MOHRecomp",
+  "rom_identity": {
+    "crc32": [
+      "e5070481"
+    ],
+    "md5": [
+      "5e2c8aaba7c3b939093584deb84711c8"
+    ],
+    "sha1": [
+      "8c2e96724118908833d0ca485760dd208238aa87"
+    ],
+    "sha256": [
+      "cf3b37769f0bd83dbf901e460af3c93591db137bbbd90fed9e91bfd2319fbba4"
+    ],
+    "disc_serials": [
+      "SLES-02470"
+    ],
+    "sizes": [
+      741980736
+    ],
+    "filenames": [
+      "Medal of Honor (Europe).cue",
+      "Medal of Honor (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "Cr1TiKa7/MOHRecomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": "*-macos-*.zip"
+    }
+  },
+  "install_dir_name": "MOHRecomp",
+  "launch": {
+    "linux": "Medal_of_Honor_PAL_Recompiled",
+    "windows": "Medal_of_Honor_PAL_Recompiled.exe",
+    "macos": "Medal_of_Honor_PAL_Recompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Native PC port by static recompilation. Supply your own Medal of Honor (Europe) disc (SLES-02470, Redump CUE/BIN); the USA, French and German discs are not supported. No BIOS dump is needed: the release bundles OpenBIOS (MIT). All 24 campaign levels load and run natively in the automated tests and Mission 1 was played through by hand on Windows; Linux and macOS packages are built by CI but untested by hand. Optional mod packages, off by default: mouse look and native 16:9 widescreen. The local split-screen multiplayer needs a second gamepad.",
+  "notes": "Prebuilt zips only (no local build block): CI builds the committed generated C. bios_identity is null because the packages ship OpenBIOS; the framework is pinned to Cr1TiKa7/psxrecomp (upstream 7097d536 plus a fix that lets plugins register commands from their constructors in MinGW builds). Disc digests are the Redump Track 01 values for Medal of Honor (Europe). Named PAL to tell it apart from FractalEngineer/Medal-Of-Honor-PSX-Recomp (USA disc, VR), which also calls itself Medal of Honor Recompiled.",
+  "bios_identity": null
+}

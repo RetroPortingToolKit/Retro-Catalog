@@ -1,0 +1,89 @@
+{
+  "id": "toy-story2-psx",
+  "name": "Toy Story 2: Buzz Lightyear to the Rescue!",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "Native PC recompile of the USA PlayStation release.",
+  "homepage": "https://github.com/PeriBluGaming/ToyStory2Recomp",
+  "rom_identity": {
+    "crc32": [
+      "5942db1f"
+    ],
+    "md5": [
+      "a3f77918dc0fb2227e976a2ec75921e2"
+    ],
+    "sha1": [
+      "ef20f5fcae59c80dd1d0d1bfc51ba51d8c64e967"
+    ],
+    "sha256": [
+      "57a27ae6e34c099424bef81e9b1f176c34b57a2d114bf2cac2fd3cd6c73c1b70"
+    ],
+    "disc_serials": [
+      "SLUS-00893"
+    ],
+    "sizes": [
+      633125472
+    ],
+    "filenames": [
+      "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA).cue",
+      "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": false
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "PeriBluGaming/ToyStory2Recomp",
+    "asset_glob": {
+      "linux": "*-linux-x64.zip",
+      "windows": "*-windows-x64.zip",
+      "macos": "*-macos-*.zip"
+    }
+  },
+  "install_dir_name": "ToyStory2Recomp",
+  "launch": {
+    "windows": "ToyStory2_Recompiled.exe",
+    "linux": "ToyStory2_Recompiled",
+    "macos": "ToyStory2_Recompiled"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "notes": "The original disc identity matches the released package.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "PeriBluGaming/ToyStory2Recomp",
+      "ref": "7e27d5ea06327cd76aff0aa88fe5b35220599710"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": null
+}
