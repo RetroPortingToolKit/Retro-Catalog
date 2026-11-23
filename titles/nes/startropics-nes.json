@@ -1,0 +1,55 @@
+{
+  "id": "startropics-nes",
+  "name": "StarTropics",
+  "kind": "recomp",
+  "platform": "nes",
+  "description": "Nintendo's StarTropics (NES, 1990) as a native game, statically recompiled from your own cartridge dump.",
+  "homepage": "https://github.com/jsp244/startropics-recomp",
+  "author_notes": "Bring your own StarTropics (USA) cartridge dump as a .nes file.",
+  "rom_identity": {
+    "crc32": [
+      "5f212b6f"
+    ],
+    "md5": [
+      "919f2a69c9ad83f6969e655df7b16a8c"
+    ],
+    "sha1": [
+      "0372a5a3e2c8c96a459f0fd83c05437bc3af44d1"
+    ],
+    "sha256": [
+      "ff20d5e9600565ae61e4eae6594c9f1e55e2a748a46bba0c88285140420a219a"
+    ],
+    "disc_serials": [],
+    "sizes": [
+      524304
+    ],
+    "filenames": [
+      "StarTropics (USA).nes"
+    ],
+    "track_counts": [],
+    "require_cue": false
+  },
+  "rom_extensions": [
+    ".nes"
+  ],
+  "release": {
+    "github": "jsp244/startropics-recomp",
+    "asset_glob": {
+      "linux": "*linux-x86_64.tar.gz",
+      "windows": "*win64.zip",
+      "macos": ""
+    }
+  },
+  "install_dir_name": "startropics-recomp",
+  "launch": {
+    "linux": "startropics",
+    "windows": "startropics.exe",
+    "macos": ""
+  },
+  "romm": {
+    "platforms": [
+      "nes"
+    ]
+  },
+  "notes": "Digests are of the No-Intro headered file, header included, because the launcher hashes NES files whole. The game itself checks the PRG+CHR data without the header (sha1 74c53fe9ac779f146c59ac01e701c9bf912b3c7b, crc32 889129cb), so dumps with other headers load in the game but will not match here."
+}
