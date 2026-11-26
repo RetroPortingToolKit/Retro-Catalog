@@ -1040,6 +1040,10 @@
       "zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-psx": {
         "platform": "psx",
         "manifest": "titles/psx/zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-psx.json"
+      },
+      "treasures-of-the-deep-psx": {
+        "platform": "psx",
+        "manifest": "titles/psx/treasures-of-the-deep-psx.json"
       }
     }
   },
