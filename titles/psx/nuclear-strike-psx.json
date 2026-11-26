@@ -1,0 +1,89 @@
+{
+  "id": "nuclear-strike-psx",
+  "name": "Nuclear Strike",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Nuclear Strike.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/nuclear-strike-recomp",
+  "rom_identity": {
+    "crc32": [
+      "36086c79"
+    ],
+    "md5": [
+      "e8191f9fea53c04056f31404bbf6c98a"
+    ],
+    "sha1": [
+      "b0a461058a16ee1fd31bf355621fe6ceb7d59ff9"
+    ],
+    "sha256": [
+      "d6a40f2eab768c7fddf68db7f7333dde9841aaf909fd93adc463fda0aa91b78f"
+    ],
+    "disc_serials": [
+      "SLUS-00518"
+    ],
+    "sizes": [
+      603168048
+    ],
+    "filenames": [
+      "Nuclear Strike (USA).cue",
+      "Nuclear Strike (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/nuclear-strike-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "nuclear-strike-recomp",
+  "launch": {
+    "linux": "nuclear_strike",
+    "windows": "nuclear_strike.exe",
+    "macos": "nuclear_strike"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/nuclear-strike-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

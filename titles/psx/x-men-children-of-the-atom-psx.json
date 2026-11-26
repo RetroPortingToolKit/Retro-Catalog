@@ -1,0 +1,89 @@
+{
+  "id": "x-men-children-of-the-atom-psx",
+  "name": "X-Men - Children of the Atom",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for X-Men - Children of the Atom.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/x-men-children-of-the-atom-recomp",
+  "rom_identity": {
+    "crc32": [
+      "56d281d2"
+    ],
+    "md5": [
+      "8ec14c9a2a78b328dc8411038460d061"
+    ],
+    "sha1": [
+      "d9f338a72183484fc96bcc643849c3a37fcb1bc0"
+    ],
+    "sha256": [
+      "0098ee6490f0d0e76db9647996f34be250b7b0b38d55994baf0f050fce020df5"
+    ],
+    "disc_serials": [
+      "SLUS-00044"
+    ],
+    "sizes": [
+      194239920
+    ],
+    "filenames": [
+      "X-Men - Children of the Atom (USA).cue",
+      "X-Men - Children of the Atom (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      19
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/x-men-children-of-the-atom-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "x-men-children-of-the-atom-recomp",
+  "launch": {
+    "linux": "x_men_children_of_the_atom",
+    "windows": "x_men_children_of_the_atom.exe",
+    "macos": "x_men_children_of_the_atom"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/x-men-children-of-the-atom-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

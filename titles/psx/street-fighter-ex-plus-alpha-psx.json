@@ -1,0 +1,89 @@
+{
+  "id": "street-fighter-ex-plus-alpha-psx",
+  "name": "Street Fighter EX Plus Alpha",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Street Fighter EX Plus Alpha.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/street-fighter-ex-plus-alpha-recomp",
+  "rom_identity": {
+    "crc32": [
+      "c7f78b70"
+    ],
+    "md5": [
+      "2a57b43b0b2f3f094ce203d32e910e2a"
+    ],
+    "sha1": [
+      "4a25dab2bdc11372ab8496c807c28d49a476137d"
+    ],
+    "sha256": [
+      "e1050b3b8a3d26e04d4bbe196a7ded17cd0ff1e7de944d0fd7e161c48d60f9ca"
+    ],
+    "disc_serials": [
+      "SLUS-00548"
+    ],
+    "sizes": [
+      528049872
+    ],
+    "filenames": [
+      "Street Fighter EX Plus Alpha (USA).cue",
+      "Street Fighter EX Plus Alpha (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/street-fighter-ex-plus-alpha-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "street-fighter-ex-plus-alpha-recomp",
+  "launch": {
+    "linux": "street_fighter_ex_plus_alpha",
+    "windows": "street_fighter_ex_plus_alpha.exe",
+    "macos": "street_fighter_ex_plus_alpha"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/street-fighter-ex-plus-alpha-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

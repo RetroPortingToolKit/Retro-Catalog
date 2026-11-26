@@ -1,0 +1,89 @@
+{
+  "id": "command-and-conquer-red-alert-psx",
+  "name": "Command & Conquer - Red Alert",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Command & Conquer - Red Alert.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/command-and-conquer-red-alert-recomp",
+  "rom_identity": {
+    "crc32": [
+      "5d9bd1b5"
+    ],
+    "md5": [
+      "95e42f19cb451bd63c4c9c490917a750"
+    ],
+    "sha1": [
+      "add8810f6d040483505f8fa2ae3a72071d4f0e71"
+    ],
+    "sha256": [
+      "65b0b6311fd2ed5fa3e74a36106980517a9aefc83e7846160852e11d19a61d47"
+    ],
+    "disc_serials": [
+      "SLUS-00431"
+    ],
+    "sizes": [
+      735569184
+    ],
+    "filenames": [
+      "Command & Conquer - Red Alert (USA) (Disc 1) (Allies).cue",
+      "Command & Conquer - Red Alert (USA) (Disc 1) (Allies).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/command-and-conquer-red-alert-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "command-and-conquer-red-alert-recomp",
+  "launch": {
+    "linux": "command_and_conquer_red_alert",
+    "windows": "command_and_conquer_red_alert.exe",
+    "macos": "command_and_conquer_red_alert"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/command-and-conquer-red-alert-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

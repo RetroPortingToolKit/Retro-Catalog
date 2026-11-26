@@ -1,0 +1,89 @@
+{
+  "id": "tactics-ogre-psx",
+  "name": "Tactics Ogre",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Tactics Ogre.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/tactics-ogre-recomp",
+  "rom_identity": {
+    "crc32": [
+      "0c5ea66b"
+    ],
+    "md5": [
+      "782b392e6072e79b83cbbd93a6fdefac"
+    ],
+    "sha1": [
+      "82b3c12e738f7297c0fe2f84b9aa980aa22d824d"
+    ],
+    "sha256": [
+      "50c405b59e22d17f6c979755e4fbcce3125cc17576ac7098228e2e7d5838d2a2"
+    ],
+    "disc_serials": [
+      "SLUS-00560"
+    ],
+    "sizes": [
+      28299264
+    ],
+    "filenames": [
+      "Tactics Ogre (USA).cue",
+      "Tactics Ogre (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      3
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/tactics-ogre-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "tactics-ogre-recomp",
+  "launch": {
+    "linux": "tactics_ogre",
+    "windows": "tactics_ogre.exe",
+    "macos": "tactics_ogre"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/tactics-ogre-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

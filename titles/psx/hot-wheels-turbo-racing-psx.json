@@ -1,0 +1,89 @@
+{
+  "id": "hot-wheels-turbo-racing-psx",
+  "name": "Hot Wheels - Turbo Racing",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Hot Wheels - Turbo Racing.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/hot-wheels-turbo-racing-recomp",
+  "rom_identity": {
+    "crc32": [
+      "5b043aae"
+    ],
+    "md5": [
+      "8c3e8ce4c0197ad81300b72bcb8ce5e9"
+    ],
+    "sha1": [
+      "4234fd036d03aa5a84b81e58cd8e3a38fe054aa7"
+    ],
+    "sha256": [
+      "a8332f94f0d7cab2357c40bfd736731d3cf729f65f49cfb18b26230f907d0290"
+    ],
+    "disc_serials": [
+      "SLUS-00964"
+    ],
+    "sizes": [
+      102984672
+    ],
+    "filenames": [
+      "Hot Wheels - Turbo Racing (USA).cue",
+      "Hot Wheels - Turbo Racing (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      14
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/hot-wheels-turbo-racing-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "hot-wheels-turbo-racing-recomp",
+  "launch": {
+    "linux": "hot_wheels_turbo_racing",
+    "windows": "hot_wheels_turbo_racing.exe",
+    "macos": "hot_wheels_turbo_racing"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/hot-wheels-turbo-racing-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "darkstalkers-3-psx",
+  "name": "Darkstalkers 3",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Darkstalkers 3.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/darkstalkers-3-recomp",
+  "rom_identity": {
+    "crc32": [
+      "7db5c7a6"
+    ],
+    "md5": [
+      "29f407ecbd17f8e4ac78de3e52ed6d4a"
+    ],
+    "sha1": [
+      "b2fba37c142e532eee1e1816705726f2ad0d23ed"
+    ],
+    "sha256": [
+      "ddc393d173698bbd285c54891302c02e6b5c11312aa201f067210a5d6a5d3719"
+    ],
+    "disc_serials": [
+      "SLUS-00745"
+    ],
+    "sizes": [
+      749838768
+    ],
+    "filenames": [
+      "Darkstalkers 3 (USA).cue",
+      "Darkstalkers 3 (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/darkstalkers-3-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "darkstalkers-3-recomp",
+  "launch": {
+    "linux": "darkstalkers_3",
+    "windows": "darkstalkers_3.exe",
+    "macos": "darkstalkers_3"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/darkstalkers-3-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

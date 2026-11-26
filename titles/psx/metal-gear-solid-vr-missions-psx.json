@@ -1,0 +1,89 @@
+{
+  "id": "metal-gear-solid-vr-missions-psx",
+  "name": "Metal Gear Solid - VR Missions",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Metal Gear Solid - VR Missions.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/metal-gear-solid-vr-missions-recomp",
+  "rom_identity": {
+    "crc32": [
+      "30e61ff3"
+    ],
+    "md5": [
+      "377a3831fde4ee71af4700f7f3e57cc2"
+    ],
+    "sha1": [
+      "e90b5c59d52af301521d51f1d035cb7851482bb9"
+    ],
+    "sha256": [
+      "a90a95b5080c943e1609f52f36f341083205b6cd97812002f5ac4a8baa7899d1"
+    ],
+    "disc_serials": [
+      "SLUS-00957"
+    ],
+    "sizes": [
+      492487632
+    ],
+    "filenames": [
+      "Metal Gear Solid - VR Missions (USA).cue",
+      "Metal Gear Solid - VR Missions (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/metal-gear-solid-vr-missions-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "metal-gear-solid-vr-missions-recomp",
+  "launch": {
+    "linux": "metal_gear_solid_vr_missions",
+    "windows": "metal_gear_solid_vr_missions.exe",
+    "macos": "metal_gear_solid_vr_missions"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/metal-gear-solid-vr-missions-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

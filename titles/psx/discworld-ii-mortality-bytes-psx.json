@@ -1,0 +1,89 @@
+{
+  "id": "discworld-ii-mortality-bytes-psx",
+  "name": "Discworld II - Mortality Bytes!",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Discworld II - Mortality Bytes!.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/discworld-ii-mortality-bytes-recomp",
+  "rom_identity": {
+    "crc32": [
+      "be526682"
+    ],
+    "md5": [
+      "ff64463860dda97ea8d2795a5dd8e168"
+    ],
+    "sha1": [
+      "b6b164ac03337c0395f88efbfefb9fd8b071d99a"
+    ],
+    "sha256": [
+      "0d3bd322a099c5436eaf2bb40fa028e8d9dfd0112ca56cf1b71ad945bcabfad6"
+    ],
+    "disc_serials": [
+      "SCUS-94605"
+    ],
+    "sizes": [
+      695493456
+    ],
+    "filenames": [
+      "Discworld II - Mortality Bytes! (USA).cue",
+      "Discworld II - Mortality Bytes! (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/discworld-ii-mortality-bytes-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "discworld-ii-mortality-bytes-recomp",
+  "launch": {
+    "linux": "discworld_ii_mortality_bytes",
+    "windows": "discworld_ii_mortality_bytes.exe",
+    "macos": "discworld_ii_mortality_bytes"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/discworld-ii-mortality-bytes-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

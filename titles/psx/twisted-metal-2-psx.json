@@ -1,0 +1,89 @@
+{
+  "id": "twisted-metal-2-psx",
+  "name": "Twisted Metal 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Twisted Metal 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/twisted-metal-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "c8f01e9d"
+    ],
+    "md5": [
+      "21599a9f5d4853461427893774023afa"
+    ],
+    "sha1": [
+      "d5dd081d860ce031a5d9601924c7d0f6afb33814"
+    ],
+    "sha256": [
+      "e88403ef1b7e24210b51e51c6832a57f9b6d9a1c7d98ed7886a9ecee83d74bfb"
+    ],
+    "disc_serials": [
+      "SCUS-94306"
+    ],
+    "sizes": [
+      418187952
+    ],
+    "filenames": [
+      "Twisted Metal 2 (USA).cue",
+      "Twisted Metal 2 (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      12
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/twisted-metal-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "twisted-metal-2-recomp",
+  "launch": {
+    "linux": "twisted_metal_2",
+    "windows": "twisted_metal_2.exe",
+    "macos": "twisted_metal_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/twisted-metal-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

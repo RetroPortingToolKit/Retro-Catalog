@@ -1,0 +1,89 @@
+{
+  "id": "bust-a-groove-2-psx",
+  "name": "Bust A Groove 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Bust A Groove 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/bust-a-groove-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "c50191c0"
+    ],
+    "md5": [
+      "a91343a99ddc96854a556df6461a1587"
+    ],
+    "sha1": [
+      "451e6a20f719c0cb718c1eea3575f7959627a5bb"
+    ],
+    "sha256": [
+      "b0384d6210808da733275f3909947ac990ee13e73748df51cdf8ac7b70814d30"
+    ],
+    "disc_serials": [
+      "SLUS-01159"
+    ],
+    "sizes": [
+      612411408
+    ],
+    "filenames": [
+      "Bust A Groove 2 (USA).cue",
+      "Bust A Groove 2 (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/bust-a-groove-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "bust-a-groove-2-recomp",
+  "launch": {
+    "linux": "bust_a_groove_2",
+    "windows": "bust_a_groove_2.exe",
+    "macos": "bust_a_groove_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/bust-a-groove-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

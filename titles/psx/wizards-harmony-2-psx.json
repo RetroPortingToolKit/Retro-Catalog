@@ -1,0 +1,111 @@
+{
+  "id": "wizards-harmony-2-psx",
+  "name": "Wizard's Harmony 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Wizard's Harmony 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/wizards-harmony-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "8cd60776"
+    ],
+    "md5": [
+      "066c5ef8978616db4960a90036195464"
+    ],
+    "sha1": [
+      "6f7ac6f421a05585267b0071b24f058a10f4a3aa"
+    ],
+    "sha256": [
+      "89f7d697a041b7ca8650486557ff127328171a19472e43ee09b000709f9db44e"
+    ],
+    "disc_serials": [
+      "SLPS-00984"
+    ],
+    "sizes": [
+      436794624
+    ],
+    "filenames": [
+      "Wizard's Harmony 2 (Japan, Asia).cue",
+      "Wizard's Harmony 2 (Japan, Asia) (Track 01).bin"
+    ],
+    "track_counts": [
+      4
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/wizards-harmony-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "wizards-harmony-2-recomp",
+  "launch": {
+    "linux": "wizards_harmony_2",
+    "windows": "wizards_harmony_2.exe",
+    "macos": "wizards_harmony_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5500 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/wizards-harmony-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN",
+      "scph5500.bin"
+    ]
+  }
+}

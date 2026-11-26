@@ -1,0 +1,89 @@
+{
+  "id": "gex-3-deep-cover-gecko-psx",
+  "name": "Gex 3 - Deep Cover Gecko",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Gex 3 - Deep Cover Gecko.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/gex-3-deep-cover-gecko-recomp",
+  "rom_identity": {
+    "crc32": [
+      "47adad81"
+    ],
+    "md5": [
+      "d2937c2dd3182ea20ebd47fbb3a2c901"
+    ],
+    "sha1": [
+      "4aefab85f69a91b446646248134ea047603905e8"
+    ],
+    "sha256": [
+      "29853262d62d492838baa714dc1829f54d362c2a08581cf2caf06decf5f2f66a"
+    ],
+    "disc_serials": [
+      "SLUS-00806"
+    ],
+    "sizes": [
+      450010512
+    ],
+    "filenames": [
+      "Gex 3 - Deep Cover Gecko (USA).cue",
+      "Gex 3 - Deep Cover Gecko (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/gex-3-deep-cover-gecko-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "gex-3-deep-cover-gecko-recomp",
+  "launch": {
+    "linux": "gex_3_deep_cover_gecko",
+    "windows": "gex_3_deep_cover_gecko.exe",
+    "macos": "gex_3_deep_cover_gecko"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/gex-3-deep-cover-gecko-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

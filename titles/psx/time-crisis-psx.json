@@ -1,0 +1,89 @@
+{
+  "id": "time-crisis-psx",
+  "name": "Time Crisis",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Time Crisis.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/time-crisis-recomp",
+  "rom_identity": {
+    "crc32": [
+      "cf674d41"
+    ],
+    "md5": [
+      "eebb81e94ffa5b43be62ca2ce1e832e3"
+    ],
+    "sha1": [
+      "2e6afbd235523f82e8af52ae266bef2799764377"
+    ],
+    "sha256": [
+      "3ee08c4e43b83b883f746605543fa8756a7a662f5e068aa74a1b6df991abd3ef"
+    ],
+    "disc_serials": [
+      "SLUS-00405"
+    ],
+    "sizes": [
+      39779376
+    ],
+    "filenames": [
+      "Time Crisis (USA).cue",
+      "Time Crisis (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      33
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/time-crisis-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "time-crisis-recomp",
+  "launch": {
+    "linux": "time_crisis",
+    "windows": "time_crisis.exe",
+    "macos": "time_crisis"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/time-crisis-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

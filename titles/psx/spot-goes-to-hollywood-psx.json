@@ -1,0 +1,89 @@
+{
+  "id": "spot-goes-to-hollywood-psx",
+  "name": "Spot Goes to Hollywood",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Spot Goes to Hollywood.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/spot-goes-to-hollywood-recomp",
+  "rom_identity": {
+    "crc32": [
+      "f5be73f3"
+    ],
+    "md5": [
+      "276bd57a15f6a618869d76783e05931c"
+    ],
+    "sha1": [
+      "7cd76889557b6dc8085e7cc0dd2e567d9655b431"
+    ],
+    "sha256": [
+      "6161515421e8943bddf788ee480d6e30e0639717f02a0366f13462200210724b"
+    ],
+    "disc_serials": [
+      "SLUS-00014"
+    ],
+    "sizes": [
+      298254768
+    ],
+    "filenames": [
+      "Spot Goes to Hollywood (USA).cue",
+      "Spot Goes to Hollywood (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      23
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/spot-goes-to-hollywood-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "spot-goes-to-hollywood-recomp",
+  "launch": {
+    "linux": "spot_goes_to_hollywood",
+    "windows": "spot_goes_to_hollywood.exe",
+    "macos": "spot_goes_to_hollywood"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/spot-goes-to-hollywood-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

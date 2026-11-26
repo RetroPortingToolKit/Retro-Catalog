@@ -1,0 +1,89 @@
+{
+  "id": "elemental-gearbolt-psx",
+  "name": "Elemental Gearbolt",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Elemental Gearbolt.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/elemental-gearbolt-recomp",
+  "rom_identity": {
+    "crc32": [
+      "8a6d6287"
+    ],
+    "md5": [
+      "ff5508c7b567650a15357ecf843c335a"
+    ],
+    "sha1": [
+      "c3cd7720515020b55a10f680ab47a7bca1e2fc34"
+    ],
+    "sha256": [
+      "355f28ad6e041f901a155ea4cbdf3e68d72140365facb740ad230b084db7b461"
+    ],
+    "disc_serials": [
+      "SLUS-00654"
+    ],
+    "sizes": [
+      533000832
+    ],
+    "filenames": [
+      "Elemental Gearbolt (USA).cue",
+      "Elemental Gearbolt (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/elemental-gearbolt-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "elemental-gearbolt-recomp",
+  "launch": {
+    "linux": "elemental_gearbolt",
+    "windows": "elemental_gearbolt.exe",
+    "macos": "elemental_gearbolt"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/elemental-gearbolt-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

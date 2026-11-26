@@ -1,0 +1,89 @@
+{
+  "id": "clock-tower-psx",
+  "name": "Clock Tower",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Clock Tower.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/clock-tower-recomp",
+  "rom_identity": {
+    "crc32": [
+      "8fc9567c"
+    ],
+    "md5": [
+      "fd44b49b7b6fd0f403b3cb7790929010"
+    ],
+    "sha1": [
+      "ce15c807f48f0a8450764e152100c63e3b6c64b2"
+    ],
+    "sha256": [
+      "e3d4392e0685864dd239eadd6b141f976556a040ff4dd867560eec7e7357a89f"
+    ],
+    "disc_serials": [
+      "SLUS-00539"
+    ],
+    "sizes": [
+      632629200
+    ],
+    "filenames": [
+      "Clock Tower (USA).cue",
+      "Clock Tower (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/clock-tower-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "clock-tower-recomp",
+  "launch": {
+    "linux": "clock_tower",
+    "windows": "clock_tower.exe",
+    "macos": "clock_tower"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/clock-tower-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

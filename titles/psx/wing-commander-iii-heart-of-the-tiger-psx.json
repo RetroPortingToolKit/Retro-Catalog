@@ -1,0 +1,211 @@
+{
+  "id": "wing-commander-iii-heart-of-the-tiger-psx",
+  "name": "Wing Commander III - Heart of the Tiger",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Wing Commander III - Heart of the Tiger.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/wing-commander-iii-heart-of-the-tiger-recomp",
+  "rom_identity": {
+    "crc32": [
+      "e2bdde1b",
+      "91d852f2",
+      "a5bf2dbc",
+      "267dd39d"
+    ],
+    "md5": [
+      "77f0fe66a2ffb509798554d7f7eaf350",
+      "53fcde28a535a37e42fe00530abbfe29",
+      "c799858563e26fd341d095897fef4f85",
+      "7b77ea89b2a982a0c8bfd975fbf8ddde"
+    ],
+    "sha1": [
+      "a2cdd388b286ef6d2b2ad303c3488c43af84c517",
+      "4b269d51acfaaabd5d242ff808fd3b53cb8f55b6",
+      "983f0ea1c66d5ba12ce805c3ffdc504b8d0e6b37",
+      "cac3864654ee1488d92655d3d458d30959981b0b"
+    ],
+    "sha256": [
+      "b771210963d4f15b91609d13196af8aae3068976d79d7210ac26fda9e9328aba",
+      "9bdebebdaa1014ecbccca98c0043171d6472f2eabd7ed5360d1ebf79001b7aaf",
+      "9e88e7cb2b30f8a5dbee4c3e9af1a84716529e79506fc297d4ffde7b80134887",
+      "c9f3fcbbedb98186b881b2dcb00bde1a4763cfc5f4dd0b87c7b160caa0de091e"
+    ],
+    "disc_serials": [
+      "SLUS-00019",
+      "SLUS-00134",
+      "SLUS-00135",
+      "SLUS-00136"
+    ],
+    "sizes": [
+      721574784,
+      751028880,
+      734132112,
+      721370160
+    ],
+    "filenames": [
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 1).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 2).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 2).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 3).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 3).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 4).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 4).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-00019",
+        "cue_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue",
+        "bin_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 1).bin",
+        "crc32": [
+          "e2bdde1b"
+        ],
+        "md5": [
+          "77f0fe66a2ffb509798554d7f7eaf350"
+        ],
+        "sha1": [
+          "a2cdd388b286ef6d2b2ad303c3488c43af84c517"
+        ],
+        "sha256": [
+          "b771210963d4f15b91609d13196af8aae3068976d79d7210ac26fda9e9328aba"
+        ],
+        "sizes": [
+          721574784
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-00134",
+        "cue_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 2).cue",
+        "bin_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 2).bin",
+        "crc32": [
+          "91d852f2"
+        ],
+        "md5": [
+          "53fcde28a535a37e42fe00530abbfe29"
+        ],
+        "sha1": [
+          "4b269d51acfaaabd5d242ff808fd3b53cb8f55b6"
+        ],
+        "sha256": [
+          "9bdebebdaa1014ecbccca98c0043171d6472f2eabd7ed5360d1ebf79001b7aaf"
+        ],
+        "sizes": [
+          751028880
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 3,
+        "serial": "SLUS-00135",
+        "cue_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 3).cue",
+        "bin_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 3).bin",
+        "crc32": [
+          "a5bf2dbc"
+        ],
+        "md5": [
+          "c799858563e26fd341d095897fef4f85"
+        ],
+        "sha1": [
+          "983f0ea1c66d5ba12ce805c3ffdc504b8d0e6b37"
+        ],
+        "sha256": [
+          "9e88e7cb2b30f8a5dbee4c3e9af1a84716529e79506fc297d4ffde7b80134887"
+        ],
+        "sizes": [
+          734132112
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 4,
+        "serial": "SLUS-00136",
+        "cue_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 4).cue",
+        "bin_name": "Wing Commander III - Heart of the Tiger (USA) (Disc 4).bin",
+        "crc32": [
+          "267dd39d"
+        ],
+        "md5": [
+          "7b77ea89b2a982a0c8bfd975fbf8ddde"
+        ],
+        "sha1": [
+          "cac3864654ee1488d92655d3d458d30959981b0b"
+        ],
+        "sha256": [
+          "c9f3fcbbedb98186b881b2dcb00bde1a4763cfc5f4dd0b87c7b160caa0de091e"
+        ],
+        "sizes": [
+          721370160
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/wing-commander-iii-heart-of-the-tiger-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "wing-commander-iii-heart-of-the-tiger-recomp",
+  "launch": {
+    "linux": "wing_commander_iii_heart_of_the_tiger",
+    "windows": "wing_commander_iii_heart_of_the_tiger.exe",
+    "macos": "wing_commander_iii_heart_of_the_tiger"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/wing-commander-iii-heart-of-the-tiger-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

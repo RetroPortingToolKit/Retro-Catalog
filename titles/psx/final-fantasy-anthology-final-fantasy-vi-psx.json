@@ -1,0 +1,89 @@
+{
+  "id": "final-fantasy-anthology-final-fantasy-vi-psx",
+  "name": "Final Fantasy Anthology - Final Fantasy VI",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Final Fantasy Anthology - Final Fantasy VI.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-vi-recomp",
+  "rom_identity": {
+    "crc32": [
+      "9554df12"
+    ],
+    "md5": [
+      "5f5b379fb4e313923b89f8863c9d08a2"
+    ],
+    "sha1": [
+      "baaa0c064bf2c05ebe706a948cb83078d71848bd"
+    ],
+    "sha256": [
+      "78065981f86eb8a8a2ba6a375f6df496973879d0a864186f1373d68265196838"
+    ],
+    "disc_serials": [
+      "SLUS-00900"
+    ],
+    "sizes": [
+      268668960
+    ],
+    "filenames": [
+      "Final Fantasy Anthology - Final Fantasy VI (USA) (Rev 1).cue",
+      "Final Fantasy Anthology - Final Fantasy VI (USA) (Rev 1).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-vi-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "final-fantasy-anthology-final-fantasy-vi-recomp",
+  "launch": {
+    "linux": "final_fantasy_anthology_final_fantasy_vi",
+    "windows": "final_fantasy_anthology_final_fantasy_vi.exe",
+    "macos": "final_fantasy_anthology_final_fantasy_vi"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-vi-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

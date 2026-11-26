@@ -1,0 +1,89 @@
+{
+  "id": "need-for-speed-ii-psx",
+  "name": "Need for Speed II",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Need for Speed II.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/need-for-speed-ii-recomp",
+  "rom_identity": {
+    "crc32": [
+      "025dc441"
+    ],
+    "md5": [
+      "5256144d48475c6ff0a6000efa9cb02a"
+    ],
+    "sha1": [
+      "a1162dfeb2b25e5ed29a77242d394dd66d8ca321"
+    ],
+    "sha256": [
+      "0a549df7c5a9b0b0217536cf8092567b161343386eb1a3e1f53a0982525d2d29"
+    ],
+    "disc_serials": [
+      "SLUS-00276"
+    ],
+    "sizes": [
+      445207728
+    ],
+    "filenames": [
+      "Need for Speed II (USA).cue",
+      "Need for Speed II (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/need-for-speed-ii-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "need-for-speed-ii-recomp",
+  "launch": {
+    "linux": "need_for_speed_ii",
+    "windows": "need_for_speed_ii.exe",
+    "macos": "need_for_speed_ii"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/need-for-speed-ii-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

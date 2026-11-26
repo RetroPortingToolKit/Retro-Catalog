@@ -1,0 +1,89 @@
+{
+  "id": "dead-or-alive-psx",
+  "name": "Dead or Alive",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Dead or Alive.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/dead-or-alive-recomp",
+  "rom_identity": {
+    "crc32": [
+      "22432a77"
+    ],
+    "md5": [
+      "3f61d4a7bc3b5f43c8ceaf7517a5d897"
+    ],
+    "sha1": [
+      "8f76598e9c35bd725a08dc6c750221c19d518f3b"
+    ],
+    "sha256": [
+      "b13c8792b33cded1592146061e634a0f7c543a1d49b09f8d63d1fa2aea4a3701"
+    ],
+    "disc_serials": [
+      "SLUS-00606"
+    ],
+    "sizes": [
+      153251616
+    ],
+    "filenames": [
+      "Dead or Alive (USA).cue",
+      "Dead or Alive (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      29
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/dead-or-alive-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "dead-or-alive-recomp",
+  "launch": {
+    "linux": "dead_or_alive",
+    "windows": "dead_or_alive.exe",
+    "macos": "dead_or_alive"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/dead-or-alive-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "id": "heart-of-darkness-psx",
+  "name": "Heart of Darkness",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Heart of Darkness.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/heart-of-darkness-recomp",
+  "rom_identity": {
+    "crc32": [
+      "2710ecd3",
+      "db169825"
+    ],
+    "md5": [
+      "b436c38977924755b3cc29c45af20204",
+      "6144d1d79507f3fb66ecfc9849ebc8ad"
+    ],
+    "sha1": [
+      "f63c1f4d3afa0fc6bef12a1f5a911b71261cbee9",
+      "02eab81fc5fa1bee536b28e08df40c5f9371b7b9"
+    ],
+    "sha256": [
+      "166b3e42536789a5b6d7382fa4319cf38c8a8813e68fcc6c972b7532aeeaea18",
+      "0c19305ae9ba98766112509eebbcf137c760a57b22738a8d7f6a44c5296d6530"
+    ],
+    "disc_serials": [
+      "SLUS-00696",
+      "SLUS-00741"
+    ],
+    "sizes": [
+      576879744,
+      691664400
+    ],
+    "filenames": [
+      "Heart of Darkness (USA) (Disc 1).cue",
+      "Heart of Darkness (USA) (Disc 1).bin",
+      "Heart of Darkness (USA) (Disc 2).cue",
+      "Heart of Darkness (USA) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-00696",
+        "cue_name": "Heart of Darkness (USA) (Disc 1).cue",
+        "bin_name": "Heart of Darkness (USA) (Disc 1).bin",
+        "crc32": [
+          "2710ecd3"
+        ],
+        "md5": [
+          "b436c38977924755b3cc29c45af20204"
+        ],
+        "sha1": [
+          "f63c1f4d3afa0fc6bef12a1f5a911b71261cbee9"
+        ],
+        "sha256": [
+          "166b3e42536789a5b6d7382fa4319cf38c8a8813e68fcc6c972b7532aeeaea18"
+        ],
+        "sizes": [
+          576879744
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-00741",
+        "cue_name": "Heart of Darkness (USA) (Disc 2).cue",
+        "bin_name": "Heart of Darkness (USA) (Disc 2).bin",
+        "crc32": [
+          "db169825"
+        ],
+        "md5": [
+          "6144d1d79507f3fb66ecfc9849ebc8ad"
+        ],
+        "sha1": [
+          "02eab81fc5fa1bee536b28e08df40c5f9371b7b9"
+        ],
+        "sha256": [
+          "0c19305ae9ba98766112509eebbcf137c760a57b22738a8d7f6a44c5296d6530"
+        ],
+        "sizes": [
+          691664400
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/heart-of-darkness-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "heart-of-darkness-recomp",
+  "launch": {
+    "linux": "heart_of_darkness",
+    "windows": "heart_of_darkness.exe",
+    "macos": "heart_of_darkness"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/heart-of-darkness-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

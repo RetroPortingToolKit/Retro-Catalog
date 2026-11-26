@@ -1,0 +1,89 @@
+{
+  "id": "final-doom-psx",
+  "name": "Final Doom",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Final Doom.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/final-doom-recomp",
+  "rom_identity": {
+    "crc32": [
+      "a53462ad"
+    ],
+    "md5": [
+      "a9d511b5f15fd8ecd725a197e49c8a9f"
+    ],
+    "sha1": [
+      "3cf95144ba09dc8cdb039835c679da6ddb31283d"
+    ],
+    "sha256": [
+      "ef61c2130379837c11e738ddd3b8f4491ba02b9860223ea99d992b94417d64dc"
+    ],
+    "disc_serials": [
+      "SLUS-00331"
+    ],
+    "sizes": [
+      53188128
+    ],
+    "filenames": [
+      "Final Doom (USA).cue",
+      "Final Doom (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      7
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/final-doom-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "final-doom-recomp",
+  "launch": {
+    "linux": "final_doom",
+    "windows": "final_doom.exe",
+    "macos": "final_doom"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/final-doom-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

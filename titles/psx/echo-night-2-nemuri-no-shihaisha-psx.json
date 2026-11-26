@@ -1,0 +1,111 @@
+{
+  "id": "echo-night-2-nemuri-no-shihaisha-psx",
+  "name": "Echo Night 2 - Nemuri no Shihaisha",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Echo Night 2 - Nemuri no Shihaisha.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/echo-night-2-nemuri-no-shihaisha-recomp",
+  "rom_identity": {
+    "crc32": [
+      "6eff036c"
+    ],
+    "md5": [
+      "7f57d3c2b5b9fc25f0783115da106903"
+    ],
+    "sha1": [
+      "77fc59e0d2f892ffcf3dbd099749d1527f157c8c"
+    ],
+    "sha256": [
+      "09c30e9eb9d7eb58b0852aa7301e1a1ca77351ce980fd7bf00019ad199b6620c"
+    ],
+    "disc_serials": [
+      "SLPS-02167"
+    ],
+    "sizes": [
+      349234368
+    ],
+    "filenames": [
+      "Echo Night 2 - Nemuri no Shihaisha (Japan).cue",
+      "Echo Night 2 - Nemuri no Shihaisha (Japan).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/echo-night-2-nemuri-no-shihaisha-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "echo-night-2-nemuri-no-shihaisha-recomp",
+  "launch": {
+    "linux": "echo_night_2_nemuri_no_shihaisha",
+    "windows": "echo_night_2_nemuri_no_shihaisha.exe",
+    "macos": "echo_night_2_nemuri_no_shihaisha"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5500 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/echo-night-2-nemuri-no-shihaisha-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN",
+      "scph5500.bin"
+    ]
+  }
+}

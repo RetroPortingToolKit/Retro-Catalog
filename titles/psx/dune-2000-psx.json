@@ -1,0 +1,89 @@
+{
+  "id": "dune-2000-psx",
+  "name": "Dune 2000",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Dune 2000.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/dune-2000-recomp",
+  "rom_identity": {
+    "crc32": [
+      "4d59d132"
+    ],
+    "md5": [
+      "3f8aa4c17d8b39363401ad9af944dbeb"
+    ],
+    "sha1": [
+      "0ac0661c4391ccaca389afef29f4321bb01daeda"
+    ],
+    "sha256": [
+      "fabdc2698192334137609e80cc4799f4d18099932762205aafb05082054808c1"
+    ],
+    "disc_serials": [
+      "SLUS-00973"
+    ],
+    "sizes": [
+      685121136
+    ],
+    "filenames": [
+      "Dune 2000 (USA).cue",
+      "Dune 2000 (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/dune-2000-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "dune-2000-recomp",
+  "launch": {
+    "linux": "dune_2000",
+    "windows": "dune_2000.exe",
+    "macos": "dune_2000"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/dune-2000-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

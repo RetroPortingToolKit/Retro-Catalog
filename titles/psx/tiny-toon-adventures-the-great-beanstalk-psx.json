@@ -1,0 +1,89 @@
+{
+  "id": "tiny-toon-adventures-the-great-beanstalk-psx",
+  "name": "Tiny Toon Adventures - The Great Beanstalk",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Tiny Toon Adventures - The Great Beanstalk.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/tiny-toon-adventures-the-great-beanstalk-recomp",
+  "rom_identity": {
+    "crc32": [
+      "a3a64d16"
+    ],
+    "md5": [
+      "2653469d6948f3cf358e3e1cf81cb58c"
+    ],
+    "sha1": [
+      "7ebbe748be345bfbe04525e062aec6a04abf78da"
+    ],
+    "sha256": [
+      "b7d26e34ca15133f792b1e182a27b387278c88acceba93dcd4525f8f373ff492"
+    ],
+    "disc_serials": [
+      "SLUS-00638"
+    ],
+    "sizes": [
+      158336640
+    ],
+    "filenames": [
+      "Tiny Toon Adventures - The Great Beanstalk (USA).cue",
+      "Tiny Toon Adventures - The Great Beanstalk (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/tiny-toon-adventures-the-great-beanstalk-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "tiny-toon-adventures-the-great-beanstalk-recomp",
+  "launch": {
+    "linux": "tiny_toon_adventures_the_great_beanstalk",
+    "windows": "tiny_toon_adventures_the_great_beanstalk.exe",
+    "macos": "tiny_toon_adventures_the_great_beanstalk"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/tiny-toon-adventures-the-great-beanstalk-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
