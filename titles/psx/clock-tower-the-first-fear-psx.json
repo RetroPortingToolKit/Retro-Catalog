@@ -1,0 +1,111 @@
+{
+  "id": "clock-tower-the-first-fear-psx",
+  "name": "Clock Tower: The First Fear (fan translation)",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Clock Tower: The First Fear (fan translation).",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/clock-tower-the-first-fear-recomp",
+  "rom_identity": {
+    "crc32": [
+      "f3ced589"
+    ],
+    "md5": [
+      "83adf3cdb6c46b3e084dec6dfb213295"
+    ],
+    "sha1": [
+      "f20aaf6d52ba2acee483445a8039b85e6f1492d4"
+    ],
+    "sha256": [
+      "f63b8501eeeaa8867cdb7e76f49f5bf39c76281c6877a96ca55c1d664e0884c3"
+    ],
+    "disc_serials": [
+      "SLPS-00917"
+    ],
+    "sizes": [
+      75750864
+    ],
+    "filenames": [
+      "Clock Tower - The First Fear (T).cue",
+      "Clock Tower - The First Fear (T) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/clock-tower-the-first-fear-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "clock-tower-the-first-fear-recomp",
+  "launch": {
+    "linux": "clock_tower_the_first_fear",
+    "windows": "clock_tower_the_first_fear.exe",
+    "macos": "clock_tower_the_first_fear"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5500 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/clock-tower-the-first-fear-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN",
+      "scph5500.bin"
+    ]
+  }
+}

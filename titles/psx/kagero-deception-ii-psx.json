@@ -1,0 +1,111 @@
+{
+  "id": "kagero-deception-ii-psx",
+  "name": "Kagero - Deception II",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Kagero - Deception II.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/kagero-deception-ii-recomp",
+  "rom_identity": {
+    "crc32": [
+      "1b83fa61"
+    ],
+    "md5": [
+      "935a1b5e53154dd18481d3ae23ed01b1"
+    ],
+    "sha1": [
+      "077b755e5581a394b181989b07e6bd54025c839c"
+    ],
+    "sha256": [
+      "c0cdfcb79e89514925920ec410611dcc9bf8dae9d9034e4f72a5c3bd4a5d6124"
+    ],
+    "disc_serials": [
+      "SLES-01967"
+    ],
+    "sizes": [
+      420704592
+    ],
+    "filenames": [
+      "Kagero - Deception II (Europe).cue",
+      "Kagero - Deception II (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/kagero-deception-ii-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "kagero-deception-ii-recomp",
+  "launch": {
+    "linux": "kagero_deception_ii",
+    "windows": "kagero_deception_ii.exe",
+    "macos": "kagero_deception_ii"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5552 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/kagero-deception-ii-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN",
+      "scph5552.bin"
+    ]
+  }
+}

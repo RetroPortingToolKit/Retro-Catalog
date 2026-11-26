@@ -1,0 +1,147 @@
+{
+  "id": "dragon-warrior-vii-psx",
+  "name": "Dragon Warrior VII",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Dragon Warrior VII.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/dragon-warrior-vii-recomp",
+  "rom_identity": {
+    "crc32": [
+      "64367925",
+      "3042529c"
+    ],
+    "md5": [
+      "aeb42bf45abde4716bf833f00ecc5325",
+      "a13e25195198ee4a7380cff18cbac411"
+    ],
+    "sha1": [
+      "56f04f8c54f8620ae608210bd35c7dc94d8d9559",
+      "578fb7911990ff95ca43bc8f3f57f0f04d3f9ef4"
+    ],
+    "sha256": [
+      "f3e755c7856882889d8357b5f22c3c28a1395b415416164e6219449912d1910a",
+      "c0c40378e44a8b9afc970e97c6552d93a2e6708afcc26e9d1b3a9a4c38533c5d"
+    ],
+    "disc_serials": [
+      "SLUS-01206",
+      "SLUS-01346"
+    ],
+    "sizes": [
+      711567024,
+      676816224
+    ],
+    "filenames": [
+      "Dragon Warrior VII (USA) (Disc 1).cue",
+      "Dragon Warrior VII (USA) (Disc 1).bin",
+      "Dragon Warrior VII (USA) (Disc 2).cue",
+      "Dragon Warrior VII (USA) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "discs": [
+      {
+        "index": 1,
+        "serial": "SLUS-01206",
+        "cue_name": "Dragon Warrior VII (USA) (Disc 1).cue",
+        "bin_name": "Dragon Warrior VII (USA) (Disc 1).bin",
+        "crc32": [
+          "64367925"
+        ],
+        "md5": [
+          "aeb42bf45abde4716bf833f00ecc5325"
+        ],
+        "sha1": [
+          "56f04f8c54f8620ae608210bd35c7dc94d8d9559"
+        ],
+        "sha256": [
+          "f3e755c7856882889d8357b5f22c3c28a1395b415416164e6219449912d1910a"
+        ],
+        "sizes": [
+          711567024
+        ],
+        "track_counts": [
+          1
+        ]
+      },
+      {
+        "index": 2,
+        "serial": "SLUS-01346",
+        "cue_name": "Dragon Warrior VII (USA) (Disc 2).cue",
+        "bin_name": "Dragon Warrior VII (USA) (Disc 2).bin",
+        "crc32": [
+          "3042529c"
+        ],
+        "md5": [
+          "a13e25195198ee4a7380cff18cbac411"
+        ],
+        "sha1": [
+          "578fb7911990ff95ca43bc8f3f57f0f04d3f9ef4"
+        ],
+        "sha256": [
+          "c0c40378e44a8b9afc970e97c6552d93a2e6708afcc26e9d1b3a9a4c38533c5d"
+        ],
+        "sizes": [
+          676816224
+        ],
+        "track_counts": [
+          1
+        ]
+      }
+    ]
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/dragon-warrior-vii-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "dragon-warrior-vii-recomp",
+  "launch": {
+    "linux": "dragon_warrior_vii",
+    "windows": "dragon_warrior_vii.exe",
+    "macos": "dragon_warrior_vii"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/dragon-warrior-vii-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

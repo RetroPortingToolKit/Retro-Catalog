@@ -1,0 +1,89 @@
+{
+  "id": "need-for-speed-v-rally-psx",
+  "name": "Need for Speed - V-Rally",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Need for Speed - V-Rally.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/need-for-speed-v-rally-recomp",
+  "rom_identity": {
+    "crc32": [
+      "6bf0c9f4"
+    ],
+    "md5": [
+      "a9f8e3f06e23a4008f3fa861a07901fb"
+    ],
+    "sha1": [
+      "5793b43cd7d26855d75bfc1261cf15a76cdc8ea4"
+    ],
+    "sha256": [
+      "6b309d1354f15daf97756e92caf0a96a869fcf9d9a3b947f560d3d2d6996d0bb"
+    ],
+    "disc_serials": [
+      "SLUS-00590"
+    ],
+    "sizes": [
+      133901712
+    ],
+    "filenames": [
+      "Need for Speed - V-Rally (USA).cue",
+      "Need for Speed - V-Rally (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      10
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/need-for-speed-v-rally-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "need-for-speed-v-rally-recomp",
+  "launch": {
+    "linux": "need_for_speed_v_rally",
+    "windows": "need_for_speed_v_rally.exe",
+    "macos": "need_for_speed_v_rally"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/need-for-speed-v-rally-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "echo-night-psx",
+  "name": "Echo Night",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Echo Night.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/echo-night-recomp",
+  "rom_identity": {
+    "crc32": [
+      "2e977f97"
+    ],
+    "md5": [
+      "f6b968d1037b7c8e3d8384f0dae188ba"
+    ],
+    "sha1": [
+      "df1b14eb432285e453e3e7d7658dd54f3c3279f4"
+    ],
+    "sha256": [
+      "d8f0cd054734473beeb8eb2a75644a27211c18bf80456dc215db86be71e79774"
+    ],
+    "disc_serials": [
+      "SLUS-00820"
+    ],
+    "sizes": [
+      514427088
+    ],
+    "filenames": [
+      "Echo Night (USA).cue",
+      "Echo Night (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/echo-night-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "echo-night-recomp",
+  "launch": {
+    "linux": "echo_night",
+    "windows": "echo_night.exe",
+    "macos": "echo_night"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/echo-night-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

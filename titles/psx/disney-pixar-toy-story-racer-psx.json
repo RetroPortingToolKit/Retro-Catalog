@@ -1,0 +1,89 @@
+{
+  "id": "disney-pixar-toy-story-racer-psx",
+  "name": "Disney-Pixar Toy Story Racer",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Disney-Pixar Toy Story Racer.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/disney-pixar-toy-story-racer-recomp",
+  "rom_identity": {
+    "crc32": [
+      "c155fe5c"
+    ],
+    "md5": [
+      "c09c5b2234744cf96837ca8b659b219b"
+    ],
+    "sha1": [
+      "d094ddd08f1c74fbf7de8d04cff98ab8129cde47"
+    ],
+    "sha256": [
+      "f8f1fc7000300f320803d1eab1b85b633fc66d41535a6663155289a56ca7529d"
+    ],
+    "disc_serials": [
+      "SLUS-01214"
+    ],
+    "sizes": [
+      259183344
+    ],
+    "filenames": [
+      "Disney-Pixar Toy Story Racer (USA).cue",
+      "Disney-Pixar Toy Story Racer (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/disney-pixar-toy-story-racer-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "disney-pixar-toy-story-racer-recomp",
+  "launch": {
+    "linux": "disney_pixar_toy_story_racer",
+    "windows": "disney_pixar_toy_story_racer.exe",
+    "macos": "disney_pixar_toy_story_racer"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/disney-pixar-toy-story-racer-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

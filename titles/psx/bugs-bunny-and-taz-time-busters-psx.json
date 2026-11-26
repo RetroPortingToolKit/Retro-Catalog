@@ -1,0 +1,89 @@
+{
+  "id": "bugs-bunny-and-taz-time-busters-psx",
+  "name": "Bugs Bunny & Taz - Time Busters",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Bugs Bunny & Taz - Time Busters.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/bugs-bunny-and-taz-time-busters-recomp",
+  "rom_identity": {
+    "crc32": [
+      "22dd3004"
+    ],
+    "md5": [
+      "03fd0dc4af76689e571eeac73721602c"
+    ],
+    "sha1": [
+      "9beb05a6f61b4a64ca4548f9f7a48c5f4d0bdb3a"
+    ],
+    "sha256": [
+      "537b073839e9139cf4583375cd52cc6fa0321ebb300bfb4618137747efe13dc2"
+    ],
+    "disc_serials": [
+      "SLUS-01144"
+    ],
+    "sizes": [
+      678069840
+    ],
+    "filenames": [
+      "Bugs Bunny & Taz - Time Busters (USA) (En,Fr,Es).cue",
+      "Bugs Bunny & Taz - Time Busters (USA) (En,Fr,Es).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/bugs-bunny-and-taz-time-busters-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "bugs-bunny-and-taz-time-busters-recomp",
+  "launch": {
+    "linux": "bugs_bunny_and_taz_time_busters",
+    "windows": "bugs_bunny_and_taz_time_busters.exe",
+    "macos": "bugs_bunny_and_taz_time_busters"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/bugs-bunny-and-taz-time-busters-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

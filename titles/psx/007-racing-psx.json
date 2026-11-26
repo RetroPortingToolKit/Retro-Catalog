@@ -1,0 +1,101 @@
+{
+  "id": "007-racing-psx",
+  "name": "007 Racing",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for 007 Racing.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/007-racing-recomp",
+  "rom_identity": {
+    "crc32": [
+      "5a39ae64"
+    ],
+    "md5": [
+      "2a51a718419e8d16e20e0ac8b5e59d24"
+    ],
+    "sha1": [
+      "91c0c4b5c888f074a777f891be5432064678070e"
+    ],
+    "sha256": [
+      "f2247b123fb694c2302125a2a95a16534f6a658fe0c778790b32a9b6994a7901"
+    ],
+    "disc_serials": [
+      "SLUS-01300"
+    ],
+    "sizes": [
+      565011552
+    ],
+    "filenames": [
+      "007 Racing (USA).cue",
+      "007 Racing (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/007-racing-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "007-racing-recomp",
+  "launch": {
+    "linux": "007_racing",
+    "windows": "007_racing.exe",
+    "macos": "007_racing"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/007-racing-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "007 Racing",
+    "game_version": "0.1.0",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  }
+}

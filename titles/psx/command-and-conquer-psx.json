@@ -1,0 +1,89 @@
+{
+  "id": "command-and-conquer-psx",
+  "name": "Command & Conquer",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Command & Conquer.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/command-and-conquer-recomp",
+  "rom_identity": {
+    "crc32": [
+      "aa2c2e6c"
+    ],
+    "md5": [
+      "3e647d79da9effe88c3190501d01a9e1"
+    ],
+    "sha1": [
+      "1d698fd7c2bc3eb55208b7cf8476b9142908996a"
+    ],
+    "sha256": [
+      "9fcb89c1be4cebd6eb9e8e31d89bf9c9dc374183a6b49aa18e40cfec4b6eeade"
+    ],
+    "disc_serials": [
+      "SLUS-00379"
+    ],
+    "sizes": [
+      736253616
+    ],
+    "filenames": [
+      "Command & Conquer (USA) (Disc 1) (GDI).cue",
+      "Command & Conquer (USA) (Disc 1) (GDI).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/command-and-conquer-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "command-and-conquer-recomp",
+  "launch": {
+    "linux": "command_and_conquer",
+    "windows": "command_and_conquer.exe",
+    "macos": "command_and_conquer"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/command-and-conquer-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

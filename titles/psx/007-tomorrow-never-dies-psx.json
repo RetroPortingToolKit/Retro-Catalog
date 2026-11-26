@@ -1,0 +1,89 @@
+{
+  "id": "007-tomorrow-never-dies-psx",
+  "name": "007: Tomorrow Never Dies",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for 007: Tomorrow Never Dies.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/007-tomorrow-never-dies-recomp",
+  "rom_identity": {
+    "crc32": [
+      "02f976df"
+    ],
+    "md5": [
+      "cd844bb94308eff3dda5e3ecb4a3c907"
+    ],
+    "sha1": [
+      "5c635e990dc77c481eb177dc86deb7a198f17cf8"
+    ],
+    "sha256": [
+      "492aa175865aa005602bc884810659a9eb02ce607faa61ce7903631cc931ce12"
+    ],
+    "disc_serials": [
+      "SLUS-00975"
+    ],
+    "sizes": [
+      573594000
+    ],
+    "filenames": [
+      "007 - Tomorrow Never Dies (USA).cue",
+      "007 - Tomorrow Never Dies (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/007-tomorrow-never-dies-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "007-tomorrow-never-dies-recomp",
+  "launch": {
+    "linux": "007_tomorrow_never_dies",
+    "windows": "007_tomorrow_never_dies.exe",
+    "macos": "007_tomorrow_never_dies"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/007-tomorrow-never-dies-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

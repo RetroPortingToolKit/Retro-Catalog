@@ -1,0 +1,89 @@
+{
+  "id": "street-fighter-alpha-2-psx",
+  "name": "Street Fighter Alpha 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Street Fighter Alpha 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/street-fighter-alpha-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "83fcbb57"
+    ],
+    "md5": [
+      "8c92ac61f6ad94feec713d1ae9aa29f2"
+    ],
+    "sha1": [
+      "f7d8c58545b49421b9bc304dd53e3165f0e6c2ca"
+    ],
+    "sha256": [
+      "8232967937ce74828ee86520ad968f323343a689f9509ad7b30bd5b471680293"
+    ],
+    "disc_serials": [
+      "SLUS-00258"
+    ],
+    "sizes": [
+      569795520
+    ],
+    "filenames": [
+      "Street Fighter Alpha 2 (USA) (Rev 1).cue",
+      "Street Fighter Alpha 2 (USA) (Rev 1) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/street-fighter-alpha-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "street-fighter-alpha-2-recomp",
+  "launch": {
+    "linux": "street_fighter_alpha_2",
+    "windows": "street_fighter_alpha_2.exe",
+    "macos": "street_fighter_alpha_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/street-fighter-alpha-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

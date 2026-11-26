@@ -1,0 +1,89 @@
+{
+  "id": "saga-frontier-2-psx",
+  "name": "SaGa Frontier 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for SaGa Frontier 2.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/saga-frontier-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "b9a1ceed"
+    ],
+    "md5": [
+      "1ae5bc2d47b0785e827eeedd01fbf92b"
+    ],
+    "sha1": [
+      "ac25dc3878ba70d32113d5d821fac5775a797bce"
+    ],
+    "sha256": [
+      "03c98d6854c15ebef45ba762c6ed5e5e22c4a529a35074bcb3b673105ea063ef"
+    ],
+    "disc_serials": [
+      "SLUS-00933"
+    ],
+    "sizes": [
+      713312208
+    ],
+    "filenames": [
+      "SaGa Frontier 2 (USA).cue",
+      "SaGa Frontier 2 (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/saga-frontier-2-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "saga-frontier-2-recomp",
+  "launch": {
+    "linux": "saga_frontier_2",
+    "windows": "saga_frontier_2.exe",
+    "macos": "saga_frontier_2"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/saga-frontier-2-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

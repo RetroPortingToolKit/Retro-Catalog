@@ -1,0 +1,89 @@
+{
+  "id": "tomb-raider-the-last-revelation-psx",
+  "name": "Tomb Raider - The Last Revelation",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Tomb Raider - The Last Revelation.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/tomb-raider-the-last-revelation-recomp",
+  "rom_identity": {
+    "crc32": [
+      "ebcb6995"
+    ],
+    "md5": [
+      "e9d8332f6551671008965f09594a167b"
+    ],
+    "sha1": [
+      "98b4f885c2a13cfe489d754a014b716be8cdc764"
+    ],
+    "sha256": [
+      "562ba4808d54cd82af88aa61dad02c12b79a79722ddf18d21cf739a4bb4bb560"
+    ],
+    "disc_serials": [
+      "SLUS-00885"
+    ],
+    "sizes": [
+      737951760
+    ],
+    "filenames": [
+      "Tomb Raider - The Last Revelation (USA) (Rev 1).cue",
+      "Tomb Raider - The Last Revelation (USA) (Rev 1).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/tomb-raider-the-last-revelation-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "tomb-raider-the-last-revelation-recomp",
+  "launch": {
+    "linux": "tomb_raider_the_last_revelation",
+    "windows": "tomb_raider_the_last_revelation.exe",
+    "macos": "tomb_raider_the_last_revelation"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/tomb-raider-the-last-revelation-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

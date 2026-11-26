@@ -1,0 +1,123 @@
+{
+  "id": "zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-psx",
+  "name": "Zen Nihon Joshi Pro Wrestling - Joou Densetsu - Yume no Taikousen",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Zen Nihon Joshi Pro Wrestling - Joou Densetsu - Yume no Taikousen.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-recomp",
+  "rom_identity": {
+    "crc32": [
+      "22dea62e"
+    ],
+    "md5": [
+      "ea56a7ba699d96136b17ed05f49982b2"
+    ],
+    "sha1": [
+      "1c1ccdadcfccf071559a82522822c092035499d3"
+    ],
+    "sha256": [
+      "cc09334975a0eda47339790629f3afac9f138ed49f10e04d91cc34301da025c5"
+    ],
+    "disc_serials": [
+      "SLPS-01475"
+    ],
+    "sizes": [
+      364044912
+    ],
+    "filenames": [
+      "Zen Nihon Joshi Pro Wrestling - Joou Densetsu - Yume no Taikousen (Japan).cue",
+      "Zen Nihon Joshi Pro Wrestling - Joou Densetsu - Yume no Taikousen (Japan) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-recomp",
+  "launch": {
+    "linux": "zen_nihon_joshi_pro_wrestling_joou_densetsu_yume_no_taikousen",
+    "windows": "zen_nihon_joshi_pro_wrestling_joou_densetsu_yume_no_taikousen.exe",
+    "macos": "zen_nihon_joshi_pro_wrestling_joou_densetsu_yume_no_taikousen"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH5500 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/zen-nihon-joshi-pro-wrestling-joou-densetsu-yume-no-taikousen-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Zen Nihon Joshi Pro Wrestling - Joou Densetsu - Yume no Taikousen",
+    "game_version": "0.1.0",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  },
+  "bios_identity": {
+    "required": true,
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN",
+      "scph5500.bin"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "lucky-luke-psx",
+  "name": "Lucky Luke",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Lucky Luke.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/lucky-luke-recomp",
+  "rom_identity": {
+    "crc32": [
+      "de69e1b8"
+    ],
+    "md5": [
+      "c01ba9782d6719b1218e3c20b3f738ed"
+    ],
+    "sha1": [
+      "789a33bbc296c0342f30fbbd68cceb2194a1642d"
+    ],
+    "sha256": [
+      "3f9868e81807b564504bb4127db41b8385377488bbaa3e5492b67624654ff1fe"
+    ],
+    "disc_serials": [
+      "SLUS-00719"
+    ],
+    "sizes": [
+      159293904
+    ],
+    "filenames": [
+      "Lucky Luke (USA).cue",
+      "Lucky Luke (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      21
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/lucky-luke-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "lucky-luke-recomp",
+  "launch": {
+    "linux": "lucky_luke",
+    "windows": "lucky_luke.exe",
+    "macos": "lucky_luke"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/lucky-luke-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "clock-tower-ii-the-struggle-within-psx",
+  "name": "Clock Tower II - The Struggle Within",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Clock Tower II - The Struggle Within.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/clock-tower-ii-the-struggle-within-recomp",
+  "rom_identity": {
+    "crc32": [
+      "46a5e547"
+    ],
+    "md5": [
+      "8d50a909b995d23d4d3087a66ee9af57"
+    ],
+    "sha1": [
+      "a3f9742d9d94ae8e88ade8a4aa9b80939dd5aa9a"
+    ],
+    "sha256": [
+      "92eb041be63e71c0bae1113a8f6957dbd6373a9000cd4364211b7cda282da599"
+    ],
+    "disc_serials": [
+      "SLUS-00695"
+    ],
+    "sizes": [
+      428922480
+    ],
+    "filenames": [
+      "Clock Tower II - The Struggle Within (USA).cue",
+      "Clock Tower II - The Struggle Within (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/clock-tower-ii-the-struggle-within-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "clock-tower-ii-the-struggle-within-recomp",
+  "launch": {
+    "linux": "clock_tower_ii_the_struggle_within",
+    "windows": "clock_tower_ii_the_struggle_within.exe",
+    "macos": "clock_tower_ii_the_struggle_within"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/clock-tower-ii-the-struggle-within-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

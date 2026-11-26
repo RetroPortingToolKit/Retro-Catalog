@@ -1,0 +1,101 @@
+{
+  "id": "missile-command-psx",
+  "name": "Missile Command",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Missile Command.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/missile-command-recomp",
+  "rom_identity": {
+    "crc32": [
+      "fd47a882"
+    ],
+    "md5": [
+      "97ce8032fd1015a19bbba02f15feba38"
+    ],
+    "sha1": [
+      "dd560c2433af75074fe0f30cd90f25be6ab730ac"
+    ],
+    "sha256": [
+      "796ce41f20e67eed5d9b2401cd025f8a1804e658130ec82fef3a764e797b529d"
+    ],
+    "disc_serials": [
+      "SLUS-00992"
+    ],
+    "sizes": [
+      305654160
+    ],
+    "filenames": [
+      "Missile Command (USA).cue",
+      "Missile Command (USA) (Track 01).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/missile-command-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "missile-command-recomp",
+  "launch": {
+    "linux": "missile_command",
+    "windows": "missile_command.exe",
+    "macos": "missile_command"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/missile-command-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  },
+  "netplay": {
+    "supported": true,
+    "stack": "recomp-net",
+    "game_name": "Missile Command",
+    "game_version": "0.1.0",
+    "max_slots": 2,
+    "transports": [
+      "lan",
+      "ice"
+    ],
+    "match_caps_schema": "psx-v1"
+  }
+}

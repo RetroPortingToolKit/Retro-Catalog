@@ -1,0 +1,89 @@
+{
+  "id": "final-fantasy-anthology-final-fantasy-v-psx",
+  "name": "Final Fantasy Anthology - Final Fantasy V",
+  "kind": "recomp",
+  "platform": "psx",
+  "description": "A native recompilation setup host for Final Fantasy Anthology - Final Fantasy V.",
+  "homepage": "https://github.com/alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-v-recomp",
+  "rom_identity": {
+    "crc32": [
+      "d6aabbca"
+    ],
+    "md5": [
+      "4687163b08fcf730a15d2ac75e82d6a2"
+    ],
+    "sha1": [
+      "3d6a2c03b34170df6e4c04042eb4eb5c2076ba2c"
+    ],
+    "sha256": [
+      "9d20708fbe88d5674940d3afda08e563fc81eb5c51e2587933fc7ad84ac63067"
+    ],
+    "disc_serials": [
+      "SLUS-00879"
+    ],
+    "sizes": [
+      252604800
+    ],
+    "filenames": [
+      "Final Fantasy Anthology - Final Fantasy V (USA) (Rev 1).cue",
+      "Final Fantasy Anthology - Final Fantasy V (USA) (Rev 1).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin"
+  ],
+  "release": {
+    "github": "alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-v-recomp",
+    "asset_glob": {
+      "windows": "*windows-x64.zip",
+      "linux": "*linux-x64.zip",
+      "macos": "*macos-*.zip"
+    }
+  },
+  "install_dir_name": "final-fantasy-anthology-final-fantasy-v-recomp",
+  "launch": {
+    "linux": "final_fantasy_anthology_final_fantasy_v",
+    "windows": "final_fantasy_anthology_final_fantasy_v.exe",
+    "macos": "final_fantasy_anthology_final_fantasy_v"
+  },
+  "romm": {
+    "platforms": [
+      "ps",
+      "psx",
+      "ps1"
+    ]
+  },
+  "author_notes": "Setup kit: supply the listed CUE/BIN disc set and your own SCPH1001 BIOS dump.",
+  "notes": "Track 01 digests measured from an owned disc set; serials and track counts from the repo's disc_set.json; launch name from the kit's EXE_NAME; release v0.1.0.",
+  "build": {
+    "enabled": true,
+    "source": {
+      "github": "alexbeavs-ps1-ports/final-fantasy-anthology-final-fantasy-v-recomp",
+      "ref": "v0.1.0"
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "github": "RetroPortingToolKit/RetroPorting-Toolchains",
+      "min_version": "1.0.3",
+      "asset_glob": {
+        "linux": "*cmake-clang-v1*linux*",
+        "windows": "*cmake-clang-v1*windows*",
+        "macos": "*cmake-clang-v1*macos*"
+      }
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
